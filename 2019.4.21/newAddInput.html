@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+	<head>
+		<title>test</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<form>
+			<!-- 新增input元素 -->
+				<input type="email">
+				<input type="url">
+				<input type="number">
+				<input type="range">
+				<input type="Date Pickers">
+				
+				<br/>
+			<!-- 新增属性 -->
+				<input type="text" autofocus> <!-- autofocus打开页面自动获取焦点 --> <br/>
+				<input type="text" placeholder="test"> <!-- placeholder在文本框显示提示字符串 --> <br/>
+				
+				<!-- fieldset指向表单，fieldset内容也属于指向的表单，大部分浏览器不支持该属性 -->
+				<form id="name1">
+					<input type="text">
+				</form>
+				<br/>
+				<fieldset form="name1">
+					<input type="text">
+				</fieldset>
+				
+				<!-- required强制填写属性 -->
+				<br/>
+				<form action="">
+				<input type="text" required>
+				<textarea rows="4" cols="50" name="comment" required> </textarea>
+				<input type="submit">
+				</form>
+				
+			<p> ----------- </p>
+			<!-- input详细属性解析 -->
+			<!--type属性-->
+				<!-- 按钮类型 -->
+					<input type="button"> <br/> <!-- 定义可单击按钮 -->
+					<input type="chekbox"> <br/> <!-- 复选框 -->
+					<input type="file"> <br/> <!-- 上传文件 -->
+						<!--
+							accept: 规定上传文件类型
+								accept="audio/*" 音频
+								accept="image/*" 图像
+								accept="video/*" 视频
+								accept="MIMI_type"
+
+							multiple: 设定允许多个元素上传
+						-->
+						
+					<input type="image" alt="123"> <br/> <!-- 定义图像为提交按钮 -->
+						<!--
+							alt="无法加载图片时显示"
+							src="索引图像位置"
+							width="设定宽度"
+						-->
+					<input type="radio"> <br/> <!-- 单选框 -->
+					<input type="range"> <br/> <!-- 滑动条控制数字 -->
+					<input type="reset"> <br/> <!-- 重置按钮 -->
+					<input type="submit"> <br/> <!-- 提交按钮 -->
+				<!-- 时间类型 -->
+					<input type="datetime"> <br/> <!-- 年月日时间,基于时区 -->
+					<input type="date"> <br/> <!-- 年月日 -->
+					<input type="datetime-local"> <br/> <!-- 年月日时间,基于本地 -->
+					<input type="mouth"> <br/> 
+					<input type="time"> <br/> <!-- 定义输入时间 -->
+					<input type="week"> <br/> <!-- 定义周期和年 -->
+				<!-- 输入类型 -->
+					<input type="email"> <br/> 
+					<input type="number"> <br/> <!-- 定义输入数字字段 -->
+					<input type="password"> <br/> <!-- 密码 -->
+					<input type="search"> <br/> <!-- 搜索字符串 -->
+					<input type="tel"> <br/> <!-- 定义电话号码输入的字段 -->
+					<input type="text"> <br/> <!-- 定义单行文本字段 -->
+					<input type="url"> <br/> <!-- 输入链接 -->
+				<!-- 其它类型 -->
+					<input type="hidden"> <br/> <!-- 定义隐藏字段 -->
+					<input type="color"> <br/> <!-- 拾色器 -->
+			<!-- input适用多属性 -->
+				<!--
+					1.	autocomplete自动补全开启/关闭
+						适用: 输入的type类型
+						autocomplete="off"/"on"
+
+					2.	autofocus打开页面直接获取焦点
+						适用: 所有input类型
+					
+					3.	checked预选
+						适用: type="checkbox"/"radio"
+
+					4.	disabled禁用input属性
+						适用: 所有input类型
+					
+					5.	form指定表单id，设定input元素归属
+						适用: 所有input类型
+						大多浏览器不支持
+					
+					6.	formaction设定表单提交链接
+						formmethod设定提交方法( 会覆盖form的method属性值 )
+						formenctype设定传输数据编码形式
+						适用: type="submit"/"image"
+						formaction="URL": 注意formaction会覆盖掉<form action="URL">action属性值
+						formmethod="get"/"post"
+					
+					7.	formnovalidate不验证提交
+						适用: type="submit"/"image"
+						<form>
+							<input type="email">
+							<input type="submit"> 验证提交
+							<input type="submit" formnovalidate> 不验证提交 
+						</form>
+					
+					8.	list属性,与datalist配合形成下拉选项
+						适用: 输入类型属性
+						<input list="name1">
+						<datalist id="name1">
+							<option value="1">
+							<option value="2">
+						</datalist>
+					
+					9.	min/max限定数值大小
+						适用: 时间类型,数子类型
+						<input type="range" min="1" max="5">
+					
+					10.	maxlength规定字符串长度
+						适用: 输入类型
+						<input type="text" maxlength="10"> 设定输入字符串数量不超过10个
+					
+					11. name设定input元素名称
+						有name可以在javascript中引用input值,并且可以提交表单
+						如果没有name则input内容不会被提交
+						<form action="xx.php" method="post">
+							<input type="text" name="name1">
+							<input type="submit">
+						</form>
+
+					-->
+
+					<br/>
+					<!-- 12. pattern:内容进行正则验证 -->
+						<!-- 适用: 输入类型 -->
+						<!-- title全局属性,当鼠标移动到元素标签时，进行信息意思 -->
+						<form action="xx.php" method="post">
+							<input type="text" required name="test1" pattern="[A-Za-z]{5}" title="5个字母" >
+							<input type="submit">
+						</form>
+						
+						<br/>
+					<!-- 13. placeholder: 在文本框内显示提示字符串  -->
+						<!-- 适用: 输入类型-->
+						<form action="xx.php" method="post" >
+							<input type="text" required placeholder="TEST_233"  >
+							<input type="submit">
+						</form>
+
+					<!--
+						14. readonly: 设定字段为只读状态
+							适用: 字段类型的input
+						
+						15. size: 设置input宽度
+							适用: 大部分input类型
+
+						16. step: 设置数字间隔
+							适用: 输入类型
+							<input type="text" step="3"> step为3则能输入的为-3,0,3,6依次类推
+
+					-->
+
+					<br/>
+					<!-- 17. 关于value属性 -->
+						<form action="xx.php" method="post">
+							<!-- value使用在按钮类型，按钮显示的文本如: button,submit,reset -->
+							<input type="button" value="111" >
+				
+							<!-- value使用在输入类型上,为默认值如: text,password,hidden -->
+							<input type="text" value="233">
+			
+							<!-- value在checkbox,radio,image的值会通过action发送到URL中 -->
+							<!-- 注意,checkbox,radio是必须写入value属性的 -->
+							<input type="checkbox" value="男">
+							<input type="radio" value="女">
+							
+						</form>
+					
+					<br/>
+					<!-- 关于form属性 -->
+						<form action="xx.php" method="post"></form> <!-- action="表单提交目标"，method="提交方式" -->
+					
+	</body>
+</html>

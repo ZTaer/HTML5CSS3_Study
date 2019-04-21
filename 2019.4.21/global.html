@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+	<head>
+		<title>test</title>
+		<meta charset="utf-8">
+		<link type="text/css" rel="stylesheet" href="test.css" >
+	</head>
+	<body>
+		<!-- 全局属性-任何元素都可以使用的属性 -->
+
+			<!-- 1. contentEditable="true/false"变为可编译模式 -->
+				<!--
+					他可以使标签变为直接可以编辑的模式，但是并没有保存功能
+					并且他具有,继承性
+				-->
+				<p contentEditable="true" >
+					啊实打实的
+				</p>
+			
+			<!-- 2. designMode="on/off" 使全页面开启/关闭可编辑模式 -->
+				<!-- 
+					注意: 只能在js中使用
+						  document.designMode="on/off"
+				-->
+				<script type="text/javascript"> document.designMode="off" // 开启可编辑模式 </script>
+				<p> 1111 </p>
+
+			<!-- 3. hidden隐藏标签-->
+				<!--
+					hidden告诉浏览器不进行渲染此标签,在未设定显示时,不占用布局空间
+					可以配合js来显示或者不显示
+				-->
+				<p hidden > 隐藏起来 </p>
+				<p> 正常显示 </p>
+			
+			<!-- 4. spellcheck专门为input的text,textarea类型设定的,拼写语法错误检查 -->
+				<textarea rows="10" cols="10"  spellcheck="true" ></textarea>
+
+			<!-- 5. tabindex获取焦点 -->
+				<!-- 
+					tabindex="顺序数字",在使用tab键逐个切换焦点顺序
+					通常情况下:
+						在HTML5中tabindex可以在任何标签中使用,并使标签为焦点
+						tabindex="-1": tab键将无法锁定,但是可以通过javascript的focus()语句来控制焦点锁定
+				-->
+				<br/>
+				<input type="text" tabindex="1" >
+				<p tabindex="2" >tabindex_test</p>
+
+	</body>
+</html>
