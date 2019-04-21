@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+	<head>
+		<title>test</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+
+		<!-- HTML5中新增元素 -->
+		<!-- 1.建立播放视频/音频流文件 -->	
+		<video src="E:/迅雷下载/西虹市首富.mp4" controls style=" width:1440px; height:500px; background:#000; " >test</video>
+		<br />
+		<audio src="music/GILL.mp3" controls >audio元素</audio>
+		<br />
+
+		<!-- 2.插入多媒体文件,自动播放多媒体文件,视频无法全屏 -->
+		<embed src="E:/迅雷下载/西虹市首富.mp4" />
+
+		<!-- 3.突显高亮文字,mark代替span -->
+		<mark>我卡啊</mark>
+		
+		<br />
+		<!-- 4.显示javascript耗费时间的函数进程 -->
+		<progress>
+			<script type="text/javascript"> var a,b; a=0; b=1; a+b; </script>
+		</progress>
+
+		<br />
+		<!-- 5.规定数值范围 -->
+		<meter><p style="width:200px; height:100px;" ></p></meter>
+		
+		<br />
+		<!-- 6.时间 -->
+		<time></time>
+
+		<br />
+		<!-- 7.ruby弄有发音符的字符串,rt发音 -->
+		<ruby>你<rt>1</rt></ruby>
+		<rp></rp> <!-- 放在ruby里,定义不支持ruby的浏览器所显示的内容 -->
+		
+		<br />
+		<!-- 8.软换行,宽度足够时不换行，宽度不够时进行换行,对中文用处不大 -->
+		<p style="width:50px;" >
+			123213123<wbr>asdasdasdasd
+		</p>
+		
+		<br />
+		<!-- 9.canvas本身没有行为,给javascript提供一片画布，进行绘制图形 -->
+		<canvas id="myCanvas" width="200" height="100px" >1</canvas>
+		
+		<br />
+		<!-- 10.建立单选复选框，目前大多浏览器不支持,暂且不谈 -->
+		<command></command>
+
+		<br />
+		<!-- 11.折叠显示信息 -->
+		<details>
+			<summary>HTML5</summary> <!-- 标题 -->
+			ASDASDASDASDASDSADASDASDASDASDAS ASDASDASDSA ASDASD . <!-- 折叠信息 --> 
+		</details>
+
+		<br />
+		<!-- 12.内容框,下拉选项创建 -->
+		<form>
+			<input list="abc" name="abc">
+			<datalist id="abc" > <!-- 创建下拉选项 -->
+				<option value="1"> <!-- 选项内容 -->
+				<option value="2">
+			</datalist>
+			<input type="submit">
+		</form>
+
+		<br />
+		<!-- 13.HTML5中已经删除 -->
+		<datagrid>
+		　　<ol>
+		　　　　<li> (datagrid row 0) </li>
+		　　　　<li> (datagrid row 1)
+		　　　　　　<ol style="list-style-type:lower-alpha;">
+		　　　　　　　　<li> (datagrid row 1,0) </li>
+		　　　　　　　　<li> (datagrid row 1,1) </li>
+		　　　　　　</ol>
+		　　　　</li>
+		　　　　<li> (datagrid row 2) </li>
+		　　</ol>
+		</datagrid>
+
+		<br />
+		<!-- 14.keygen生成密码,HTML5中已经删除 -->
+		<keygen>
+	
+		<br />
+		<!-- 15.output输出计算结果 -->
+		<form oninput=" x.value = parseInt(a.value) * parseInt(b.value) " > <!-- oninput与output联用,parseInt()转换为整数类型,id.value能索引出目标的value值 -->
+			<input id="a" type="range" value="10" >
+			<input id="b" type="number" value="10" style="width:50px;" > =
+			<output name="x" for="a b"></output> <!-- 输出x值,for属性描述计算关系,用空格隔开 -->
+		</form>
+
+		<br />
+		<!-- 16.source设置多个播放源,可以使用到流媒体播放标签,如: audio,video,embed -->
+		<audio controls>
+			<source src="music/GILL.ogg" type="audio/ogg">
+			<source src="music/GILL.mp3" type="audio/mp3">
+		</audio>
+
+		<br />
+		<!-- 17.已经删除 -->
+		<menu>
+			<li><input type="checkbox">Red</li>
+			<li><input type="checkbox">Blue</li>
+		</menu>
+
+		<br />
+		<!-- 18.dialog弹窗交互,目前只要Chrome和Safari支持 -->
+		<dialog open style=" width:90%; height:70%; " > <!-- open属性表示显示弹窗,默认不显示 -->
+			<div style="width:100px; height:100px; background:#000;" ></div>
+		</dialog>
+		<div style="width:100px; height:100px; background:red;" ></div> <!-- dialog弹窗不影响排序 -->
+
+
+	</body>
+</html>
