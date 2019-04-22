@@ -9,9 +9,10 @@
 <br/> 
 <br/>
 2019.4.21 <br/>
-	1. HTML5新增的input类型
-	2. input属性详细解析
-	3. HTML5全局属性研究
+	1. HTML5新增的input类型 <br/>
+	2. input属性详细解析 <br/>
+	3. HTML5全局属性研究 <br/>
 
-	
+<br/>
+<br/>
 
