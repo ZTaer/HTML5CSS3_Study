@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<title>test</title>
+	<meta charset="utf-8">
+</head>
+	<body onresize="alert('调整页面大小促发')" onpageshow="alert('页面被加载促发')" onBeforeUnload="return'是否离开本页面?'" onHashChange="alert('URL的hash部分发生改变')"  >
+
+		<!-- HTML5新增的事件 -->
+		<!--
+		只能在body中使用
+			1. 调整页面大小
+			   <body onResize="">
+			
+			2. 页面加载出错促发
+			   <body onError="">
+			
+			3. 页面离线时促发
+			   <body onOffline="">
+			
+			4. 页面被加载时促发
+			   <body onPageshow="">
+			
+			5. 离开页面时被促发
+			   通常情况下,此事件,浏览器不允许开发者修改提示内容
+			   跳转离开页面,或者关闭页面时,才促发此事件
+			   <body onBeforeUnload="return'是否离开本页面'" >
+			
+			6. 页面URL哈希部分被改变将被促发提示
+			   <body onHashChange="">
+		-->
+		<a href="#a">11</a>
+		
+		<!-- 任何标签使用 -->
+			<!-- 7. onMouseWheel检测鼠标滑动促发 -->
+			<div style="width:500px; height:900px; background:#000; " onMouseWheel="alert('鼠标滑动测试';)"  ></div>
+
+			<!-- 8. 当滚动条被滑动时促发 -->
+			<div style="width300px; height:900px; background:red;" onScoll="alert('第二个滑动测试';)" ></div>
+		
+		<!-- input,textarea标签使用 -->
+			<!-- 9. onInput改变内容被促发 -->
+			<input type="text" value="233" onInput="alert('被修改')" >
+		
+		<!-- form标签使用 -->
+			<!-- 10. onReset当按下重置按钮被促发 -->
+			<form action="xx.php" method="post" onReset="alert('被重置')" >
+				<input type="tel" >
+				<input type="reset" value="重置" >
+			</form>
+	</body>
+</html>
+	

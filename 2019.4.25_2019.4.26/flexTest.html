@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+	<head>
+		<title>test</title>
+		<meta charset="utf-8">
+	<!--
+		Flex布局研究总结( 弹性布局 ):
+			1. 开启弹性布局 ( display;flex; | display:-webkit-flex; )
+				display:flex;
+				display:-webkit-flex;
+				display:inline-flex;
+
+			2. 控制x/y排序方向 ( flex-direction:; | -webkit-flex-direction:; )
+				flex-direction:row | row-reverse | column | column-reverse;
+
+			3. x对齐 ( justif-content:; | -webkit-justif-content:; )
+				justify-content:flex-start | flex-end | flex-center | space-between | space-around;
+
+			4. y对齐 ( align-items:; | -webkit-align-items:; )
+				align-items:flex-start | flex-end | center | space-between | space-around;
+
+			5. 换行模式 ( flex-wrap:; | -webkit-flex-wrap:; )
+				flex-wrap:nowrap | wrap | wrap-reverse;
+
+			6. 换行排序 ( align-content:; | -webkit-align-content:; )
+				align-content:flex-start | flex-end | center | space-between | space-around;
+
+			7. 自定义排序顺序( order )
+				order:number;
+				-webkit-order:number;
+
+			8. 完美剧中( flex弹性布局下的auto作用 )
+				margin:auto; 
+				核心属性: flex模式下auto会沾满容器
+
+			9. y对齐单独自身调控 ( align-self:; | -webkit-align-self:; )
+				align-self: flex-start | flex-end | center | space-between | space-around ;
+			
+			10. 常用属性 ( initial | inherit )
+				initial: 默认值
+				inherit: 继承父类属性
+
+			11. 等比放大 ( flex-grow:; | -webkit-flex-grow:; )
+				flex-grow: number | initial | inherit ;( 默认为0 )
+
+			12. 等比缩小 ( flex-shrink:; | -webkit-flex-shrink:; )
+				flex-shrink:number;( 默认为1 )
+
+			13. 固定宽度 ( flex-basis:; | -webkit-flex-basis:; )
+				flex-basis: numberPX | inherit ;
+
+			14. 便捷式-控制缩放( flex:; | -webkit-flex:; )
+				flex: flex-grow flex-shrink flex-basis | auto | initial | inherit;
+	-->
+	<style type="text/css" >
+		body{
+			margin:0px;
+			padding:0px;
+		}
+
+		/**
+			0. 行内元素开启弹性布局:
+			.box{
+				display:inline-flex;
+			}
+
+		 **/
+		
+
+		/** 1. 块级元素开启弹性布局 **/
+		.flexTest{
+			display:flex;			/** 开启弹性布局 **/
+			display:-webkit-flex;   /** 开启弹性布局,兼任其它浏览器 **/
+				
+			/**direction:rtl;			使内部元素反方向排序**/
+		
+
+		/** 2. flex-direction属性,控制x/y排序方向 **/
+			flex-direction:row;
+				/**
+					flex-direction:row | row-reverse | column | column-reverse ;
+						row: 默认重左到右
+						row-reverse: 反方向
+						column: 垂直方向排序
+						column-reverse: 反方向
+				 **/
+
+
+		/** 3. justify-content沿主轴线(main-aix,水平轴)水平对齐 **/
+			justify-content:space-around;
+			-webkit-justify-content:space-around;	/** 为兼容性 **/	
+				/**
+					justify-content: flex-start | flex-end | center | space-between | space-around ;
+							flex-start: 默认重左排序
+							flex-end: 重右侧排序
+							center: 剧中排序
+							space-between:平均分布排序,左右二边不留空隙;
+							space-around:平均分布排序,左右二边留出空袭;
+				 **/
+		
+		/** 4.	align-items属性,控制垂直排序方向**/
+				/**
+					align-items: flex-start | flex-end | center | baseline | stretch ;
+						flex-start: 顶部对齐
+						flex-end: 底部对齐
+						center: 上下剧中对齐
+						baseline: 基于第一行文字对齐
+						stretch: 如果高度为auto,则沾满容器高度,相当于height:100%;
+				 **/
+			align-items:baseline;					/** 基于第一行文字对齐 **/
+			-webkit-align-items:baseline;			/** 为兼容性 **/
+
+
+			width:1200px;
+			height:500px;
+			background:pink;
+		}
+
+		.pic{
+			width:100px;
+			height:100px;
+			margin:10px;
+			background:green;
+		}
+
+		
+		.flexTest2{
+			width:1200px;
+			height:500px;
+			background:#000;
+			display:flex;
+			display:-webkit-flex-;
+			
+			/** 5. flex-wrap控制换行模式**/
+				/**
+				  flex-wrap: nowrap | wrap | wrap-reverse ;
+					  nowrap: 不换行,大于容器会溢出
+					  wrap: 自动换行
+					  wrap-reverse: 反转换行,这个挺有意思的
+				**/
+				flex-wrap:wrap;					/** 自动换行 **/
+				-webkit-flex-wrap:wrap;			/** 为兼容性 **/
+
+
+			/**6. align-content控制flex-wrap行为,控制"多行垂直"的排布 **/
+				/**
+					aligin-content:stretch | flex-start | flex-end | space-between | space-around;
+						stretch: 高度设置为auto时,将沾满容器的高度;
+						flex-start: 上方起始位置堆叠
+						flex-end: 下方底部位置开始堆叠
+						center: 高度中间位置开始堆叠
+						space-around: 上下二边有空隙( 空隙大小,为子元素之间高度空隙的一半 )，平均发布
+						space-between: 没有空隙的平均分布
+				 **/	
+				align-content:flex-start;			/** 上方起始开始堆叠 **/
+				-webkit-align-content:flex-start;	/** 为兼容性 **/
+
+					
+		}
+		.pic2{
+			width:300px;
+			height:100px;
+			background:red;
+			margin:10px;
+		}
+		
+		/**7. order设置元素排序顺序,小值在前,大值在后 **/
+			/**
+				默认排序初始值,为0 
+				order也可以设置负数
+			 **/
+			.firstTest{
+				order:-1;							/** 设置排序顺序 **/
+				-webkit-order:-1;					/** 为兼容性 **/
+						}
+
+		/** 8. 一行代码搞定完美剧中,及底层原理解析 **/
+			/**
+				在flex模式下"margin:auto;"直接使元素剧中
+				因为flex状态下,auto会自动沾满容器
+			 **/
+		.preCenter{
+			width:1200px;
+			height:500px;
+			background:pink;
+
+			display:flex;
+			-webkit-display:flex;
+		}
+		.pre{
+			width:500px;
+			height:100px;
+			background:#fff;
+			margin:auto;							/** 核心代码,完美剧中 **/
+		}
+	
+		/**设置自身排序,控制语句将放在子元素中**/
+		
+		.flexTest3{
+			width:1200px;
+			height:500px;
+			background:yellow;
+
+			display:flex;
+			-webkit-display:flex;
+
+			align-items:center;
+			-webkit-align-items:center;
+		}
+		.pic3{
+			width:300px;
+			height:300px;
+			background:red;
+			margin:10px;
+		}
+		/** align-self设置自身垂直排序 **/
+			/**
+				align-self:flex-start | flex-end | center | baseline | stretch;
+					flex-start: y轴顶部
+					flex-end: y轴底部
+					center: y轴中间
+					baseline: y轴方向文字对齐,默认值其实为flex-start
+					stretch: y轴方向沾满容器
+			 **/
+		.selfTest{
+			align-self:flex-start;
+			-webkit-align-self:flex-start;
+		}
+			
+	</style>
+	</head>
+	<body>
+	
+		<div class="flexTest" >
+			<div class="pic" ><p style="margin-top:30px;" >1</p></div>
+			<div class="pic" >2</div>
+			<div class="pic" >3</div>
+			<div class="pic" >4</div>
+		</div>
+		<div class="flexTest2" >
+			<div class="pic2">1</div>
+			<div class="pic2">2</div>
+			<div class="pic2 firstTest">3</div>					  <!-- 多个class简洁写法 -->
+			<div class="pic2">4</div>
+			<input class="pic2" style="border:0px ;" type="text"> <!-- 测试行内元素排序 -->
+		</div>
+
+		<div class="preCenter" >
+			<div class="pre" >111</div>
+		</div>
+
+		<div class="flexTest3" >
+			<div class="pic3 selfTest"></div>
+			<div class="pic3"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<title>TEST</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+				.abc{
+					width:1200px;
+					height:500px;
+					background:pink;
+
+					display:flex;
+					display:-webkit-flex;
+					flex-wrap:nowrap;
+					justify-content:flex-start;
+				}
+
+				.pic{
+					flex-basis:50px;
+					height:300px;
+					background:#000;
+					flex-grow:1; /** 经过证明,flex-grow将填满容器(宽度) **/
+					margin:10px;
+					
+				}
+				.pic2{
+					flex-grow:2;
+				}
+				.pic1{
+					flex-basis:50px;
+				}
+
+		</style>
+	</head>
+	<body>
+		
+		<div class="abc" >
+			<div class="pic pic1">1</div>
+			<div class="pic pic2">2</div>
+			<div class="pic">3</div>
+			<div class="pic">4</div>
+		</div>
+
+	</body>
+</html>

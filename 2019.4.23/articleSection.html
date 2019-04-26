@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+	<head>
+		<title>test</title>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<!--
+			关于article使用
+				1.	完整的文章,有标题,有文章较独立
+				2.	article可以互相嵌套
+				3.	如，博客，论坛帖子，用户评论，较独立完整的文字，有标题有内容
+		-->
+			<article>
+
+				<!-- 标题文章 -->
+				<header>
+					<h1>苹果</h1>
+					<p>
+						<time pubdate datetime="2010/10/09">2010/10/09</time>
+					</p>
+				</header>
+				<p>
+					<b>苹果</b>
+					植物类是锁定，啊实打实的...
+				</p>
+				
+				<!-- 评论区 -->
+				<section> <!-- 分块时使用 -->
+					
+					<h2>评论: </h2>
+					
+					<!-- 评论者 -->
+					<article>
+						<header>
+							<h3>发表者: 007</h3>
+							<p>
+								<time pubdate datetime="2010-10-10T19:10-08:00">
+									1小时前
+								</time>
+							</p>
+						</header>
+						<p>
+							我喜欢吃啊实打实的啊是大
+						</p>
+					</article>
+					
+					<article>
+						<header>
+							<h3>发表者: 008</h3>
+							<p>
+								<time pubdate datetime="2010-10-10T19:15-08:00">
+									1小时前
+								</time>
+							</p>
+						</header>
+						<p>
+							苹果? 我不喜欢
+						</p>
+					</article>
+
+				</section>
+			</article>
+		
+		<br/>
+		<p>---------------------------</p>
+		<!--
+			关于section的使用
+			1.	section与article相似,但是section主要用于分段,并且必须要有标题+内容,而article要求独立性,有标题和内容较独立完整.
+			2.	section强调分段或者分块
+			3.	article强调独立和完整性
+		-->
+		<article>
+			<h1>苹果</h1>
+			<p>
+				<b>苹果</b>
+				啊实打实的啊实打实大苏打....
+			</p>
+			<section>
+				<h2>黄苹果</h2>
+				按时大苏打萨达萨达萨达萨达
+			</section>
+			<section>
+				<h2>黑苹果</h2>
+				按时大苏打实打实大苏打萨达萨达萨达萨达
+			</section>
+		</article>
+
+	</body>
+</html>

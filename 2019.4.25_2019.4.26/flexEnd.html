@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+	<head>
+		<title>test</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			.flexTest{
+				width:1200px;
+				height:500px;
+				display:flex;
+				display:-webkit-flex;
+				background:pink;
+			}
+			.items{
+				flex-basis:500px;
+				height:200px;
+				background:#000;
+				margin:10px;
+			}
+			/** 常用的属性值解析 **/	
+				/**
+					initial( 默认值的意思 )
+					inherit( 继承指定父类的属性,
+						如父元素文字大小为font-size:15px;
+						子元素可以直接font-size:inherit; 
+						)
+				 **/
+
+			/** flex-grow: 等比放大,值至占满容器
+				number: 等比放大
+				initial: 默认值( 默认值为0 )
+				inherit: 继承父类属性设置
+				.it1{
+					flex-grow:1;
+				}			
+				.it2{
+					flex-grow:2;
+				}
+				.it3{
+					flex-grow:1;
+				}
+				.it4{
+					flex-grow:1;
+				}
+			**/
+			
+		
+			/**flex-basis设置固定值宽度大小**/
+				/**
+				  flex-basis:固定宽度值,但是依然受flex-grow/flex-shrink影响;
+				  分类指定选择: div:nth-of-type(2){}选择第二个DIV标签
+					.flexTest div:nth-of-type(2){
+						flex-basis:300px;
+					}
+				**/
+			
+			/** flex-shrink空间不足时进行项目缩小 **/
+					/**
+						flex-shrink默认值为1
+						当容器变小时,子元素也会跟着缩小
+						子元素,flex-shrink设置的值越大则缩小值越大( 指宽度 )
+					 **/
+			.it1{
+				flex-shrink:1;
+			}
+			.it2{
+				flex-shrink:1;
+			}
+			.it3{
+				flex-shrink:3;
+			}
+			.it4{
+				flex-shrink:3;
+			}
+		
+		/** flex便捷式控制缩放问题 **/
+		/** 
+			flex: flex-grow flex-shrink flex-basis | auto | initial | inherit 
+			flex:auto; == flex:1 1 auto;
+			flex:none: == flex:0 0 auto;
+			flex:initial; == flex:0 1 auto; ( initial默认值的意思 )
+			flex:inherit;( 非常好用 )
+		**/
+		</style>
+	</head>
+	<body>
+		<div class="flexTest">
+			<div class="items it1">1</div>
+			<div class="items it2">2</div>
+			<div class="items it3">3</div>
+			<div class="items it4">4</div>
+		</div>
+	</body>
+</html>
