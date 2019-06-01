@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+	<head>
+	<style type="text/css">
+		/** transition动画 **/
+			/**
+				transition有4个属性
+				transition: 选择属性 动画时间 动画方式 延迟时间 ;
+				transition: property duration timing-function delay ;
+				当然可以单独控制:
+					transition-property:xxx;
+					transition-duration:xxx;
+					transition-timing-function:xxx;
+					transition-delay:xxx;
+				关于变换方式timing-function属性:
+					linear: 以均速进行变化
+					cubic-bezier(x1,y1,x2,y2) 
+				注意兼容性(兼容苹果浏览器):
+					-webkit-transition:;
+
+			 **/
+			/** transition-timing-function:cubic-bezier(x1,y1,x2,y2);三次贝塞尔曲线 **/
+					/**
+						cubic-bezier(x1,y1,x2,y2)
+						此曲线有二个坐标点,来控制曲线,类似与钢笔控制的曲线
+						x: 0<= x <=1
+						y: 不易过大
+					 **/
+		
+		/** 实列1: 当鼠标放到标签时变换背景颜色 **/
+		.bgcolor{
+			background:#ffff00;
+			transition:background 1s linear; /**  **/
+			width:280px;
+			height:50px;
+		}
+		.bgcolor:hover{
+			background:#00ffff;
+		}
+
+		/** 实列2: 多属性变换 **/
+			/**
+				用逗号隔开,即可进行多属性变换
+				transform:rotate(0deg);  // 旋转效果
+			 **/
+		.sizetest{
+			width:100px;
+			height:100px;
+			background:pink;
+			transform:rotate(0deg);
+
+			transition:background 0.5s linear,width 0.5s linear,height 1s linear,transform 1s linear;
+		}
+		
+		.sizetest:hover{
+			background:yellow;
+			width:200px;
+			height:200px;
+			transform:rotate(720deg);
+		}
+
+	</style>
+	<body>
+		<div class="bgcolor" >test</div>
+		<div class="sizetest"></div>
+	</body>
+</html>

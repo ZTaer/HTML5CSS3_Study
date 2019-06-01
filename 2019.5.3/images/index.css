@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/*
+	非编译注释
+ */
+/*!
+	强制注释
+ */
+body {
+  border: 1px solid #555;
+}
+
+div {
+  border: 1px solid #555;
+}
+div p {
+  color: green;
+}
+div p a {
+  width: 100px;
+  height: 100px;
+  display: block;
+  background: red;
+}
+div p a:hover {
+  background: #555;
+}
+
+p {
+  border: solid;
+  border-width: 2px;
+  border-color: red;
+}
+
+.test, .test2 {
+  background: yellow;
+}
+
+.test3 {
+  width: 300px;
+  height: 50px;
+  background: pink;
+}
+
+.test3 {
+  display: flex;
+  display: -webkit-flex;
+}
+
+.test4 {
+  display: flex;
+  display: -webkit-flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  flex-wrap: nowrap;
+}
+
+.test4 {
+  background: green;
+  transition: background 1s linear;
+}
+.test4:hover {
+  background: #004d00;
+}
+
+/*********** scss_oo7GoldModl v1.0 目录 *****/
+/*
+	0. 防出错类
+	1.	flex函数类
+	2. 颜色类
+	3. 字体类
+	4. 布局类
+	
+*/
+* {
+  margin: 0px;
+  paddding: 0px;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.test5 {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+  align-content: space-between;
+  -webkit-align-content: space-between;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  height: 500px;
+  width: 100%;
+}
+.test5 div {
+  width: 100%;
+  height: 100px;
+  background: green;
+}
+.test5 p {
+  width: 100%;
+  height: 100px;
+  background: pink;
+}
+
+.test6 {
+  background: green;
+}
+
+.test6 {
+  height: 100px;
+}
+
+.test6 {
+  border: 5 solid red;
+}
+
+.test6 {
+  border: 4 solid red;
+}
+
+.test6 {
+  border: 3 solid red;
+}
+
+.test6 {
+  border: 2 solid red;
+}
+
+.test6 {
+  border: 1 solid red;
+}
+
+.test2 {
+  background: url("test2.jpg");
+}
+
+.test3 {
+  background: url("test3.jpg");
+}
+
+.test4 {
+  background: url("test4.jpg");
+}
+
+.test5 {
+  background: url("test5.jpg");
+}
+
+.test4 {
+  background: pink;
+}
+
+.test5 {
+  background: pink;
+}
+
+/*# sourceMappingURL=index.css.map */

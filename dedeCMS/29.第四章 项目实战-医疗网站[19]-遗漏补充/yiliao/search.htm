@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="{dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmspath/}/templets/yiliao/images/public.css" />
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmspath/}/templets/yiliao/images/public_list_index_article.css" />
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmspath/}/templets/yiliao/images/list.css" />
+</head>
+<body>
+{dede:include filename='yiliao/head.htm'/}
+<div id="mainBody" class="auto">
+	<div class="left">
+		<div class="position">
+			搜索 <strong class="fc_03c">{dede:global name='keyword' function='RemoveXSS(@me)'/}</strong> 的结果 
+		</div>
+		<div class="list">
+			<ul>
+				{dede:list perpage='20'}
+				<li>
+					<h2><a href="[field:arcurl/]">[field:title/]</a></h2>
+					<p class="p0">[field:description/]...<a href="[field:arcurl/]">[详情]</a></p>
+					<p class="p1">发布时间：[field:stime/]</p>
+				</li>
+				{/dede:list}
+			</ul>
+		</div>
+		<div class="page">
+			<ul>
+				{dede:pagelist listsize='4'/}
+			</ul>
+		</div>
+	</div>
+	<div class="right" style="height:1000px;">
+		
+	</div>
+	<div style="clear:both;"></div>
+</div>
+{dede:include filename='yiliao/footer.htm'/}
+</body>
+</html>

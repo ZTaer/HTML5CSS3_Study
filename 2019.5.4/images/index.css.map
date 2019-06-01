@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AACA,4CAA4C;AAC5C;;;;;;;EAOE;AAGF,CAAC;EACA,MAAM,EAAC,GAAG;EACV,QAAQ,EAAC,GAAG;;AAEb,MAAK;EACJ,UAAU,EAAC,IAAI;;AAGhB,CAAC;EACA,eAAe,EAAC,IAAI;;ACnBrB,GAAG;ED0ED,KAAK,EAAC,KAAyB;EAC/B,MAAM,EAAC,0BAAuD;ECzE/D,UAAU,EAAC,IAAI",
+"sources": ["../../../OO7_GoldModl/WebClass/scss/scss_oo7GoldModl.scss","index.scss"],
+"names": [],
+"file": "index.css"
+}

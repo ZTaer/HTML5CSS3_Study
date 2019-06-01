@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+
+	<head>
+	<style type="text/css">
+		@keyframes mycolor{
+			0%{
+				background:red;
+			}
+			40%{
+				background:darkblue;
+			}
+			70%{
+				background:yellow;
+			}
+			100%{
+				background:red;
+			}
+		}
+
+		.ani_bgcolor{
+			width:280px;
+			height:80px;
+
+			background:red;
+		
+			/** 页面打开时播放 **/
+			animation-name:mycolor;
+			animation-duration:1s;
+			animation-timing-function:linear;
+
+		}
+		
+		/** 鼠标停留时播放 **/
+		.ani_bgcolor:hover{
+			animation-name:mycolor;
+			animation-duration:2s;
+			animation-timing-function:linear;
+
+			animation-delay:1s; /** 延迟1秒 **/
+			animation-iteration-count:infinite; /** 循环次数，infinite:无限, number:执行次数 **/
+			animation-direction:alternate; /** 动画执行方向 **/
+			/**
+				animation-direction:normal | alternate | reverse | alternate-reverse;
+					normal: 正常
+					alternate: 交替更改动画方向
+					reverse: 反转播放
+					alternate-reverse: 交替反转播放
+			 **/
+		}
+
+	</style>
+	<body>
+		<div class="ani_bgcolor" ></div>
+	</body>
+</html>

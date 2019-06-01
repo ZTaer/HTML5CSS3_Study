@@ -1,0 +1,176 @@
+
+#mainBody .left .top {
+	margin-top: 25px;
+	margin-left:15px;
+	margin-bottom:20px;
+	width: 678px;
+	height:258px;
+	overflow:hidden;
+}
+#mainBody .left .top .topLeft {
+	width:184px;
+	float:left;
+}
+#mainBody .left .top .topLeft .imgTitle {
+	height:45px;
+}
+
+#mainBody .left .top .topLeft .typeList ul li {
+	height:32px;
+	background:url(arrow_r.gif) top right no-repeat;
+	border-bottom:1px solid #E3E3E3;
+}
+#mainBody .left .top .topLeft .typeList ul li a {
+	line-height:32px;
+	color:#333333;
+	display:block;
+	text-indent:10px;
+}
+#mainBody .left .top .topLeft .typeList ul li a:hover {
+	text-decoration:none;
+	color:#fff;
+	background:url(page_Bk_r2_c2.png);
+}
+
+#mainBody .left .top .topRight {
+	width:480px;
+	float:right;
+	
+}
+#mainBody .left .top .topRight .topRight00 img.img {
+	display:block;
+	width:183px;
+	height:108px;
+	float:left;
+}
+#mainBody .left .top .topRight .topRight00 {
+	height:130px;
+	border-bottom:1px dashed #CCCCCC;
+}
+
+#mainBody .left .top .topRight .topRight00 dl.dl {
+	width:280px;
+	height:110px;
+	float:right;
+}
+#mainBody .left .top .topRight .topRight00 dl.dl dt {
+	color:#666666;
+	font-size:20px;
+	font-weight:bold;
+	text-align:center;
+}
+#mainBody .left .top .topRight .topRight00 dl.dl dd {
+	line-height:22px;
+	color:#333;
+	margin:10px 0 0 0;
+}
+#mainBody .left .top .topRight .topRight00 dl.dl dd a {
+	color:#1773B1;
+}
+#mainBody .left .top .topRight .topRight01 {
+	margin-top:10px;
+}
+#mainBody .left .top .topRight .topRight01 ul li {
+	width:215px;
+	float:left;
+	padding:0 10px 0 12px;
+	background:url(libg.jpg) 0px center no-repeat;
+	margin-top:7px;
+}
+#mainBody .left .top .topRight .topRight01 ul li a {
+	color:#666666;
+}
+#mainBody .left .typeArcList {
+	
+}
+#mainBody .left .typeArcList .arcList {
+	width:320px;
+	float:left;
+	margin:0 10px 30px 15px;
+}
+#mainBody .left .typeArcList .arcList h2 {
+	border-bottom:2px solid #1773B2;
+	height:32px;
+}
+#mainBody .left .typeArcList .arcList h2 a.typeName {
+	color:#5C5C5C;
+	font-size:20px;
+	float:left;
+}
+#mainBody .left .typeArcList .arcList h2 a.more {
+	color:#5C5C5C;
+	font-size:12px;
+	font-weight:normal;
+	float:right;
+	padding:10px 0 0 0;
+}
+#mainBody .left .typeArcList .arcList .typeTop {
+	margin:10px 0 0 0;
+}
+#mainBody .left .typeArcList .arcList .typeTop img {
+	width:121px;
+	height:98px;
+	float:left;
+	display:block;
+}
+#mainBody .left .typeArcList .arcList .typeTop dl {
+	float:right;
+	width:180px;	
+}
+#mainBody .left .typeArcList .arcList .typeTop dl dt {
+	margin:3px 0 10px 0;
+}
+#mainBody .left .typeArcList .arcList .typeTop dl dt a {
+	color:#656565;
+	font-size:14px;
+	font-weight:bold;
+}
+#mainBody .left .typeArcList .arcList .typeTop dl dd {
+	color:#666;
+	line-height:23px;
+}
+#mainBody .left .typeArcList .arcList .typeTop dl dd a {
+	color:#1773B2;
+}
+#mainBody .left .typeArcList .arcList ul {
+	margin-top:15px;
+}
+#mainBody .left .typeArcList .arcList ul li {
+	line-height:23px;
+	height:23px;
+	background:url(dot.gif) 0px center no-repeat;
+	text-indent:10px;
+}
+#mainBody .left .typeArcList .arcList ul li a {
+	color:#666;
+	float:left;
+}
+#mainBody .left .typeArcList .arcList ul li span {
+	color:#999;
+	float:right;
+}
+#mainBody .left .pk {
+	width:670px;
+	margin:0 auto;
+}
+#mainBody .left .pk h2 {
+	height:40px;
+	line-height:40px;
+	font-size: 18px;
+	border-bottom:3px solid #1773B2;
+	background:url(cas_03.gif) 0px center no-repeat;
+	text-indent:20px;
+}
+#mainBody .left .pk h2 a {
+	color:#553C6A;
+}
+#mainBody .left .pk ul li {
+	width:154px;
+	float:left;
+	text-align:center;
+	margin:20px 5px 0 8px;
+}
+#mainBody .left .pk ul li p {
+	color:#333;
+	line-height:23px;
+}

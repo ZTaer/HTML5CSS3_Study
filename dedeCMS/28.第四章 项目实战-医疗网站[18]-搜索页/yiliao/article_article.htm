@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="{dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmspath/}/templets/yiliao/images/public.css" />
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmspath/}/templets/yiliao/images/public_list_index_article.css" />
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmspath/}/templets/yiliao/images/article_article.css" />
+</head>
+<body>
+{dede:include filename='yiliao/head.htm'/}
+<div id="mainBody" class="auto">
+	<div class="left">
+		<div class="position">
+			{dede:field name='position'/}
+		</div>
+		<div class="details">
+			<h1>{dede:field.title/}</h1>
+			<div class="info">
+				<span>&nbsp;发布：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span>
+				<span>来源：{dede:field.source/}</span>
+				<span>作者：{dede:field.writer/}</span>
+				<span></span>
+			</div>
+			<div class="div0">
+				<ul>
+					{dede:arclist flag='c' titlelen='30' limit='0,9'}
+					<li><a href="[field:arcurl/]"  title="[field:fulltitle/]">[field:title/]</a></li>
+					{/dede:arclist}
+				</ul>
+			</div>
+			<div class="div1">
+				{dede:field.body/}
+			</div>
+			<a class="ask" href="#"><img src="{dede:global.cfg_cmspath/}/templets/yiliao/images/neir_03.jpg" /></a>
+			<div class="pre_next"></div>
+			<div class="typeList">
+				<div class="divWrap"><h2>相关文章</h2></div>
+				<ul>
+					{dede:arclist titlelen='30' orderby='rand'  limit='0,8'}
+					<li><a href="[field:arcurl/]"  title="[field:fulltitle/]">[field:title/]</a></li>
+					{/dede:arclist}
+				</ul>
+				<div style="clear:both;"></div>
+			</div>
+			<div class="anli">
+				案例对比
+				<ul>
+				{dede:arclist titlelen='30' flag='a' limit='0,2'}
+				<li>
+					<a href="[field:arcurl/]"  title="[field:fulltitle/]"><img src="[field:litpic/]" /></a>
+					<p>[field:title/]</p>
+				</li>
+				{/dede:arclist}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="right" style="height:1000px;">
+		
+	</div>
+	<div style="clear:both;"></div>
+</div>
+{dede:include filename='yiliao/footer.htm'/}
+</body>
+</html>

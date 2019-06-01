@@ -1,0 +1,102 @@
+#mainBody .left .listTop {
+	width:650px;
+	margin:20px auto 10px auto;
+}
+#mainBody .left .listTop .leftImg {
+	width:260px;
+	height:214px;
+	float:left;
+}
+#mainBody .left .listTop .listTopArc {
+	float:right;
+	width:360px;
+}
+#mainBody .left .listTop .listTopArc dl dt {
+	color:#1773B1;
+	font-size:14px;
+	font-weight:bold;
+	text-align:center;
+	margin:15px auto;
+}
+#mainBody .left .listTop .listTopArc dl dd {
+	color:#666;
+	line-height:23px;
+}
+#mainBody .left .listTop .listTopArc dl dd a {
+	color:#1773B1;
+}
+#mainBody .left .listTop .listTopArc ul {
+	padding:15px 0 0 0;
+	margin:5px 0 0 0;
+	border-top:1px dashed #D9D9D9;
+}
+#mainBody .left .listTop .listTopArc ul li {
+	color:#1773B1;
+	line-height:24px;
+	font-size:14px;
+	background:url(dot.gif) 0px center no-repeat;
+	text-indent:12px;
+}
+#mainBody .left .listTop .listTopArc ul li a {
+	color:#1773B1;
+}
+
+#mainBody .left .list {
+	width:650px;
+	margin:0px auto;
+}
+#mainBody .left .list ul li {
+	border-bottom:1px dashed #D9D9D9;
+	padding-bottom:15px;
+}
+#mainBody .left .list ul li h2 {
+	font-size:14px;
+	background:url(list_13.jpg) 0px center no-repeat;
+	text-indent:25px;
+	margin:18px 0 15px 0;
+}
+#mainBody .left .list ul li h2 a {
+	color:#1773B1;
+}
+#mainBody .left .list ul li p.p0 {
+	color:#666666;
+	line-height:21px;
+}
+#mainBody .left .list ul li p.p0 a {
+	color:#1773B1;
+}
+#mainBody .left .list ul li p.p1 {
+	color:#A2A2A2;
+}
+#mainBody .left .page {
+	margin:20px 0 0 40px;
+}
+#mainBody .left .page ul li {
+	float:left;
+	color:#1773b2;
+	font-family:Tahoma;
+	font-size:14px;
+	margin:0 10px 0 0;
+}
+#mainBody .left .page ul li span {
+	display:block;
+	padding:2px 4px;
+}
+#mainBody .left .page ul li a {
+	color:#1773b2;
+	font-family:Tahoma;
+	font-size:14px;
+	display:block;
+	padding:2px 4px;
+	font-weight:bold;
+}
+#mainBody .left .page ul li.thisclass a {
+	background-color:#1672b1;
+    color: #fff;
+    font-weight:bold;
+    padding:2px 4px;
+}
+#mainBody .left .page ul li a:hover {
+	text-decoration:none;
+	color:#690;
+}

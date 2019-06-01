@@ -1,0 +1,6 @@
+@import "E:/Study/OO7_GoldModl/WebClass/scss/scss_oo7GoldModl.scss";
+
+div{
+	@include calcImg(100);
+	background:pink;
+}

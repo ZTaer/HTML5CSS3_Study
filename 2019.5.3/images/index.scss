@@ -1,0 +1,171 @@
+// 0. 3种注释方式
+/*
+	非编译注释
+ */
+
+/*!
+	强制注释
+ */
+
+// 1. sass变量定义
+
+$sss:#555; // 定义变量
+$border:1px solid $sss; // 多个变量可以嵌套使用
+
+body{
+	border:$border;
+}
+
+// 2. sass 选择器嵌套
+div{
+	border:$border;
+	p{
+		color:green;
+		a{
+			width:100px;
+			height:100px;
+			display:block;
+			background:red;
+			&:hover{ // 使标签拥有hover效果
+				background:$sss;
+			}
+		}
+	}
+}
+
+// 3. sass 属性嵌套
+p{
+	border: solid {
+		width:2px;
+		color:red;
+	}
+}
+
+// 4. sass 继承
+
+// 注意1: 确定继承目标( 注意一定要在继承前确让sass中有写入目标类名称 )
+// 注意2: 继承会使目标属性被继承，但是子元素属性也会被继承
+.test{
+	background:yellow;
+}
+
+
+.test2{
+	@extend .test; // 继承调用@extend .test属性,以及.test下的子元素属性
+}
+
+// 5. 计算功能
+$a:100px; // ":" 代替了赋值号"="
+.test3{
+	width:$a*3;
+	height:$a/2;
+	background:pink;
+}
+
+// 6. mixin类似于python函数调用
+//第一种函数方式
+@mixin display-flex{ // @mixin + 函数名称: 创建函数 
+	display:flex;
+	display:-webkit-flex;
+}
+
+.test3{
+	@include display-flex; // @include 调用函数
+}
+//第二种函数方式
+
+@mixin xy_line( $x,$y,$wrap:nowrap ){ // 可以传输参数,也可以使用参数默认值
+	justify-content:$x;
+	-webkit-justify-content:$x;
+
+	align-items:$y;
+	-webkit-align-items:$y;
+
+	flex-wrap:$wrap;
+}
+
+.test4{
+	@include display_flex;
+	@include xy_line( center,center ); // 调用函数
+}
+
+// 7. 颜色函数
+	// lighten( 颜色.10% ) 颜色变亮函数
+	// darken( 颜色,10% ) 颜色变深函数
+.test4{
+	background:green;
+	transition:background 1s linear;
+	&:hover{
+		// background:lighten(green,10%); // 颜色变亮函数
+		background:darken(green,10%); // 颜色变深函数
+	}
+}
+
+
+// 8. 插入文件
+//插入后按照正常函数直接调用即可,会自动编译到一个css文件中
+@import "E:/Study/OO7_GoldModl/WebClass/scss/scss_oo7GoldModl.scss";
+.test5{
+	@include display-flex;
+	@include xy_content( center,center,space-between );
+	height:500px;
+	width:100%;
+	div{
+		width:100%;
+		height:100px;
+		background:green;
+	}
+	p{
+		width:100%;
+		height:100px;
+		background:pink;
+	}
+}
+
+// 9. 高级用法
+	// a). @if @else
+	// b). @while
+	// c). @for
+	// d). @each
+	// 注意：字符串于变量结合方式 
+		// $s:1; test#{$s}.jpg; == test1/jpg
+
+// a). @if @else用法
+.test6{
+
+	@if 1<2{
+		background:green;
+	}
+	@else{
+		background:red;
+	}
+}
+// b). @while 用法
+$i:5;				// ":"代替了"="赋值号
+.test6{
+	height:100px;
+}
+@while $i>0 {
+	.test6{
+		border:$i solid red;
+	}
+	$i: $i - 1 ;	// 各数字之间加减时必须要有空格
+
+}
+
+// c). @for用法
+@for $s from 2 to 6{
+	.test#{$s}{
+		background:url("test#{$s}.jpg");
+	}
+}
+
+// d). @each用法
+@each $t in test4, test5{ // 类似于for不过更加自主化
+	.#{$t}{
+		background:pink;
+	}
+}
+
+
+

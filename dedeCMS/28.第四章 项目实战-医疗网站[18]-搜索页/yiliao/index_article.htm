@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="{dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmspath/}/templets/yiliao/images/public.css" />
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmspath/}/templets/yiliao/images/public_list_index_article.css" />
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_cmspath/}/templets/yiliao/images/index_article.css" />
+</head>
+<body>
+{dede:include filename='yiliao/head.htm'/}
+<div id="mainBody" class="auto">
+	<div class="left">
+		<div class="position">
+			{dede:field name='position'/}
+		</div>
+		<div class="top">
+			<div class="topLeft">
+				<div class="imgTitle">{dede:field.typename/}</div><!--调用出栏目名称-->
+				<div class="typeList">
+					<ul>
+						{dede:channel type='son' row='6'}
+						<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+						{/dede:channel}
+					</ul>
+				</div>
+			</div>
+			<div class="topRight">
+				<div class="topRight00">
+					{dede:arclist flag='h' titlelen='30' infolen='130' limit='0,1'}
+					<img class="img" src="[field:litpic/]" />
+					<dl class="dl">
+						<dt>[field:title/]</dt>
+						<dd>[field:infos/]...<a href="[field:arcurl/]">[详细]</a></dd>
+					</dl>
+					{/dede:arclist}
+				</div>
+				<div class="topRight01">
+					<ul>
+						{dede:arclist titlelen='30' limit='1,8'}
+						<li><a href="[field:arcurl/]" title="[field:fulltitle/]" target="_blank">[field:title/]</a></li>
+						{/dede:arclist}
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="typeArcList">
+			{dede:channelartlist}
+			<div class="arcList">
+				<h2><a class="typeName" href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a><a class="more" href="{dede:field name='typeurl'/}">+MORE</a></h2>
+				<div class="typeTop">
+					{dede:arclist titlelen='42' infolen='90' limit='0,1'}
+					<img src="[field:litpic /]" />
+					<dl>
+						<dt><a href="[field:arcurl /]" title="[field:fulltitle /]">[field:title /]</a></dt>
+						<dd>[field:infos/]...<a href="[field:arcurl /]">[详细]</a></dd>
+					</dl>
+					{/dede:arclist}
+					<div style="clear:both;"></div>
+				</div>
+				<ul>
+					{dede:arclist titlelen='42' limit='1,4'}
+					<li>
+						<a href="[field:arcurl /]">[field:title /]</a>
+						<span>[field:stime /]</span>
+					</li>
+					{/dede:arclist}
+				</ul>
+			</div>
+			{/dede:channelartlist}
+			<div style="clear:both;"></div>
+		</div>
+		<div class="pk">
+			<h2><a href="#">案例对比</a></h2>
+			{dede:field.content/}
+		</div>
+	</div>
+	<div class="right" style="height:1000px;">
+		
+	</div>
+	<div style="clear:both;"></div>
+</div>
+{dede:include filename='yiliao/footer.htm'/}
+</body>
+</html>
