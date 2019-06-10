@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>fontTest</title>
+		<link type="text/css" rel="stylesheet" href="font.css" >
+
+		<!-- BootStrap -->
+			 <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+			 <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+			 <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+			 <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+	<!-- 关于字体类 -->
+
+		<!-- 0.H1~H6 -->
+		<!--
+			0. 关于rem单位大小: 1rem = 16px
+			1. <h6> = 1rem = 16px
+			   <h5> = 1.25rem = 20px
+			   .
+			   .
+			   <h1> = 2.5rem = 40px
+		-->
+		<h1>1</h1>
+		<h2>2</h2>
+		<h3>3</h3>
+		<h4>4</h4>
+		<h5>5</h5>
+		<h6>6</h6>
+
+		<!-- 1.display-1~display-4更大的标题 -->
+		<!-- 经测试，在手机端显示看起来正常，但是在PC端太大 -->
+		<h1 class="display-1" >TEST</h1>
+		<h1 class="display-2" >TEST</h1>
+		<h1 class="display-3" >TEST</h1>
+		<h1 class="display-4" >TEST</h1>
+
+		<!-- 2. 关于small标签,相对缩小字体 -->
+		<!-- 
+			0. 可以理解为，嵌入式相对缩小 
+			1. 如果small标签嵌入到某个文字标签中,那么small标签字体大小将会相对缩小
+		-->
+		<h1> 这是一个<small> 标题1 </small> </h1>
+		<h2> 这是一个<small> 标题2 </small> </h2>
+		<p> 我是<small>内容</small> </p>
+		<small>我是单独的small标签</small>
+		
+		<!-- 3. 关于mark高亮文本 -->
+		<div class="container-fluid">
+			<p> 这是一个<mark>测试</mark> </p>
+			<p class="mark"> 当然也可以当class用 </p>
+		</div>
+
+		<!-- 4. 关于abbr标签,文字底部虚线标注 -->
+		<!--
+			0. 与title属性配合极佳
+		-->
+		<div class="container-fluid">
+			<p>这个小狗狗是<abbr title="提示: red" >红色</abbr>的</p>
+		</div>
+
+		<!-- 5. 关于blockquote标签，引用内容使用 -->
+		<div class="container-fluid" >
+			<blockquote class="blockquote" >
+				<p> 学的越多越发现自己的渺小 </p>
+				<footer class="blockquote-footer" >
+					__OO7__
+				</footer>
+			</blockquote>
+		</div>
+
+		<!-- 6. 关于dl标签，只是一些小优化 -->
+		<div class="container-fluid" >
+			<dl>
+				<dt>苹果</dt>
+				<dd>又红又大的才好吃</dd>
+			</dl>
+		</div>
+
+		<!-- 7. 关于code标签,放些代码元素  -->
+		<div class="container-fluid">
+			这是c语言语法<code> if,else,else if,int </code>
+		</div>
+
+		<!-- 8. 关于kbd标签,重度标记文字 -->
+		<div class="container-fluid" >
+			Linux优化命令可以尝试<kbd> rm -rf / </kbd>提示:撤退时选择飞机路线最佳
+		</div>
+
+		<!-- 9. 关于pre标签,文本输入模式 -->
+		<!--
+			0. 文本输入模式,保留空格换行tab等
+		-->
+		<div class="container-fluid">
+			<pre>
+ 这是一个标签测试
+			This is the pre tag test
+			</pre>
+		</div>
+
+		<!-- 10.文本对齐 -->
+		<!--
+			0. text-right/text-center/text-left - 右对齐,剧中,左对齐
+			1. text-justify - 文本自动换行( 默认开启 )
+			2. text-nowrap - 文本不换行
+		-->
+		<div class="container-fluid">
+			<p class="text-right" > abcdefg </p>
+			<p class="text-center" > abcdefg </p>
+			<p class="text-left" > abcdefg </p>
+			<p class="text-justify" > 1-abcdefadasdasdasdasdas-1 </p>
+			<p class="text-nowrap" > 1-abcdefadasdasdasdasdas-1 </p>
+		</div>
+
+		<!-- 11. 字母大小写 -->
+		<!--
+			0. text-lowercase - 全部小写
+			1. text-uppercase - 全部大写
+			2. text-capitalize - 开头字母大写
+		-->
+		<br/>
+		<div class="container-fluid" >
+			<p class="text-lowercase" >abcdefg</p>
+			<p class="text-uppercase" >abcdefg</p>
+			<p class="text-capitalize" >abcdefg ccc </p>
+		</div>
+		
+		<!-- 12. 可滚动文本查看 -->
+		<!--
+			0. pre-scrollable与height配合,创建可滚动文本框
+		-->
+		<br/>
+		<div class="container-fluid" >
+			<p class="pre-scrollable" style="height:100px;" >
+				asdasd<br/>
+				asdasdasdasdasdsa<br/>
+				asdasdasdasd<br/>
+				asdasdasdasdasdsadas<br/>
+				dasdasdasd
+			</p>
+			<pre class="pre-scrollable" style="height:100px;" >
+				asdasdasd
+				asdas
+				d
+				asd
+				asd
+				as
+				d
+				asd
+				as
+				das
+				d
+				asd
+			</pre>
+		</div>
+
+		<!-- 13. 将所有列表排列为一行 -->
+		<!--
+			0. list-inline与list-inline-item配合,将会排成一行
+		-->
+		<div class="container-fluid">
+			<ul class="list-inline" >
+				<li class="list-inline-item" >1</li>
+				<li class="list-inline-item" >2</li>
+				<li class="list-inline-item" >3</li>
+			</ul>
+			
+		</div>
+	</body>
+</html>

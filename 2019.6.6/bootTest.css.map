@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,KAAK;EACJ,UAAU,EAAC,IAAI;EACf,MAAM,EAAC,IAAI",
+"sources": ["bootTest.scss"],
+"names": [],
+"file": "bootTest.css"
+}

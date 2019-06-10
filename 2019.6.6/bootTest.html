@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+	<head>
+		<meat charset="utf-8">
+		<title>test</title>
+		<link type="text/css" rel="stylesheet" href="bootTest.css"   >
+
+		<!-- 0. BootStrap,CDN加速引用, 注意排序方式 -->
+			<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+			<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+			<!-- popper.min.js 用于弹窗、提示、下拉菜单 -->
+			<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+			<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+			<!-- 新 Bootstrap4 核心 CSS 文件 -->
+			<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		
+		<!-- 1. 更好的适应移动设备 -->
+			<!--
+				0. width = device-width: 宽度为设备屏幕宽度
+				1. initial-scale = 1: 原始缩放比例
+				2. shrink-to-fit = no: 自适应手机屏幕宽度
+			-->
+		<meta name="vieport" content=" width=deice-width, initial-scale=1, shrink-to-fit=no " >
+
+	</head>
+	<body>
+		<!-- 2. 容器 -->
+			<!-- a) 剧中自适应容器 -->
+			<div class="container  onec" >
+				
+			</div>
+			<!-- b) 类似于100%宽度的容器 -->
+			<div class="container-fluid onec" ></div>
+		
+		<br/>
+		<!-- Bootstrap 4 网格的基本结构 -->
+			<!--
+				0. 控制响应式网格容器变化col-*-*:
+					a) col- ( <540px，手机 )
+					b) col-sm-* ( >=540px,平板 )
+					c) col-md-* ( >=720px,小显示器 )
+					d) col-lg-* ( >=992px,普通显示器 )
+					e) col-xl-* ( >=1200px,大显示器 )
+				1. 网格布局最大为12，所以*不能大于12
+					可以理解容器被分12部分,用*来控制占用格子数
+					如果设定数值不够12则空余代替。
+			-->
+		<!-- 3. 等宽列 -->
+			<!-- 会创建3个相等的容器 -->
+			<div class="container-fluid" >
+				<div class="row" >
+					<div class="col" style="background:green;" > 111 </div>
+					<div class="col" style="background:pink;" > 222 </div>
+					<div class="col" style="background:red;" > 333 </div>
+				</div>
+			</div>
+			<br/>
+			<!-- padding并不会使container变形,这点很难得 -->
+			<div class="container" >
+				<div class="row" >
+					<div class="col" id="test"  style="background:green;" > 111 </div>
+					<div class="col" style="background:pink;" > 222 </div>
+					<div class="col" style="background:red;" > 333 </div>
+				</div>
+			</div>
+		<!-- 4. 等宽 - 响应式 -->
+			<!--
+				a) 最大为12格,值设定不到12格则以空余代替
+				b) 达到小于sm宽度,容器将会排成一列
+			-->
+
+			<div class="container" >
+				<div class="row" >
+					<div style=" background:pink; "  class="col-sm-3">a</div>
+					<div style=" background:green; "  class="col-sm-3">a</div>
+					<div style=" background:#000; "  class="col-sm-3">a</div>
+					<div style=" background:#555; "  class="col-sm-3">a</div>
+				</div>
+			</div>
+		<!-- 5. 不等宽 - 响应式 -->
+			<!--
+				a) 同上宽度达到sm则容器变为1列
+			-->
+		<div class="container">
+			<div class="row" >
+				<div class="col-sm-4" style="background:#696969;" >c1</div>
+				<div class="col-sm-8" style="background:#e3e3e3;" >c2</div>
+			</div>
+		</div>
+
+		<!-- 6. 不同端显示 -->
+		<!--
+			0. 当屏幕宽度大于md时为6:6大小，当屏幕小于sm时变为3:6大小( 我只想说强大 )
+		-->
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 col-md-6 " style="background:#000;"  >d1</div>
+				<div class="col-sm-9 col-md-6 " style="background:green;"  >d2</div>
+			</div>
+		</div>
+		<!-- 支持多种屏幕 -->	
+		<div class="container" >
+			<div class="row" >
+				<div class="col-sm-3 col-md-6 col-lg-4 col-xl-2 " style="background:pink;"  >f1</div>
+				<div class="col-sm-9 col-md-6 col-lg-8 col-xl-10 " style="background:yellow;"  >f2</div>
+			</div>
+		</div>
+
+		<!-- 7. 使用offset-*-*偏移 -->
+		<!--
+			0. 大屏幕显示器上使用偏移，使用 .offset-md-* 类
+		-->
+		<div class="container" >
+			<div class="row" >
+				<div class="col-md-4 offset-md-4 " style="background:#000;"  > test </div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 bg-warning "  >test</div>
+				<div class="col-md-4 bg-success offset-md-4">test</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
