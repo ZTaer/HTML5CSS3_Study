@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+	</head>
+	<body>
+
+		<!-- 0. 基本表格".table" -->
+		<!--
+			a) class="table" 注意th,tr,td
+		-->
+		<div class="container">
+			<table class="table" >
+				<thead> <!-- 表头 -->
+					<tr>
+						<th>red</th>  
+						<th>blue</th>
+					</tr>	
+				</thead>
+				<tbody> <!-- 表身 -->
+					<tr>
+						<td>ball</td>
+						<td>sky</td>
+					</tr>
+					<tr>
+						<td>ball2</td>
+						<td>sky2</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<br/>
+		<!-- 1. 条纹样式,边框样式,鼠标悬停样式 -->
+		<!--
+			a) class="table table-striped" 给表格增加条纹
+			b) class="table table-bordered" 给表格增加边框
+			c) class="table table-hover" 鼠标悬停对应表格有样式变化  
+		-->
+		<div class="container">
+			<table class="table table-striped table-bordered table-hover">
+				<thead>
+					<tr>
+						<th>1</th>
+						<th>1</th>
+						<th>1</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>a</td>
+						<td>a</td>
+						<td>a</td>
+					</tr>
+					<tr>
+						<td>a</td>
+						<td>a</td>
+						<td>a</td>
+					</tr>
+					<tr>
+						<td>a</td>
+						<td>a</td>
+						<td>a</td>
+					</tr>
+					<tr>
+						<td>a</td>
+						<td>a</td>
+						<td>a</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- 2. 黑色背景表格,条纹，悬停，表格颜色 -->
+		<!--
+			a) class=" table table-dark " 黑色背景表格
+			b) class=" table table-dark table-striped table-hover " 条纹，鼠标悬停都可正常使用,自动识别进行自我样式变化
+			c) 表身颜色引用"table-sucess"等..
+			d) 表头颜色引用"thead-dark,thead-light"等..
+		-->
+
+		<div class="container">
+			<table class="table table-dark table-striped table-hover " >
+				<thead class="thead-light" >
+					<tr>
+						<th>111</th>
+						<th>111</th>
+						<th>111</th>
+					</tr>	
+				</thead>
+				<tbody>
+					<tr>
+						<td>aaa</td>
+						<td>aaa</td>
+						<td>aaa</td>
+					</tr>
+					<tr class="table-success" >
+						<td>aaa</td>
+						<td>aaa</td>
+						<td>aaa</td>
+					</tr>
+					<tr>
+						<td>aaa</td>
+						<td>aaa</td>
+						<td>aaa</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- 3. 小表格 -->
+		<!-- 
+			a) class="table-sm" 小表格创建
+		-->
+		<div class="container">
+			<table class="table-sm table-striped table-bordered ">
+				<thead>
+					<tr>
+						<th>11</th>
+						<th>11</th>
+						<th>11</th>
+						<th>11</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>123213</td>
+						<td>123213</td>
+						<td>123213</td>
+						<td>123213</td>
+					</tr>
+					<tr>
+						<td>123213</td>
+						<td>123213</td>
+						<td>123213</td>
+						<td>123213</td>
+					</tr>
+					<tr>
+						<td>123213</td>
+						<td>123213</td>
+						<td>123213</td>
+						<td>123213</td>
+					</tr>
+					<tr>
+						<td>123213</td>
+						<td>123213</td>
+						<td>123213</td>
+						<td>123213</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<!-- 4. 响应式表格 -->
+		<!--
+			a) 响应式表格 - 超出屏幕，出现滚动条浏览
+			b) 注意: class="table-responsive"位置,是嵌套在table父类div标签中
+			c) table-resonsive == table-responsive-lg( < 992px出现滚动条 )
+			   table-resonsive == table-responsive-sm( < 576px出现滚动条 )
+			   table-resonsive == table-responsive-md( < 768px出现滚动条 )
+			   table-resonsive == table-responsive-xl( < 1200px出现滚动条 )
+		-->
+		<div class="container">
+			<div class="table-responsive"> 
+				<table class="table" >
+					<thead>
+					  <tr>
+						<th>#</th>
+						<th>Firstname</th>
+						<th>Lastname</th>
+						<th>Age</th>
+						<th>City</th>
+						<th>Country</th>
+						<th>Sex</th>
+						<th>Example</th>
+						<th>Example</th>
+						<th>Example</th>
+						<th>Example</th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td>1</td>
+						<td>Anna</td>
+						<td>Pitt</td>
+						<td>35</td>
+						<td>New York</td>
+						<td>USA</td>
+						<td>Female</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>Yes</td>
+						<td>Yes</td>
+					  </tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		
+	</body>
+</html>

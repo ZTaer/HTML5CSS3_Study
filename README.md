@@ -68,3 +68,8 @@
 <br/>
 <h2>2019.6.6</h2> ( 此时在家 )
 	1. 开始学习BootStrap4 ( H5/C3 -> JS -> JQ -> vue -> react )
+	
+<br/>
+<br/>
+<h2>2019.6.10</h2>
+	1. 学习bootstarp表格类

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> test </title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- 0. 图片,圆角效果,椭圆,边框 -->
+			<!--
+				a) class="rounded" 图片圆角
+				b) class="rounded-circle" 椭圆形图片
+				c) class="img-thumbnail" 缩略图,有边框，且具有响应式效果( 图片随着屏幕的大小而变化 )
+			-->
+			<img src="hack.jpg" class="rounded" >
+			<img src="hack.jpg" class="rounded-circle">
+			<img src="hack.jpg" class="img-thumbnail">
+
+			<!-- 1. 图片对齐方式 -->
+			<!--
+				我感觉float不止这点功能
+				a) class="float-left" 左对齐
+				b) class="float-right" 右对齐
+			-->
+			<img src="hack.jpg" class="float-left">
+
+			<!-- 2. 响应式图片 -->
+			<!--
+				a) class="img-fluid" 图片具有响应式,随着屏幕的大小进行变化
+			-->
+			<img src="hack.jpg" class="img-fluid">
+
+		</div>	
+	</body>
+</html>
+
