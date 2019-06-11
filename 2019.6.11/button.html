@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- 0. 普通按钮 -->
+			<!--
+				a) 核心: class="btn"
+				b) 当然,btn不止用到button标签,也可以用其他标签,如:a,input
+				c) class="btn"到a标签时注意加入role="button"
+			-->
+			<button type="button" class="btn" > 按钮 </button>
+			<button type="button" class="btn btn-primary" > 按钮 </button>
+			<button type="button" class="btn btn-success" > 按钮 </button>
+			
+			<br/>
+			<a href="#" class="btn btn-success" role="button" > a标签按钮 </a>
+			<input type="submit" class="btn btn-success" value="提交按钮" > 
+
+			<!-- 1. 边框按钮 -->
+			<!--
+				a) class="btn btn-outline-info": 显然由btn-outline-颜色来控制 
+				b) class="btn-lg / btn-sm": 控制按钮大小
+			-->
+			<br/>
+			<a href="#" class="btn btn-outline-info btn-lg" > 按钮 </a>
+			<a href="#" class="btn btn-outline-danger" > 按钮 </a>
+			<a href="#" class="btn btn-outline-success btn-sm" > 按钮 </a>
+
+			<!-- 2. 块级按钮(宽度百分百按钮) -->
+			<!--
+				a) .btn-block 块级按钮
+				b) .active 单击过后的按钮
+				c) .disabled 禁用按钮
+			-->
+			<br/>
+			<a href="#" class="btn btn-outline-info btn-block" > 按钮 </a>
+			<a href="#" class="btn btn-outline-info btn-block active " > 单击过后的按钮 </a>
+			<a href="#" class="btn btn-outline-info btn-block disabled " > 单标签禁用按钮 </a>
+			<button type="button" class="btn btn-outline-info btn-block" disabled > 双标签禁用按钮 </button>
+		</div>	
+	</body>
+</html>
