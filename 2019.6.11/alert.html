@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head>
+		<title>test</title>
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	
+	</head>
+	<body>
+		<div class="container">
+			<!--0. 普通提示框 -->
+			<!--
+				a) class="alert" 提示框模块
+				b) 可以与颜色配合class="alert alert-success"
+				c) 可以加入超链接class="alert-link"
+			-->
+			<div class="alert alert-success" >
+				<strong>提示: </strong>
+				yes!!!
+				<a href="#" class="alert-link" >
+					快速阅读
+				</a>
+			</div>
+		</div>
+
+		<!-- 1. 可关闭提示框 -->
+		<!--
+			a) class="alert alert-dismissible"与button标签的class="close" alert-dismissible 配合才能实现关闭提示效果
+			b) class="fade show"能实现在关闭时,淡入淡出效果
+		-->
+		<div class="container">
+			<div class="alert alert-danger alert-dismissible fade show">
+				<button type="button" class="close" data-dismiss="alert" >&times;</button>
+				<strong>警告: </strong>
+				非法操作!!!
+			</div>
+		</div>
+			
+
+	</body>
+</html>
