@@ -11,6 +11,87 @@
 		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<div class="" ></div>	
+
+		<!-- 0. 按钮组 -->
+		<!--
+			a) btn-group - 包含的btn形成按钮组
+			b) btn-group-lg/sm - 形成大/小按钮组
+		-->
+		<div class="btn-group" >
+			<a href="#" class="btn btn-dark" role="button" >按钮</a>
+			<a href="#" class="btn btn-dark" role="button" >按钮</a>
+			<a href="#" class="btn btn-dark" role="button" >按钮</a>
+		</div>	
+		<div class="btn-group btn-group-lg" >
+			<a href="#" class="btn btn-dark" role="button" >按钮</a>
+			<a href="#" class="btn btn-dark" role="button" >按钮</a>
+			<a href="#" class="btn btn-dark" role="button" >按钮</a>
+		</div>
+
+		<br/>
+		<!--
+			c) btn-group-vertical - 垂直导航栏 
+		-->
+		<div class="btn-group-vertical" >
+			<a href="#" class="btn btn-success" role="button" > 你好 </a>
+			<a href="#" class="btn btn-success" role="button" > 你好 </a>
+			<a href="#" class="btn btn-success" role="button" > 你好 </a>
+		</div>
+		<!--
+			d) 创建内嵌按钮组
+				0. 在btn-group创建btn-group
+				1. 显示按钮部分: class=" btn dropdown-toggle "  data-toggle="dropdown" , 
+				2. 隐藏按钮部分: 
+					class="dropdown-menu" 写在容器
+					class="dropdown-item" 嵌入在容器
+				3. 其实是三大核心:
+					dropdown-toggle: 选中对应按钮 ( 需要: data-toggle="dropdown"配合 )
+					dropdown-menu: 对应隐藏容器
+					dropdown-item: 隐藏容器内的子菜单
+		-->
+		<div class="btn-group" >
+			<a href="#" class="btn btn-danger" role="button" > 按钮 </a>
+			<a href="#" class="btn btn-danger" role="button" > 按钮 </a>
+			<a href="#" class="btn btn-danger" role="button" > 按钮 </a>
+
+			<div class="btn-group" >
+				<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" > 按钮 </button>
+				<div class="dropdown-menu">
+					<a href="#" class="dropdown-item" > Number1 </a>
+					<a href="#" class="dropdown-item" > Number2 </a>
+					<a href="#" class="dropdown-item" > Number2 </a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 1. 拆分下拉菜单按钮 -->
+		<!--
+			a) 原理与内嵌按钮原理相同，只是按钮形状不同
+		-->
+		<div class="btn group">
+			<button type="button" class="btn btn-danger " > 按钮 </button>
+			<button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" >
+				<span class="caret" ></span>
+			</button>
+			<div class="dropdown-menu">
+				<a href="#" class="btn dropdown-item" role="button" >1</a>
+				<a href="#" class="btn dropdown-item" role="button" >2</a>
+			</div>
+		</div>
+
+		<!-- 2. 垂直下拉菜单 -->
+		<!--
+			a) 除了btn-group-vertical其他与内嵌按钮原理一样
+		-->
+		<div class="btn-group-vertical">
+			<button type="button" class="btn btn-success " > 按钮 </button>
+			<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" > 按钮 </button>
+			<div class="dropdown-menu">
+				<a href="#" class="btn dropdown-item" role="button" >111</a>
+				<a href="#" class="btn dropdown-item" role="button" >111</a>
+				<a href="#" class="btn dropdown-item" role="button" >111</a>
+			</div>
+		</div>
+
 	</body>
 </html>
