@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<!-- 0. 进度条 -->
+		<!--
+			a) 父类progress 与 子类 progress-bar 配合形成进度条,在由width:%;来决定进度条长度
+			b) 默认进度条height:16px; 通过progress改变它的高度来实现不同高度的进度条
+		-->
+		<div class="container">
+			<h2> 普通的进度条 </h2>
+			<div class="progress">
+				<div class="progress-bar" style="width:10%;" ></div>
+			</div>
+			<h2> 控制高度 </h2>
+			<div class="progress" style="height:50px;" >
+				<div class="progress-bar" style="width:20%;" ></div>
+			</div>
+		</div>
+
+	</body>
+</html>
