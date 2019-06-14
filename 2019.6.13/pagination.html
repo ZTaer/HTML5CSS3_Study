@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+
+		<!-- 0. 分页,当然只是css样式 -->
+		<!--
+			a) 父类pagination与子类page-item配合构成框架
+			   在由子类的子类page-link进行链接样式处理
+			b) active与page-item同级配合,显示当前选择页,当然这需要js来操控
+			c) disabled 禁用选择,与page-item 同级
+			d) pagination-lg/pagination-sm 与pagination 同级操控分页大小
+		-->
+
+		<div class="container">
+			<ul class="pagination">
+				<li class="page-item disabled " >
+					<a class="page-link" href="#" > 上一页 </a>
+				</li>
+				<li class="page-item active " >
+					<a class="page-link" href="#" > 1 </a>
+				</li>
+				<li class="page-item" >
+					<a class="page-link" href="#" > 2 </a>
+				</li>
+				<li class="page-item" >
+					<a class="page-link" href="#" > 下一页 </a>
+				</li>
+			</ul>
+
+			<ul class="pagination pagination-lg " >
+				<li class=" page-item ">
+					<a class="page-link" href="#" > page1 </a>
+				</li>
+				<li class=" page-item ">
+					<a class="page-link" href="#" > page2 </a>
+				</li>
+				<li class=" page-item ">
+					<a class="page-link" href="#" > page3 </a>
+				</li>
+
+			</ul>
+		</div>
+		<!-- 1. 分页, 面包条导航 -->
+		<!--
+			a) 父类breadcrumb 与 子类breadcrumb-item 配合形成面包条状导航栏
+		-->
+		<div class="container">
+			<ul class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="#" > sm </a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="#" > am </a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="#" > cm </a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="#" > fm </a>
+				</li>
+			</ul>
+		</div>
+		
+
+	</body>
+</html>
