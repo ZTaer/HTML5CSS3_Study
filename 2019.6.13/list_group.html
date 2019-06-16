@@ -10,12 +10,36 @@
 		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 	</head>
 	<body>
+		<!-- 0. 列表组 -->
+		<!--
+			a) 核心: 父类list-group,子类list-item
+			b) active 选中状态
+			c) disabled 禁选状态
+		-->
 		<div class="container">
 			<ul class="list-group" >
 				<li class="list-group-item"> first1 </a>
-				<li class="list-group-item"> first2 </a>
+				<li class="list-group-item active "> first2 </a>
 				<li class="list-group-item"> first3 </a>
+				<li class="list-group-item disabled"> first3 </a>
 			</ul>
+		</div>
+
+		<!-- 1. 链接列表 -->
+		<!--
+			a) 父类依然是list-group与list-group-item配合
+			b) list-group-item-action 使鼠标悬停时有动态效果
+			c) 添加背景颜色如: list-group-item-dark/list-group-item-danger等... 
+		-->
+		<div class="container">
+			<div class="list-group">
+				<a class="list-group-item list-group-item-action " href="#"> test1 </a>
+				<a class="list-group-item list-group-item-action " href="#"> test2 </a>
+				<a class="list-group-item list-group-item-action " href="#"> test3 </a>
+
+				<a class="list-group-item list-group-item-dark" href="#" > 有背景颜色的列表组1 </a>
+				<a class="list-group-item list-group-item-danger" href="#" > 有背景颜色的列表组2 </a>
+			</div>
 		</div>
 
 	</body>
