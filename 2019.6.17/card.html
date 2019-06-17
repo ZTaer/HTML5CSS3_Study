@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+	<head>
+		<title> test </title>
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- 0.card 小卡片 -->
+			<!--
+				a) 父类card与子类:
+						头部: card-header
+						躯体: card-body ( 可以单独与父类配合 )
+						尾部: card-footer
+				b) bg-success 上背景颜色
+				c) text-danger 上文本颜色
+			-->
+			<div class="card">
+				<div class="card-header"> This is header </div>
+				<div class="card-body bg-success text-danger " > 
+					This is body
+				</div>
+				<div class="card-footer"> This is footer </div>
+			</div>
+
+			<!-- 1. card 细节使用 -->
+			<!--
+				a) card-title 标题
+				   card-text 文本
+				   card-link 链接
+			-->
+			<div class="card">
+				<div class="card-body">
+					<h2 class="card-title" > test </h2>
+					<p class="card-text" > 我是文本 </p>
+					<a href="#" class="card-link" > 链接 </a>
+				</div>
+			</div>
+		</div>	
+
+		<!-- 2. card的图片使用 -->
+		<!--
+			a) card容器可以进行控制宽度
+			b) card-img-top/card-img-bottom 图片上下分别使用,看下面的例子
+		-->
+		<div class="container">
+			<div class="card" style="width:350px;" >
+				<img class="card-img-top"  src="test.jpg">
+				<div class="card-body">
+					<h2 class="card-title" > __OO7__ </h2>
+					<p> 成为一名优秀的黑客，是我终生奋斗的目标 </p>
+					<a class="btn btn-success" role="button" href="#" > 我的博客 </a>
+				</div>
+			</div>
+			
+			<div class="card" style="width:350px;" >
+				<div class="card-body">
+					<h3 class="card-title" > __OO7__ </h3>
+					<p class="card-text" > 学习使我快乐 </p>
+					<a class="btn btn-outline-success" role="button" > 我的博客 </a>
+				</div>
+				<img class="card-img-bottom" src="test.jpg">
+			</div>
+			
+			<!-- 3. card以图片为背景 -->
+			<!--
+				a) 先调用一张图片card-img-top/bottom
+				   在使用card-img-overlay进行配合即可使图片为背景
+			-->
+			<div class="card" style="width:350px"  >
+				<img src="test.jpg" class="card-img-top" >
+				<div class="card-img-overlay">
+					<h3 class="card-title" > __OO7__ </h3>
+					<p class="card-text" > 成为优秀的黑客后，那么成为顶级黑客也并非不可能 </p>
+					<a class="btn btn-danger"> 我的博客 </a>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- 0. 下拉菜单 -->
+			<!--
+				a) 父类: dropdown与下方配合( 其实下方这些元素,早在按钮组就已经相遇过 )
+				   核心: dropdown-toggle 要与 data-toggle="dropdown"配合 
+						 dropdown-menu 隐藏菜单容器
+						 dropdown-item 菜单项
+				b) 父类与子类核心配合共同构建，下拉菜单
+			-->
+			<div class="dropdown">
+				<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" > 下拉菜单 </button>
+				<div class="dropdown-menu">
+					<a href="#" class="dropdown-item"> 1 </a>
+					<a href="#" class="dropdown-item"> 1 </a>
+					<a href="#" class="dropdown-item"> 1 </a>
+				</div>
+			</div>
+
+			<!-- 1. 下拉菜单,子菜单中的分割线 -->
+			<!--
+				a) dropdown-toggle: 可以使按钮有下拉菜单小标记
+				b) data-toggle="dropdown": 没有他无法显示dropdown-menu的内容
+				c) dropdown-divider: 在dropdown-menu下拉菜单中产生分割线
+			-->
+			<div class="dropdown">
+				<button type="button" class="btn btn-danger dropdown-toggle " data-toggle="dropdown" > 我是下拉菜单 </button>
+				<div class="dropdown-menu">
+					<a href="#" class="dropdown-item" > 1 </a>
+					<a href="#" class="dropdown-item" > 1 </a>
+					<a href="#" class="dropdown-item" > 1 </a>
+					<div class="dropdown-divider"></div>
+					<a href="#" class="dropdown-item" > 2 </a>
+					<a href="#" class="dropdown-item" > 2 </a>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>
