@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 	<head>
-		<title></title>
+		<title> test </title>
 		<meta charset="utf-8">
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,23 +29,76 @@
 				</div>
 			</div>
 
-			<!-- 1. 下拉菜单,子菜单中的分割线 -->
+			<!-- 1. 下拉菜单,子菜单中的分割线/标题 -->
 			<!--
 				a) dropdown-toggle: 可以使按钮有下拉菜单小标记
 				b) data-toggle="dropdown": 没有他无法显示dropdown-menu的内容
 				c) dropdown-divider: 在dropdown-menu下拉菜单中产生分割线
+				d) dropdown-header: 在dropdown-menu下拉菜单中产生的标题
 			-->
 			<div class="dropdown">
 				<button type="button" class="btn btn-danger dropdown-toggle " data-toggle="dropdown" > 我是下拉菜单 </button>
 				<div class="dropdown-menu">
+					<h3 href="#" class="dropdown-header"> HEAD </h3>
 					<a href="#" class="dropdown-item" > 1 </a>
 					<a href="#" class="dropdown-item" > 1 </a>
 					<a href="#" class="dropdown-item" > 1 </a>
 					<div class="dropdown-divider"></div>
+					<h3 href="#" class="dropdown-header" > BODY </h3>
+					<a href="#" class="dropdown-item" > 2 </a>
 					<a href="#" class="dropdown-item" > 2 </a>
 					<a href="#" class="dropdown-item" > 2 </a>
 				</div>
 			</div>
+
+			<!-- 2. 下拉菜单活动项/禁用项 -->
+			<!--
+				a) 其实依然是老朋友，选中项"active",禁用项"disabled",为了练习在写一遍
+				b) dropdown-menu-right 可以改变子菜单x方向位置( 与dropdown-menu同级 )
+				c) 父类dropup变为上拉菜单( 注意,此函数类容易出现问题 ) 
+			-->
+			<div class="dropdown">
+				<button type="button" class=" btn btn-success dropdown-toggle " data-toggle="dropdown" > 活动/禁用项目实验 </button>
+				<div class="dropdown-menu dropdown-menu-right ">
+					<h3 class="dropdown-header" > head </h3>
+					<a class="dropdown-item" href="#" > 1 </a>
+					<a class="dropdown-item active " href="#" > 1 - ( 保持选中状态 ) </a>
+					<div class="dropdown-divider"></div>
+					<h3 class="dropdown-header"> footer </h3>
+					<a href="#" class="dropdown-item" > 2 </a>
+					<a href="#" class="dropdown-item disabled " > 2 - ( 被禁用 ) </a>
+				</div>
+			</div>
+
+			 <div class="dropup">
+				<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+				  Dropdown button
+				</button>
+				<div class="dropdown-menu">
+				  <a class="dropdown-item" href="#">Link 1</a>
+				  <a class="dropdown-item" href="#">Link 2</a>
+				</div>
+			 </div>
+			
+			 <!-- 3. 分割下拉菜单，其实核心都一样，只是有个下拉三角号而已 -->
+			 <!--
+				a) 这不是回忆一下btn-group的内容吗，我以为是由dropdown创造出,谁知道是btn-group
+				b) 核心在于: dropdown-toggle-split 与 形状标签<span class="caret" ></span>
+						     dropdown-toggle-split: 可以与前一个标签无缝对接
+							 <span class="caret" ></span>: 产生倒三角下拉形状
+			 -->
+			 <div class="container">
+				 <div class="btn-group">
+					 <button type="button" class="btn btn-success" > 111 </button>
+					 <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split " data-toggle="dropdown" >
+						<span class="caret" ></span>
+					 </button>
+					 <div class="dropdown-menu">
+						<a href="#" class="dropdown-item" > a </a>
+						<a href="#" class="dropdown-item" > b </a>
+					 </div>
+				 </div>
+			 </div>
 
 		</div>
 	</body>
