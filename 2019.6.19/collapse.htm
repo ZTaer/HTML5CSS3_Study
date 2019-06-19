@@ -1,0 +1,84 @@
+<!doctype html >
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<!-- 0. 折叠菜单 -->
+		<!--
+			a) 控制按钮: 
+				data-toggle="collapse": 开启collapse模式
+				data-target="#id": 指定控制ID
+				注意:
+					a标签的href="#id"可以代替data-target="#id"
+			b) 内容容器:
+				collapse: 开启collapse模式
+				id: id号要与按钮指定的id对应
+		-->
+		<div class="container">
+
+			<button class="btn btn-success" data-toggle="collapse" data-target="#demotest" > 111 </button>
+			<a class="btn btn-danger" data-toggle="collapse" href="#demotest" >222</a>
+			<div id="demotest" class="collapse" >
+				<p>
+					asdasdasdasdasdasd
+				</p>
+			</div>
+
+			<!-- 1. 显示collapse -->
+			<!--
+				a) collapse show 直接显示出隐藏容器内容
+			-->
+			<button class="btn btn-danger" data-toggle="collapse" data-target="#demotest3"  > 333 </button>
+			<div class="collapse show " id="demotest3"  >
+				<p>
+					123213213213
+				</p>
+			</div>
+		</div>
+
+		<!-- 手风琴效果: 指定统一父类，配合隐藏 -->
+		<!--
+			a) 不要被card家族迷惑,card只是代替显示效果
+			b) 注意collapse要在同一个父类容器
+			c) 与隐藏容器collapse同级data-parent="#父类ID",即可实现手风琴效果
+
+		-->
+		<div class="container">
+			<div id="father">
+
+				<div class="card">
+					<div class="card-header">
+						<a href="#demo0" class="btn btn-success" data-toggle="collapse" > 444 </a>
+					
+					</div>
+					<div id="demo0" class="collapse" data-parent="#father" >
+						<div class="card-body" >
+							1111111111
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-header">
+						<a href="#demo1" class="btn btn-success" data-toggle="collapse" >555</a>
+					</div>
+					<div class="collapse" id="demo1" data-parent="#father" >
+						<div class="card-body" >
+							222222222
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	
+	</body>
+</html>
