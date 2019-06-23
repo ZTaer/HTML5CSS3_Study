@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+	<head>
+		<title> test </title>
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+
+		<!-- 0. 导航,基本骨骼 -->
+		<!--
+			a) 核心:
+				父类: nav
+					子类: nav-item
+							子类: nav-link
+			b) 使用justify-content-center/start/end来控制导航x排序
+		-->
+		<div class="container">
+			<ul class="nav justify-content-center ">
+				<li class="nav-item">
+					<a href="#" class="nav-link" > 111 </a>
+				</li>	
+				<li class="nav-item">
+					<a href="#" class="nav-link" > 111 </a>
+				</li>	
+				<li class="nav-item">
+					<a href="#" class="nav-link" > 111 </a>
+				</li>	
+			</ul>
+		</div>
+		
+		<!-- 1. 垂直导航 -->
+		<!--
+			a) 垂直布局，其实利用的就是flex布局,
+		-->
+		<div class="container">
+			<ul class=" nav flex-column">
+				<li class="nav-item">
+					<a href="#" class="nav-link" > 222 </a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" > 222 </a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" > 222 </a>
+				</li>
+			</ul>
+
+		<!-- 2. 选项卡导航 -->
+		<!--
+			a) 选项卡导航,父类: nav nav-tabs
+			b) 胶囊导航,父类: nav nav-pills
+			c) 等宽导航,父类: nav nav-tabs nav-justified
+		-->
+			<ul class="nav nav-tabs nav-justified " >
+				<li class="nav-item">
+					<a href="#" class="nav-link" > 111 </a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" > 111 </a>
+				</li>
+				<li class="nav-item">
+					<a href="#" class="nav-link" > 111 </a>
+				</li>
+			</ul>
+			<ul class="nav nav-pills" >
+				<li class="nav-item  ">
+					<a href="#" class="nav-link bg-danger text-light "  > 333 </a>
+				</li>
+				<li class="nav-item  ">
+					<a href="#" class="nav-link"  > 333 </a>
+				</li>
+				<li class="nav-item  ">
+					<a href="#" class="nav-link"  > 333 </a>
+				</li>
+			</ul>
+
+		<!-- 3. 下拉导航栏 -->
+		<!--
+			a) 下拉菜单的导航栏,
+			   同样是老相识dropdown
+			   下拉菜单父类与nav-link同级
+		-->
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+				<a href="#" class="nav-link" > 444 </a>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" > 444 </a>
+				<div class="dropdown-menu">
+					<a href="#" class="dropdown-item"  >1</a>
+					<a href="#" class="dropdown-item"  >1</a>
+				</div>
+			</li>
+			<li class="nav-item">
+				<a href="#" class="nav-link" > 444 </a>
+			</li>
+		</ul>
+		
+		<!--4. 动态导航-->
+		<!--
+			a) 选项按钮nav-link设定: data-toggle="tab" href="#id"
+			b) 切换容器设定: 
+					父类: tab-content
+					子类: tab-pane container fade , id="#id"
+						tab-pane: 核心
+						container: 框架
+						fade: 切换时有淡入效果
+						id: 要与上方按钮对应
+		-->
+		<ul class="nav nav-tabs">
+			<li class="nav-item">
+				<a href="#test1" data-toggle="tab"  class="nav-link" > num1 </a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#test2" data-toggle="tab"  class="nav-link" > num1 </a>
+			</li>
+
+			<li class="nav-item">
+				<a href="#test3" data-toggle="tab"  class="nav-link" > num1 </a>
+			</li>
+
+		</ul>
+
+		<div class="tab-content">
+			<div class="container tab-pane fade" id="test1" >
+				<p styl"height:50px;" class="bg-danger" >1</p>
+			</div>
+
+			<div class="container tab-pane fade" id="test2" >
+				<p styl"height:50px;" class="bg-success" >2</p>
+			</div>
+
+			<div class="container tab-pane fade" id="test3" >
+				<p styl"height:50px;" class="bg-dark" >3</p>
+			</div>
+		</div>
+		<!-- 导航切换实战 -->
+		<!--
+			a) 关于active: 
+				初始显示内容,在nav-link/tab-pane 同级加入active
+				且记fade会影响active所以不能共同存在
+		-->
+		<ul class="nav nav-pills ">
+			<li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#tt1" > home </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#tt2" > danger </a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" data-toggle="tab" href="#tt3"  > yellow </a>
+			</li>
+		</ul>
+		<div class="tab-content">
+			<div class="container tab-pane  active" id="tt1" >
+				<p style="height:100px;" class="bg-danger"  >1111</p>
+			</div>
+			<div class="container tab-pane" id="tt2" >
+				<p style="height:100px;" class="bg-success"  >1111</p>
+			</div>
+			<div class="container tab-pane" id="tt3" >
+				<p style="height:100px;" class="bg-dark"  >1111</p>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>

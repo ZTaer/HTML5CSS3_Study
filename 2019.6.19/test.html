@@ -1,0 +1,43 @@
+<!doctype html >
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>test</title>
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="father">
+
+				<div class="card">
+					<div class="card-header">
+						<a href="#test" class="btn btn-danger" data-toggle="collapse" > 111 </a> 	
+					</div>
+					<div id="test" class="collapse" data-parent="#father" >
+						<div class="card-body">
+							内容1
+						</div>
+					</div>
+				</div>
+				
+				<div class="card">
+					<div class="card-header">
+						<a href="#test1" class="btn btn-success" data-toggle="collapse"  > 222 </a>
+					</div>
+					<div class="collapse" id="test1" data-parent="#father" >
+						<div class="card-body">
+							内容2
+						</div>
+					</div>
+				</div>
+							 
+			</div>
+		</div>
+	
+	</body>
+</html>
