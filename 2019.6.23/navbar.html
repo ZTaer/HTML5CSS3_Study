@@ -22,7 +22,7 @@
 				   a子类: nav-link
 				b) navbar-expand-xl/lg/md/sm 没有它则导航栏为垂直,有他则在一定分辨率为垂直
 				c) 控制导航栏背景: bg-dark/bg-light等...
-				d) 控制导航栏字体颜色: navbar-light/dark等...
+				d) 控制导航栏字体颜色: navbar-light/dark( navbar-颜色为相反色 )等...
 				e) 同样active/disabled同样起作用
 			-->
 			<nav class=" navbar navbar-expand-sm bg-light ">
@@ -91,7 +91,7 @@
 
 			<!-- 2. 响应式折叠按钮导航栏( 移动端会变成菜单按钮 ) -->
 			<!--
-				a) 分析核心: collapse套装与，按钮类navbar-toggler控制菜单类navbar-collapse，的组合成响应式折叠按钮菜单
+					a) 分析核心: collapse套装与，按钮类navbar-toggler控制菜单类navbar-collapse，的组合成响应式折叠按钮菜单
 				b) collapse本身就为折叠菜单而打造，注意navbar-expand-xl/lg/md/sm没有他菜单会隐藏起来
 				c) 0. 写入导航栏骨架
 				   1. 嵌入式,button标签,上collapse按钮类,在额外加入navbar-toggler毕竟在别人家地盘
@@ -130,6 +130,78 @@
 			</nav>
 
 		</div>
+
+		<!-- 3. 有下拉菜单的导航栏 -->
+		<!--
+			a) 写入navbar骨架
+			b) 选中某一个nav-item
+			c) 正常写入dropdown的三大核心
+			d) 在将选中的选中项nav-item同级写入dropdown
+			   因为这样可以使下拉菜单正确的对应选项
+		-->
+		<div class="container">
+			<nav class="navbar navbar-expand-sm bg-success navbar-dark ">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a href="#" class="nav-link" > aaa </a>
+					</li>
+
+					<li class="nav-item">
+						<a href="#" class="nav-link" > aaa </a>
+					</li>
+
+					<li class="nav-item dropdown ">
+						<a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown"  > aaa </a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" > 111 </a>
+							<a class="dropdown-item" > 111 </a>
+						</div>
+					</li>
+				</ul>	
+			</nav>
+		</div>
+
+		<!-- 4. 给导航栏加入表单 -->
+		<!--
+			a) 直接form嵌入到nav中
+			b) 但是注意表单加入class样式
+			c) 父类: form-inline
+			   子类: form-control
+			d) 按钮直接上btn
+			e) navbar-text直接搞文字，注意在ul之外,nav中
+		-->
+		<div class="container">
+			<nav class="navbar navbar-expand-sm bg-light navbar-light ">
+				<form class="form-inline" >
+					<input class="form-control" type="text" >
+					<button type="button" class="btn btn-success" > Search </button>
+				</form>
+
+				<ul class="navbar-nav" >
+					<li class="nav-item">
+						<a href="#" class="nav-link" > 233 </a>
+					</li>
+				</ul>
+
+				<span class="navbar-text">
+					直接搞文字
+				</span>
+			</nav>
+		</div>
+
+		<!-- 5. 固定导航栏 -->
+		<!--
+			核心在于: fixed-top/bottom
+		-->
+		<nav class="navbar navbar-expand-sm fixed-bottom bg-dark navbar-dark">
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a href="#" class="nav-link" >
+						fixed-bottom
+					</a>
+				</li>	
+			</ul>
+		</nav>
 
 	</body>
 </html>
