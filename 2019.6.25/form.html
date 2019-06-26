@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> test </title>
+	
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+		<style type="text/css">
+			body{
+				letter-spacing:3px;
+			}
+		</style>
+
+	</head>
+	<body>
+		<!-- 0. 堆叠表单( 宽度100%拥有block属性的表单 ) -->
+		<!--
+			a) 核心: 表单嵌套在form-group容器中
+			b) 输入框架使用: form-control
+			c) 选区框:
+				容器: form-check
+				父类: form-check-label
+				子类: form-check-input
+			d) 按钮直接上btn即可
+			e) 关于label中的for:
+					label中的for="id",填写id与表单id对应,即点击label内容如点击表单
+		-->
+		<div class="container">
+			<form>
+				<h2> 堆叠式表单基本骨骼测试 </h2>
+				<div class="form-group">
+					<label for="email" > 邮箱: </label>
+					<input type="email" class="form-control" id="email" placeholder="Enter Email" >
+				</div>
+				<div class="form-group">
+					<label for="passw"> 密码: </label>
+					<input type="password" class="form-control" id="passw" placeholder="Enter PassWord" >
+				</div>
+				<div class="form-check">
+					<label for="Reme" class="form-check-label" > 
+						<input type="checkbox" class="form-check-input" >
+						记住密码 
+					</label>
+				</div>
+				<button type="submit" class="btn btn-success" > 登陆 </button>
+			</form>
+		</div>
+
+		<!-- 1. 内联表单 -->
+		<!--
+			a) 核心在于form-inline,有他则为内联样式模式
+			b) 注意，选框依然需要容器套装来配合
+		-->
+		<div class="container">
+			<form class="form-inline" >
+				<label for="user"> User: </label>
+				<input type="text" class="form-control" id="user" placeholder="Enter User" >
+
+				<label for="pass" > PassWord: </label>
+				<input type="password" class="form-control" id="pass" placeholder="Enter Password" >
+
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="checkbox" class="form-check-input" >
+						记住我
+					</label>
+				</div>
+				<button type="submit" class="btn btn-danger" > 登陆 </button>
+			</form>
+		</div>
+
+
+	</body>
+</html>
