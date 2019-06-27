@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstrap 实例</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+
+		<div class="container">
+			<h2> 表单控件 </h2>
+			<!-- 0. 表单控件,text,passwprd -->
+			<!--
+				a) 其实 type=""这些都是H5已经有的属性
+				b) 容器: form-group 块级表单必备
+				   子类: form-control 使表单为块级样式 
+			-->
+			<form>
+				<div class="form-group">
+					<label  for="usr" > 用户: </label>
+					<input type="text" id="usr" class="form-control" >
+				</div>
+				<div class="form-group">
+					<label for="pas"> 密码: </label>
+					<input type="password" id="pas" class="form-control" >
+				</div>
+				<div class="form-group">
+					<label for="texta"> 留言: </label>
+					<textarea id="texta" class="form-control" rows="6" ></textarea>
+				</div>
+				
+				<div class="form-check">
+					<label class="form-check-label">
+						<input type="checkbox" class="form-check-input" value="" > choose1
+					</label>
+				</div>
+				<div class="form-check disabled ">
+					<label class="form-check-label">
+						<input type="checkbox" class="form-check-input" value="" disabled > choose2
+					</label>
+				</div>
+
+			</form>
+		</div>
+	
+	</body>
+</html>
