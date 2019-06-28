@@ -13,13 +13,13 @@
 
 		<div class="container">
 			<h2> 表单控件 </h2>
-			<!-- 0. 表单控件,text,passwprd -->
-			<!--
-				a) 其实 type=""这些都是H5已经有的属性
-				b) 容器: form-group 块级表单必备
-				   子类: form-control 使表单为块级样式 
-			-->
-			<form>
+				<form>
+				<!-- 0. 表单控件,text,passwprd -->
+				<!--
+					a) 其实 type=""这些都是H5已经有的属性
+					b) 容器: form-group 块级表单必备
+					   子类: form-control 使表单为块级样式 
+				-->
 				<div class="form-group">
 					<label  for="usr" > 用户: </label>
 					<input type="text" id="usr" class="form-control" >
@@ -33,18 +33,83 @@
 					<textarea id="texta" class="form-control" rows="6" ></textarea>
 				</div>
 				
-				<div class="form-check">
-					<label class="form-check-label">
-						<input type="checkbox" class="form-check-input" value="" > choose1
+				<!-- 1. 多选框 -->
+				<!--
+					a) 多选框: 
+					    容器: form-check
+						父类: form-check-label
+						子类: form-check-input
+					b) 如果容器 form-check 加入 form-check-inline  则块级表单变为内联表单
+				-->
+				
+					<!-- 块级选项框 -->
+					<div class="form-check">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input" value="" > choose1
+						</label>
+					</div>
+					<div class="form-check disabled ">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input" value="" disabled > choose2
+						</label>
+					</div>
+					<!-- 内联选项框 -->
+					<div class="form-check form-check-inline ">
+						<label class="form-check-label">
+							<input type="checkbox" class="form-check-input"  value="" >  choose3
+						</label>
+					</div>
+					<div class=" form-check form-check-inline">
+						<label class="form-check-label" >
+							<input  type="checkbox" class="form-check-input" value="" checked  > choose4
+						</label>
+					</div>
+				<!-- 2. 单选框 -->
+				<!--
+					a) 块级单选框:
+						容器: radio
+						表单input使用type="radio"属性配合label,包含在radio容器中
+					b) 内联单选框:
+						容器: radio 加入 radio-inline 即可变为内联单选框
+				-->
+				<!-- 块级选项框 -->
+				<div class="radio">
+					<label>
+						<input type="radio" name="test" > man
 					</label>
 				</div>
-				<div class="form-check disabled ">
-					<label class="form-check-label">
-						<input type="checkbox" class="form-check-input" value="" disabled > choose2
+				<div class="radio">
+					<label>
+						<input type="radio" name="test" > woman
+					</label>
+				</div>
+				<div class="radio disabled ">
+					<label>
+						<input type="radio" name="test" disabled > disabled
+					</label>
+				</div>
+				
+				<!-- 内联选项框 -->
+				<div class="radio radio-inline ">
+					<label>
+						<input type="radio" name="test1" > test1
+					</label>
+				</div>
+				<div class="radio radio-inline ">
+					<label>
+						<input type="radio" name="test1" > test2
+					</label>
+				</div>
+				<div class="radio radio-inline disabled">
+					<label>
+						<input type="radio" name="test1" disabled > test3
 					</label>
 				</div>
 
 			</form>
+		</div>
+		<div class="container">
+			
 		</div>
 	
 	</body>
