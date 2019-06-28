@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstrap 实例</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<!-- 0. 输入框组 -->
+			<!--
+				a) 其实输入框组主要围绕着，input-group-append,input-group-prepend,使输入表单开头或者结尾有文字
+				b) 容器: input-group
+				   父类: input-group-prepend 在开头部分加入文字
+				         input-group-append  在结尾部分加入文字
+				   子类: input-group-text    文本标签设置文字样式
+				   ( 上方这几个函数为核心,其它演示也只是应用展示 )
+
+				c) 注意input-group-prepend与input标签同级 
+				d) mb-4: 是margin-bottom: (2*x)px ;以4px为基础*2进行缩放
+				e) 大/小的表单,input-group-sm/lg 注意与"容器同级"
+			-->
+			<form>
+				<!-- 头部信息演示 -->
+				<div class="input-group mb-4 input-group-lg ">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> UserName: </span>
+					</div>
+					<input type="text" class="form-control" placeholder=" UserName " >
+				</div>
+				
+				<!-- 尾部信息演示 -->
+				<div class="input-group">
+					<input type="password" class="form-control" placeholder=" PassWord " >
+					<div class="input-group-append">
+						<span class="input-group-text"> PassWord: </span>
+					</div>
+				</div>
+				
+				<!-- 单行多框 -->
+				<div class="input-group mt-4 ">
+					<div class="input-group-prepend">
+						<span class="input-group-text"> test0 </span>
+						<span class="input-group-text"> test1 </span>
+					</div>
+					<input type="text" class="form-control" placeholder="test0" >
+					<input type="text" class="form-control" placeholder="test1" >
+				</div>
+
+			</form>
+		</div>
+
+
+	</body>
+</html>

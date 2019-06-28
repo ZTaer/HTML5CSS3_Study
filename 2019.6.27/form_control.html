@@ -106,6 +106,35 @@
 					</label>
 				</div>
 
+				<!-- 3. 表单下拉菜单 -->
+				<!--
+					a) 核心在于" form-control "与HTML5的表单select进行配合
+					b) 父类: form-group
+					   子类: form-control
+					c) HTML5 - select下拉菜单,加入"multiple"属性则变为多选下拉菜单
+				-->
+				<div class="form-group">
+					<label for="select0" >
+						单下拉选项
+					</label>
+					<select class="form-control" for="select0" >
+						<option> 1 </option>
+						<option> 1 </option>
+						<option> 1 </option>
+					</select>
+					<br/>
+					<label for="select1" >
+						多下拉选项菜单( 使用ctrl或者shift配合鼠标多选 )
+					</label>
+					<select multiple class="form-control">
+						<option> a </option>
+						<option> b </option>
+						<option> c </option>
+						<option> d </option>
+						<option> e </option>
+					</select>
+				</div>
+
 			</form>
 		</div>
 		<div class="container">
