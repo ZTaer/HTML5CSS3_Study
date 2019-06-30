@@ -41,7 +41,7 @@
 					</div>
 				</div>
 				
-				<!-- 单行多框 -->
+				<!-- 单行多框输入 -->
 				<div class="input-group mt-4 ">
 					<div class="input-group-prepend">
 						<span class="input-group-text"> test0 </span>
@@ -52,6 +52,66 @@
 				</div>
 
 			</form>
+		</div>
+
+		<div class="container">
+			<form>
+			<!-- 1. 多选框/单选框输入，开头/结尾 -->
+			<!--
+				a) input-group -> input-group-prepend -> input-group-text -> 嵌入表单( 与上方嵌套文字无异 ) 
+			-->
+				<!-- 多选框 -->
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<div class="input-group-text">
+							<input type="checkbox">
+						</div>
+					</div>
+					<input type="text" class="form-control" placeholder="write something!!!" >
+				</div>
+				<!-- 单选框 -->
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<div class="input-group-text">
+							<input type="radio" name="test" >
+						</div>
+					</div>
+					<input type="text" class="form-control" placeholder="what's your drink something?" >
+				</div>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<div class="input-group-text">
+							<input type="radio" name="test" >
+						</div>
+					</div>
+					<input type="text" class="form-control" placeholder="what's your eat something?" >
+				</div>
+			<!-- 2. 按钮输入栏 -->
+			<!--
+				a) 按钮无需嵌套在input-group-text中,嵌套在input-group-prepend/input-group-append
+				b) 其它都大差不差
+			-->
+			<div class="input-group">
+				<input type="text" class="form-control" >
+				<div class="input-group-append">
+					<button type="button" class="btn btn-success" > Search </button>
+				</div>
+			</div>
+			<!-- 有下拉菜单的按钮输入栏 -->
+			<label for="search" > 单机开始搜索 </label>
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown"  > 全部搜索 </button>
+					<div class="dropdown-menu">
+						<span class="dropdown-item"> 免费区域 </span>
+						<span class="dropdown-item"> 打折区域 </span>
+						<span class="dropdown-item"> 精品区域 </span>
+					</div>
+				</div>
+				<input type="text" id="search" class="form-control" placeholder="Search!!!" >
+			</div>
+
+			<form>
 		</div>
 
 

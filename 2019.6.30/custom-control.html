@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstrap 实例</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<form>
+				<!-- 0. 自定义复选框/单选框 -->
+				<!--
+					a) 自定义表单系列好像是要突出bootstrap的美状
+					b) 容器: custom-control custom-checkbox/custom-radio组成
+					c) 子类: checkbox表单: custom-control-input
+					d)       label标签: custom-control-label
+				-->
+				<!-- 块级表单 -->
+				<div class="custom-control custom-checkbox ">
+					<input type="checkbox" class="custom-control-input" id="test" >
+					<label for="test" class="custom-control-label"  > 自定义复选框 </label>
+				</div>
+				<!-- 内联表单 -->
+				<div class="custom-control custom-radio custom-control-inline ">
+					<input type="radio" class="custom-control-input" name="choose" id="test2" >
+					<label class="custom-control-label" for="test2" > man </label>
+				</div>
+				<div class="custom-control custom-radio custom-control-inline">
+					<input type="radio" class="custom-control-input" name="choose" id="test3" >
+					<label class="custom-control-label" for="test3" > woman </label>
+				</div>
+
+			</form>
+		</div>
+	</body>
+</html>
