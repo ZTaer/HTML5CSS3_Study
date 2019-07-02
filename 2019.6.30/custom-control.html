@@ -18,6 +18,7 @@
 					b) 容器: custom-control custom-checkbox/custom-radio组成
 					c) 子类: checkbox表单: custom-control-input
 					d)       label标签: custom-control-label
+					e) custom-control-inline: 使自定义的表单变为内联元素,可以使表单变为同一行
 				-->
 				<!-- 块级表单 -->
 				<div class="custom-control custom-checkbox ">
@@ -33,6 +34,47 @@
 					<input type="radio" class="custom-control-input" name="choose" id="test3" >
 					<label class="custom-control-label" for="test3" > woman </label>
 				</div>
+
+				<!-- 1.自定义select选择菜单  -->
+				<!--
+					在select标签中加入.custom-select即成为自定义表单拥有Bootstrap设计的样式( 具有响应式 )
+					custom-select-sm: 小的选择菜单
+					custom-select-lg: 大的选择菜单
+				-->
+				<select class="custom-select" >
+					<option selected > 选择 </option>
+					<option value="google" > google </option>
+					<option value="baidu" > baidu </option>
+					<option value="sogou" > sogou </option>
+				</select>
+				<!-- custom-select-sm 小的选择菜单 -->
+				<select class="custom-select-sm">
+					<option selected > 1 </option>
+					<option value="2" > 2 </option>
+					<option value="3" > 3 </option>
+				</select>
+				<!-- custom-select-lg 大的选择菜单 -->
+				<select class="custom-select-lg">
+					<option selected> A </option>
+					<option> B </option>
+					<option> C </option>
+				</select>
+
+				<!-- 2. 自定义滑块控件 -->
+				<!--
+					a) 核心:
+						容器: .custom-file
+						子类: 标签input的type="range" class="custom-range"
+						子类: label加入 class="custom-file-input"
+				-->
+				<input type="range" id="range0" name="" class=" custom-range ">
+
+				<!-- 3. 自定义上传控件 -->
+				<div class="custom-file">
+					<label for="file0" class="custom-file-label" > 选择文件</label> 
+					<input type="file" class="custom-file-input" id="file0" >
+				</div>
+
 
 			</form>
 		</div>
