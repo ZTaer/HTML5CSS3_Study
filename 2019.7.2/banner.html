@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstrap 实例</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+		<style>
+			/* 保持图片填充满容器 */
+			.carousel-inner img {
+			  width: 100%;
+			  height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+
+		<!-- 0. 只有,图片轮播 -->
+		<!--
+			a) 主要容器: 
+				.carousel data-ride="carousel" 必备元素
+			    .slide - 动画效果
+			b) 图片容器:
+				主: .carousel-inner
+				子: .carousel-item
+					注意格式，且第一个显示的div用active属性标记
+				修改容器大小:
+					与carousel-inner同级，通过css3来改变容器大小
+		-->
+		<div class="carousel slide" data-ride="carousel" >
+			<div class="carousel-inner" style="width:1920px; height:800px;" >
+				<div class="carousel-item active ">
+					<img src="1.jpg">
+				</div>
+				<div class="carousel-item">
+					<img src="2.jpg">
+				</div>
+			</div>
+		</div>
+
+		<!-- 1. 有图片轮播，指示符 -->
+		<!--
+			a) 指示符
+			b) 容器: 注意是ul标签carsousel-indicators
+			   子类: li标签加入data-target="主容器id号" data-slide-to="图对应数" , 注意第0个符加.active属性
+		-->
+		<div id="test" class="carousel slide " data-ride="carousel" >
+			
+			<!-- 指示符 -->
+			<ul class="carousel-indicators">
+				<li data-target="#test" data-slide-to="0" class="active" ></li>
+				<li data-target="#test" data-slide-to="1" ></li>
+			</ul>
+			
+			<!-- 轮播图 -->
+			<div class="carousel-inner">
+				<div class="carousel-item active ">
+					<img src="1.jpg">
+				</div>
+				<div class="carousel-item">
+					<img src="2.jpg">
+				</div>
+			</div>
+
+		</div>
+
+		<!-- 2. 有图片轮播,指示符,切换按钮 -->
+		<!--
+			容器: 注意id以及,data-ride="carousel"属性
+			      .carousel为必备核心;
+				  .slide为动画效果
+			切换按钮:
+				  父类: carousel-control-prev/next
+				        href="容器ID"
+						data-slide="prev/next"必备属性
+				  子类: 用于创建按钮小图标
+				        carousel-control-prev/next-icon
+			banner描述: 直接在carousel-item嵌入carousel-caption
+		-->
+		<div id="test1" class="carousel slide" data-ride="carousel" >
+
+			<ul class="carousel-indicators">
+				<li data-target="#test1" data-slide-to="0" class="active" ></li>
+				<li data-target="#test1" data-slide-to="1" ></li>
+			</ul>
+			
+			<div class="carousel-inner">
+				<div class="carousel-item active ">
+					<img src="1.jpg">
+					<div class="carousel-caption">
+						<h3>第一张图片描述标题</h3>
+						<p>描述文字!</p>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="2.jpg">
+				</div>
+			</div>
+
+			<!-- 按钮 -->
+			<a class="carousel-control-prev" href="#test1" data-slide="prev" >
+				<span class="carousel-control-prev-icon" ></span>
+			</a>
+			<a class="carousel-control-next" href="#test1" data-slide="next" >
+				<span class="carousel-control-next-icon"></span>
+			</a>
+
+		</div>
+
+	</body>
+</html>
