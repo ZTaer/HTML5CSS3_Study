@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 实例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	
+	<div class="container">
+
+		<!-- 0. 提示框 -->
+		<!--
+			a) 提示框3个属性+jquery构成
+			b) 属性:
+				data-toggle="tooltip": 开启提示
+				data-placement="top/bottom/left/right": 确定提示位置
+				title="写入提示信息" 
+			c) jquery:
+				目前并不清楚jquery的用法
+				<script>
+					$( document ).ready( function(){ $('[data-toggle="tooltip"]').tooltip(); });
+				</script>
+		-->
+		<a href="#" data-toggle="tooltip" data-placement="left" title="我是提示信息" > 提示 </a>
+
+		<script>
+			$(document).ready( 
+				function(){
+				$('[data-toggle="tooltip"]').tooltip();
+
+				}
+			);
+		</script>
+
+		<!-- 1. 弹出框,有标题的提示框 -->
+		<!--
+			a) 5属性+jquery
+			b) 属性:
+				0. data-toggle="popover": 开启弹出框
+				1. data-placement="top": 设定弹出框位置
+
+				2. title="设定标题"
+				3. data-content="弹出框内容"
+
+				4. data-trigger="": 控制弹出效果
+					默认情况: 单机进行/打开/关闭弹出框操作
+					focus: 单击打开,单机其它地方关闭
+					hover: 鼠标悬停时打开
+			c) jquery:
+				<script> $(document).ready( function(){ $('[data-toggle="tooltip"]').tooltip(); }); </script>
+		-->
+		<br/>
+		<a href="#" data-toggle="popover" data-placement="bottom" title="我是标题" data-content="我是内容" > 弹出( 默认,单机打开/关闭 ) </a><br/>
+		<a href="#" data-toggle="popover" data-placement="bottom" title="我是标题" data-content="我是内容" data-trigger="focus" > 弹出( 单机打开,其它地方单机关闭 ) </a><br/>
+		<a href="#" data-toggle="popover" data-placement="bottom" title="我是标题" data-content="我是内容" data-trigger="hover" > 弹出( hover ) </a><br/>
+
+		<script>
+			$(document).ready(
+				function(){
+					$('[data-toggle="popover"]').popover();
+				}
+			);
+		</script>
+		
+	</div>
+
+</body>
+</html>

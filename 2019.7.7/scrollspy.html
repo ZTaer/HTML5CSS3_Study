@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 实例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+  
+</head>
+	<!-- 0. scroll滚动监听 -->
+	<!--
+		a) 其实核心就3步
+		b) 第一步,开启监听:
+			0. 在body标签加入 
+				data-spy="scroll", 开启监听
+				data-target=".navbar", 设定监听的导航栏
+				data-offset="50", 设定滚动条监听敏感度偏差
+			1. body标签为 position:relative;
+		c) 第二步,创建导航栏:
+			0. 导航栏class名对应上方data-target=""
+			1. 设定a标签的href="id/类名"
+					注意: href="#s1",href=".s1"一个是监控id一个监控类名
+			2. 其它样式无所谓
+		d) 第三步,创建对应div:
+			0. id="s1"/class="s1", 与上方导航栏的a标签href="对应ID/class"即可
+			1. 每个div设定padding:50px 0px;, 更加精确的操控监听跳转位置,适量调整即可
+			
+	
+	-->
+	<style>
+	  body {
+		  position: relative; 
+	  }
+	  #s1,#s2,#s3,#s4{
+		  padding:56px 0px;
+	  }
+	</style>
+
+	<body data-spy="scroll" data-target=".navbar" data-offset="50"  >
+
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top  ">
+			<ul class="navbar-nav" >
+				<li class="nav-item">
+					<a class="nav-link" href="#s1" > section1 </a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="#s2" > section2 </a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="#s3" > section3 </a>
+				</li>
+
+				<li class="nav-item">
+					<a class="nav-link" href="#s4" > section4 </a>
+				</li>
+
+			</ul>
+		</nav>
+		
+		<div class="container bg-success" id="s1" style="height:500px;" >
+			<h1 class="display-3" >
+				Section1
+			</h1>
+		</div>
+
+		<div class="container bg-danger" id="s2" style="height:500px;" >
+			<h1 class="display-3" >
+				Section2
+			</h1>
+		</div>
+
+		<div class="container bg-light" id="s3" style="height:500px;" >
+			<h1 class="display-3" >
+				Section3
+			</h1>
+		</div>
+
+		<div class="container bg-dark" id="s4" style="height:500px;" >
+			<h1 class="display-3" >
+				Section4
+			</h1>
+		</div>
+
+
+
+	</body>
+</html>

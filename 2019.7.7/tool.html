@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 实例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	
+	<style>
+		.wh{
+			width:100px;
+			height:100px;
+			margin:30px;
+		}
+	</style>
+
+</head>
+	<body>
+		<!-- 常用class代替部分常用css -->
+		<div class="container" style="margin-top:50px;" >
+
+			<!--0. border边框 -->
+			<!--
+				border: 默认边框
+				border-danger: 可以修改边框颜色
+				border-top-0: 可以取消上方显示边框,上下左右类似
+			-->
+			<div class="border border-bottom-0 border-danger wh"></div>
+
+			<!-- 1. rounded圆角 -->
+			<!--
+				rounded: 默认圆角
+				rounded-top: 指定圆角
+				rounded-circle: 圆形
+				rounded-0: 取消圆角
+			-->
+			<div class="rounded  wh bg-danger "> 默认圆角 </div>
+			<div class="rounded-top wh border "> 指定圆角 </div>
+			<div class="rounded-circle wh border"> 圆形 </div>
+			<div class="rounded-0 wh border "> 取消圆角 </div>
+
+
+
+		</div>
+		<div class="container">
+			<!-- 2. float-left/right浮动 -->
+			<!--
+				a) 普通浮动:
+					float-left/right: 左右浮动
+					clearfix: 清除浮动
+				b) 响应式浮动
+					float-sm-right: 屏幕大于sm时为右浮动
+						float-sm/md/lg/xl-right
+					float-none: 无浮动
+
+			-->
+			<div class="clearfix">
+				<div class="float-left border wh">111</div>
+				<div class="float-right border wh">222</div>
+			</div>
+			<h3 class="clearfix" > 响应式浮动 </h3>
+			<div class="clearfix">
+				<span class="float-sm-right"> 屏幕大于sm时为右浮动 </span>
+				<span class="float-none" style="color:red;" > 无浮动 </span>
+			</div>
+			<h3 class="clearfix" > 水平剧中 </h3>
+			<!-- 3. mx-auto水平剧中 -->
+			<div class="mx-auto wh border border-danger"> 水平剧中 </div>
+
+		</div>
+
+		<!-- 4. w-*,h-*宽度/高度 -->
+		<!--
+			w-*: 控制宽度,w-25 相当于 width:25%;
+			h-*: 控制高度,w-100 相当于 height:100%;
+			mw-100/mh-100: 最大宽度/高度 
+		-->
+		<div class="container" style="height:500px;"  >
+			<div class=" w-25 h-50 bg-danger float-left"></div>
+			<div class=" w-25 h-100 bg-info float-left "></div>
+		</div>
+
+	</body>
+</html>
