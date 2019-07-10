@@ -1,0 +1,59 @@
+body{
+    background-color:#333;
+
+    letter-spacing:1px;
+    font-size: 15px;
+    color:#f8f8f8;
+    font-family: 微软雅黑;
+    font-weight: normal;
+}
+
+/********* nav *****/
+.navbar{
+    border-bottom:3px solid #008ed6;
+    opacity: 0.8; /** 设置透明度 **/
+}
+/********* home-section *****/
+#home-section{
+    background: url(../images/home.jpg) no-repeat center center ;
+    background: cover;
+    min-height: 700px;
+    background-attachment: fixed; /** 使用背景图静止不动 **/
+
+    .dark-overlay{
+        background-color: rgba(0,0,0,0.7); /** background-color:rgba(rgb颜色,透明度);可以控制背景颜色的透明度 **/
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        min-height: 700px;
+
+        .home-inner{
+            margin-top:150px;
+
+            .fas{
+                color:#008ed6;
+                background: #f8f8f8;
+                padding:5px;
+                border-radius: 5px;
+            }
+
+            .card-title{
+                margin-top:25px;
+            }
+        }
+    }
+}
+
+#explore-body-section{
+	.fas{
+		color:#f8f8f8;
+		background:#333;
+		padding:5px;
+		border-radius:5px;
+
+	}
+
+	
+}
+
