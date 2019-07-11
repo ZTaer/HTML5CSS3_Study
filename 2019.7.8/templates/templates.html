@@ -19,7 +19,7 @@
         <link rel="stylesheet" href="../static/css/style.css">
 
     </head>
-    <body>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50" >
         <!--nav-BGN-->
         <nav class="navbar bg-dark navbar-dark navbar-expand-sm fixed-top">
             <div class="container">
@@ -32,7 +32,7 @@
                 <div class="navbar-collapse collapse" id="main-nav" >
                     <ul class="navbar-nav ml-auto ">
                         <li class="nav-items">
-                            <a href="#home-head-section" class="nav-link">主页</a>
+                            <a href="#home-section" class="nav-link">主页</a>
                         </li>
                         <li class="nav-items">
                             <a href="#explore-head-section" class="nav-link">探索</a>
@@ -168,11 +168,192 @@
 			</div>
 		</section>
         <!-- EXPLORE - SECTION - END -->
+        <!-- CREATE - SECTION - BGN -->
+        <section id="create-head-section" class="bg-primary py-5"  >
+			<div class="container">
+				<div class="row text-center ">
+					<div class="col">
+						<h1 class="display-4"> 创造 </h1>
+						<p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid qui soluta suscipit officiis deleniti sapiente, eligendi illum animi iste temporibus!
+						</p>
+						<a href="#" class="btn btn-outline-light mx-auto " role="button" > 查看更多 </a>
+					</div>
+				</div>
+			</div>            
+        </section>
+		<section id="create-body-section" class="py-5" >
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h3> 创造你的激情 </h3>	
+						<p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid qui soluta suscipit officiis deleniti sapiente, eligendi illum animi iste temporibus!
+						</p>
+						<div class="d-flex ">
+							<div class="p-4">
+                                <i class="fas fa-check fa-2x"></i>
+							</div>
+							<p class="p-4" >
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid qui soluta suscipit officiis deleniti sapiente!
+							</p>
+						</div>
+
+						<div class="d-flex">
+							<div class="p-4">
+                                <i class="fas fa-check fa-2x"></i>
+							</div>
+							<p class="p-4" >
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid qui soluta suscipit officiis deleniti sapiente!
+							</p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<img src="../static/images/create-section1.jpg" class="rounded-circle img-fluid " >	
+					</div>
+				</div>
+			</div>
+		</section>
+        <!-- CREATE - SECTION - END -->
+		<!-- SHARE - SECTION -BGN -->
+		<section id="share-head-section" class="py-5 bg-danger">
+			<div class="container  text-center ">
+				<div class="row">
+					<div class="col">
+						<h1 class="display-4" > 分享 </h1>
+						<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid qui soluta suscipit officiis deleniti sapiente, eligendi illum animi iste temporibus!
+						</p>
+						<a class="btn btn-outline-light mx-auto "> 查看更多 </a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="share-body-section" class="py-5" >
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<img src="../static/images/share-section1.jpg" class="rounded-circle img-fluid" >
+						
+					</div>
+					<div class="col-md-6">
+						<h3> 分享你的创作 </h3>
+						<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid qui soluta suscipit officiis deleniti sapiente, eligendi illum animi iste temporibus!
+						</p>
+
+						<div class="d-flex">
+							<div class="p-4">
+                                <i class="fas fa-check fa-2x"></i>
+							</div>
+							<p class="p-4" >
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid qui soluta suscipit officiis deleniti sapiente!
+							</p>
+						</div>
+
+						<div class="d-flex">
+							<div class="p-4">
+                                <i class="fas fa-check fa-2x"></i>
+							</div>
+							<p class="p-4" >
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid qui soluta suscipit officiis deleniti sapiente!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SHARE - SECTION -END -->
+		<!-- FOOTER - BGN -->
+		<footer id="footer" class="bg-dark py-5" >
+			<div class="container">
+				<div class="row text-center ">
+					<div class="col">
+						<h3> LoopLAB </h3>
+						<p>
+							Copyright @ <span id="year" ></span>  <!-- 与jquery对应ID -->  
+						</p>
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#contactModal"  > 联系我们 </button>
+					</div>
+				</div>
+			</div>
+			
+		</footer>
+		<!-- FOOTER - END -->
+		<!-- CONTACT - BGN -->
+		<div id="contactModal" class="modal fade" >
+			<div class="modal-dialog">
+				<div class="modal-content text-dark ">
+					<div class="modal-header">
+						<h3> 联系我们 </h3>
+						<button type="button" class="close" data-dismiss="modal"> &times; </button>
+					</div>
+					<div class="modal-content p-4 px-5 ">
+						<form>
+							<div class="form-group">
+								<label for="usrname" > 姓名: </label>
+								<input type="text" id="usrname" class="form-control" >
+							</div>
+
+							<div class="form-group">
+								<label for="usremail" > 邮件: </label>
+								<input type="email" id="usremail"  class="form-control" >
+							</div>
+
+							<div class="form-group">
+								<label for="usrtel" > 手机: </label>
+								<input type="tel" id="usrtel"  class="form-control" >
+							</div>
+
+							<div class="form-group">
+								<label for="usrmsg" > 留言: </label>
+								<textarea class="form-control" id="usrmsg" ></textarea>
+							</div>
+
+							<div class="form-group">
+							</div>
+					</div>
+					<div class="modal-footer">
+
+						<button type="submit" class="btn btn-success mx-auto" > 立即提交 </button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- CONTACT - END -->
+
 
         <!-- bootstrap必备 -->
         <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+		<script>
+			// 获取时间,使用时" <span id="year"></span> "对应id是核心
+			$('#year').text(new Date().getFullYear());
+
+			// 创建滚动效果 
+			$(".navbar a").on(  // 抓取跳转的a标签,要与目标位置对应
+				'click',
+				function(event){
+					if(this.hash !== ""){
+						event.preventDefault();
+						const hash = this.hash;
+
+						$('html, body').animate({
+							scrollTop: $(hash).offset().top
+							},
+							800, // 动画执行时间
+							function(){
+								window.location.hash = hash;
+							}
+						);
+					}
+			});
+		</script>
     </body>    
 
 </html>

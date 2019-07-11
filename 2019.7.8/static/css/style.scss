@@ -6,6 +6,8 @@ body{
     color:#f8f8f8;
     font-family: 微软雅黑;
     font-weight: normal;
+
+	position:relative;
 }
 
 /********* nav *****/
@@ -56,4 +58,36 @@ body{
 
 	
 }
+/********* create-section *****/
+#create-body-section{
+	.fas{
+		background:#f8f8f8;
+        color:#008ed6;
+		padding:5px;
+		border-radius:5px;
+	}
 
+}
+
+/********* share-section *****/
+#share-head-section{
+	.btn:hover{
+		color:#333;
+	}
+	.fas{
+		background:#f8f8f8;
+        color:#008ed6;
+		padding:5px;
+		border-radius:5px;
+	}
+
+}
+
+#share-body-section{
+	.fas{
+		background:#f8f8f8;
+        color:#008ed6;
+		padding:5px;
+		border-radius:5px;
+	}
+}
