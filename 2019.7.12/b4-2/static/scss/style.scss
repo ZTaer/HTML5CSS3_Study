@@ -1,0 +1,144 @@
+/**
+    在bootstrap的variables.scss改变了primary的颜色,则全局将会发生变化
+    有_下滑线的scss文件不会被编辑
+**/
+$blue:#3292a6;
+$blue-overlay:rgba(50,146,166,0.8);
+
+.navbar{
+
+    opacity: 0.9;
+    box-shadow:2px 2px 5px $blue-overlay ;
+
+    .navbar-brand{
+        img{
+            width:50px;
+            height:50px;
+        }
+    }
+    
+    .navbar-collapse{
+        .navbar-nav{
+            .nav-item{
+                margin-left:1.4rem;
+                font-size: 1.1rem;
+                letter-spacing: 3px;
+            }
+        }
+    }
+}
+
+/********* banner *****/
+#banner{
+    margin-top:108px;
+
+    background: url(../img/mountains.jpg) no-repeat center center;
+    background: cover;
+
+    .overlay{
+        position: relative;
+        top:0;
+        left:0;
+        background:$blue-overlay;
+        width:100%;
+        height:100%;
+        min-height:600px;
+
+        .title0{
+            margin-top:80px;
+        }
+    }
+}
+
+/********** about *****/
+#about{
+    .about_hp{
+        width:50%;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 2.6rem;
+        margin-bottom: 2.7rem;
+    }
+}
+
+/*********** authors ******/
+#authors{
+    .about_hp{
+        width:50%;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 1.5rem;
+        margin-bottom: 3.3rem;
+        
+    }
+    .authors_img{
+        margin-top:-50px; /** margin竟然哈可以使用负数，竟然有惊奇的效果，可以越父类容器的界 **/
+    }
+    .authors_hover{
+        transition:background 0.5s linear;
+        cursor: pointer;
+
+        h3{
+            color:#333;
+            transition:color 0.5s linear;
+        }
+        p{
+            color:#333;
+            transition:color 0.5s linear;
+        }
+        i{
+            color:$blue;
+            transition:color 0.5s linear;
+        }
+
+        &:hover{
+            background: $blue;
+        }
+        &:hover h3{
+            color:#f8f8f8;
+        }
+        &:hover h5{
+            color:#f8f8f8;
+        }
+        &:hover p{
+            color:#f8f8f8;
+        }
+        &:hover i{
+            color:#f8f8f8;
+        }
+    }
+}
+
+/********* footer *****/
+#footer{
+    i{
+        color:#333;
+    }
+    .input-group{
+        margin:1.4rem 0;
+    }
+}
+/** 移动端样式: 当屏幕分辨率<768px时生效 **/
+@media( max-width:768px ){
+    /** banner **/
+    #banner{
+        .overlay{
+            min-height:500px;
+            
+            .title0{
+                font-size: 4.5rem;
+            }
+        }
+    }
+
+    /** 移动端时,加外边距 **/
+    .mb-resp{
+        margin-bottom: 1.5rem;
+    }
+
+    /** footer **/
+    #footer{
+        .img-fluid{
+            width:65%;
+        }
+    }
+}
+

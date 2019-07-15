@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+    <head>
+        <meta charset="utf-8" >
+        <title>bt4_test</title>
+
+
+        <!-- 为兼容响应式 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+
+        <!-- cdn_icon -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+        <!-- bootstrap必备 -->
+        <link rel="stylesheet" href="../static/css/bootstrap.css" >
+
+		<!-- 本地css,后面可以覆盖样式 -->
+        <link rel="stylesheet" href="../static/css/style.css">
+
+    </head>
+    <body data-spy="scroll" data-target="#main_nav" data-offset="50" >
+        <!-- nav-BGN -->
+        <nav id="main_nav" class="navbar py-4 navbar-expand-md navbar-light fixed-top bg-light">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <img src="../static/img/mlogo.png">
+                    <p class="d-inline">
+                        Mizuxe
+                    </p>
+                </a>
+
+                <button class="navbar-toggler " data-toggle="collapse" data-target="#hnav" >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="hnav">
+                    <ul class="navbar-nav ml-auto ">
+                        <li class="nav-item">
+                            <a href="#banner" class="nav-link">主页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link">关于</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#authors" class="nav-link">作者</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#footer" class="nav-link">联系</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- nav-END -->
+        <!-- banner-BGN -->
+        <section id="banner">
+            <div class="overlay">
+                <div class="container  ">
+                    <div class="row py-1 text-center">
+                        <div class="col-lg-6 text-white">
+                            <h1 class="display-1 title0 pb-5 ">
+                                你的梦想是什么...
+                            </h1>
+                            <p class="lead pb-4 " >
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae aspernatur nam iure porro tenetur maiores, quasi cumque laboriosam fugit consequuntur?
+                            </p>
+                            <a href="#" class="btn btn-outline-light mb-5 ">
+                                <i class="fas fa-arrow-right"></i>
+                                ReadMore
+                            </a>
+                        </div>
+                        <div class="col-lg-6 d-none d-lg-block ">
+                            <img src="../static/img/book.png" alt="book" class="img-fluid ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- banner-END -->
+        <!-- mb-resp为移动端加css样式做准备 -->
+
+        <!-- tel-BGN -->
+        <section id="tel" class="bg-dark py-5 " >
+            <div class="container">
+                <div class="row">
+                        <div class="col-md-4 mb-resp">
+                            <form action="#" >
+                            <input type="text" class="form-control  form-control-lg " placeholder="你的称呼" >
+                        </div>
+                        <div class="col-md-4 mb-resp">
+                            <input type="email" class="form-control form-control-lg" placeholder="你的邮箱" >
+                        </div>
+                        <div class="col-md-4">
+                            <input type="submit" class="form-control form-control-lg btn-primary " value="提交信息" >
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </section>
+        <section id="step" class="py-5" >
+            <div class="container">
+                <div class="row text-center text-primary">
+                    <div class="col-md-3 mb-resp">
+                        <div class="card border-primary ">
+                            <div class="card-body">
+                                <h3>更好</h3>
+                                <p class="">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, nobis!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-resp">
+                        <div class="card border-primary bg-primary text-white ">
+                            <div class="card-body">
+                                <h3>简捷</h3>
+                                <p class="">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, nobis!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-resp">
+                        <div class="card border-primary ">
+                            <div class="card-body">
+                                <h3>快速</h3>
+                                <p class="">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, nobis!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card border-primary bg-primary text-white ">
+                            <div class="card-body">
+                                <h3>强大</h3>
+                                <p class="">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, nobis!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- tel-END -->
+        <!-- about-BGN -->
+        <section id="about" class="bg-light py-5" >
+            <div class="container text-center ">
+                <div class="row">
+                    <div class="col">
+                        <h1 class="text-primary">
+                            你需要这本书的原因?
+                        </h1>
+                        <p class="pt-3 about_hp mx-auto ">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quia neque fugit quod nostrum sit.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="father" class="col">
+
+                        <div class="card ">
+                            <div class="card-header">
+                                <div href="#collapse0" data-toggle="collapse" >
+                                    <i class="fas fa-arrow-circle-down"></i>
+                                    灵感来源 
+                                </div>
+                            </div>
+                            <div id="collapse0" class="collapse show" data-parent="#father" >
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt mollitia, id provident explicabo non sunt repellendus porro ullam? Quas asperiores sunt pariatur ratione unde hic, nihil maxime cumque culpa soluta nam recusandae voluptates laborum doloremque nobis amet quia assumenda eveniet blanditiis, accusamus, corrupti voluptas dolores neque. Cupiditate dolor aliquam sequi?
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div  href="#collapse1" data-toggle="collapse" >
+                                    <i class="fas fa-arrow-circle-down"></i>
+                                    获得知识
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapse1" data-parent="#father" >
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt mollitia, id provident explicabo non sunt repellendus porro ullam? Quas asperiores sunt pariatur ratione unde hic, nihil maxime cumque culpa soluta nam recusandae voluptates laborum doloremque nobis amet quia assumenda eveniet blanditiis, accusamus, corrupti voluptas dolores neque. Cupiditate dolor aliquam sequi?
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="" href="#collapse2" data-toggle="collapse" >
+                                    <i class="fas fa-arrow-circle-down"></i>
+                                    开拓你的思维
+                                </div>
+                            </div>
+                            <div class="collapse" id="collapse2" data-parent="#father" >
+                                <div class="card-body">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt mollitia, id provident explicabo non sunt repellendus porro ullam? Quas asperiores sunt pariatur ratione unde hic, nihil maxime cumque culpa soluta nam recusandae voluptates laborum doloremque nobis amet quia assumenda eveniet blanditiis, accusamus, corrupti voluptas dolores neque. Cupiditate dolor aliquam sequi?
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about-END -->
+        <!-- authors-BGN -->
+        <section id="authors">
+            <div class="container text-center py-5">
+                <div class="row ">
+                     <div class="col">
+                        <h1 class="text-primary">
+                            认识作者
+                        </h1>
+                        <p class="pt-3 about_hp mx-auto ">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam quia neque fugit quod nostrum sit.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        
+                        <div class="card authors_hover mb-5 mb-lg-0 "> <!-- mb-5,mb-lg-0与d-none与d-lg-block配合一个道理 -->
+                            <div class="card-body">
+                                <img src="../static/img/person1.jpg" alt="" class="rounded-circle w-50 mb-3 authors_img ">
+                                <h3>
+                                    Sunsan Williams
+                                </h3>
+                                <h5 class="text-muted">
+                                    Lead Writer
+                                </h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat libero nulla, harum facere esse veniam!
+                                </p>
+                                <div class="d-flex justify-content-center">
+                                    <div class="p-3">
+                                        <a href="http://facebook.com">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-3">
+                                        <a href="http://twitter.com">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-3">
+                                        <a href="http://instagram.com">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        
+                        <div class="card authors_hover mb-5 mb-lg-0 ">
+                            <div class="card-body">
+                                <img src="../static/img/person2.jpg" alt="" class="rounded-circle w-50 mb-3 authors_img ">
+                                <h3>
+                                    Grace Smith
+                                </h3>
+                                <h5 class="text-muted">
+                                    Co-Writer
+                                </h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat libero nulla, harum facere esse veniam!
+                                </p>
+                                <div class="d-flex justify-content-center">
+                                    <div class="p-3">
+                                        <a href="http://facebook.com">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-3">
+                                        <a href="http://twitter.com">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-3">
+                                        <a href="http://instagram.com">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        
+                        <div class="card authors_hover mb-5 mb-lg-0 ">
+                            <div class="card-body">
+                                <img src="../static/img/person3.jpg" alt="" class="rounded-circle w-50 mb-3 authors_img ">
+                                <h3>
+                                    John Doe
+                                </h3>
+                                <h5 class="text-muted">
+                                    Editor
+                                </h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat libero nulla, harum facere esse veniam!
+                                </p>
+                                <div class="d-flex justify-content-center">
+                                    <div class="p-3">
+                                        <a href="http://facebook.com">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-3">
+                                        <a href="http://twitter.com">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-3">
+                                        <a href="http://instagram.com">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        
+                        <div class="card authors_hover">
+                            <div class="card-body">
+                                <img src="../static/img/person4.jpg" alt="" class="rounded-circle w-50 mb-3 authors_img ">
+                                <h3>
+                                    Kevin Swanson
+                                </h3>
+                                <h5 class="text-muted">
+                                    Designer
+                                </h5>
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat libero nulla, harum facere esse veniam!
+                                </p>
+                                <div class="d-flex justify-content-center">
+                                    <div class="p-3">
+                                        <a href="http://facebook.com">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-3">
+                                        <a href="http://twitter.com">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </div>
+                                    <div class="p-3">
+                                        <a href="http://instagram.com">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- authors-END -->
+
+        <!-- footer-BGN -->
+        <footer id="footer" class="py-5 bg-light " >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h3> 在线留言 </h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, nostrum.
+                        </p>
+                        <form action="">
+                            <div class="input-group input-group-lg ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-user "></i>
+                                    </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="你的称呼" >
+                            </div>
+                            <div class="input-group input-group-lg ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-envelope"></i>
+                                    </span>
+                                </div>
+                                <input type="email" class="form-control" placeholder="你的邮箱" >
+                            </div>
+                            <div class="input-group input-group-lg ">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </span>
+                                </div>
+                                <textarea rows='6' class="form-control" placeholder="你的需求" ></textarea>
+                            </div>
+                            <input type="submit" value="提交信息" class="form-control form-control-lg btn btn-primary " >
+                        </form>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center align-items-center ">
+                        <img src="../static/img/mlogo.png" alt="" class="img-fluid w-65 mt-4 mt-md-0 ">
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-END -->
+        <!-- end-BGN -->
+        <div id="end" class="py-5 bg-primary text-center " >
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="text-light">
+                            Copyright © 
+                            <span id="year"></span>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end-END -->
+
+        <!-- bootstrap必备 -->
+        <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+        <script>
+			// 获取时间,使用时" <span id="year"></span> "对应id是核心
+			$('#year').text(new Date().getFullYear());
+
+			// 创建滚动效果 
+			$("#main_nav a").on(  // 抓取跳转的a标签,要与目标位置对应
+				'click',
+				function(event){
+					if(this.hash !== ""){
+						event.preventDefault();
+						const hash = this.hash;
+
+						$('html, body').animate({
+							scrollTop: $(hash).offset().top
+							},
+							800, // 动画执行时间
+							function(){
+								window.location.hash = hash;
+							}
+						);
+					}
+			});
+		</script>
+    
+    </body>    
+
+</html>
