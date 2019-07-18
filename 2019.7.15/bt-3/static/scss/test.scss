@@ -1,0 +1,29 @@
+
+$wh:150px;
+$wp:5px;
+.pic0{
+    width:$wh;
+    height:$wh;
+    background: pink;
+    margin:$wp 0;
+}
+.pic1{
+    width:$wh;
+    height:$wh;
+    background: #ccc;
+    margin:$wp 0;
+
+}
+
+
+#test1{
+    $h:250px;
+    .card-window{
+        max-height: $h;
+        overflow: hidden;
+        img{
+            min-width:150%;
+            height:auto;
+        }
+    }
+}

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="zh" >
+
+    <head>
+        <meta charset="utf-8" >
+        <title>bt4实战3</title>
+
+        <!-- 为兼容响应式 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+
+        <!-- cdn_icon -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+        <!-- bootstrap必备 -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+		<!-- 灯笼弹窗效果-与Bt4搭配，js文件在底部 -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
+
+		<!-- 本地css,后面可以覆盖样式 -->
+        <link rel="stylesheet" href="../static/css/style.css">
+    </head>
+    <body data-spy="scroll" data-target="#mainNav" data-offset="50" >
+		<!-- nav-BGN -->
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark " id="mainNav" >
+			<div class="container">
+					<a href="#" class="navbar-brand">
+						Glozzom
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainItems" >
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="navbar-collapse collapse " id="mainItems" >
+						<ul class="navbar-nav ml-auto ">
+							<li class="nav-item active">
+								<a href="index.html" class="nav-link "  > 主页 </a>
+							</li>
+							<li class="nav-item">
+								<a href="about.html" class="nav-link"> 关于 </a>
+							</li>
+							<li class="nav-item">
+								<a href="service.html" class="nav-link"> 服务 </a>
+							</li>
+							<li class="nav-item">
+								<a href="blog.html" class="nav-link"> 博客 </a>
+							</li>
+							<li class="nav-item">
+								<a href="contact.html" class="nav-link"> 联系 </a>
+							</li>
+						</ul>
+					</div>
+			</div>
+			
+		</nav>
+		<!-- nav-END -->
+		<!-- banner-BGN -->
+		<section id="banner">
+
+			<div class="carousel slide" data-ride="carousel" id="mainBanner" >
+
+				<!-- 指示符 -->
+				<div class="carousel-indicators">
+					<li class="active" data-slide-to="0" data-target="#mainBanner" ></li>
+					<li data-slide-to="1" data-target="#mainBanner" ></li>
+					<li data-slide-to="2" data-target="#mainBanner" ></li>
+				</div>
+
+				<!-- 按钮 -->
+				<a class="carousel-control-prev" href="#mainBanner" data-slide="prev" >
+					<span class="carousel-control-prev-icon"></span>
+				</a>
+				<a class="carousel-control-next" href="#mainBanner" data-slide="next" >
+					<span class="carousel-control-next-icon"></span>
+				</a>
+
+				<!-- 图片轮播 -->
+				<div class="carousel-inner">
+
+					<div class="carousel-item active banner_0">
+						<div class="container d-none d-sm-block "> <!-- 把carousel-item嵌入container在嵌入carousel-caption也是可以的，能更加有校的限制显示内容 -->
+							<div class="carousel-caption text-right ">
+								<h2 class="display-3" >
+									Banner_One
+								</h2>
+								<p>
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia nostrum omnis ipsum quod rerum reprehenderit id reiciendis quo cupiditate debitis!
+								</p>
+								<a href="#" class="btn btn-danger btn-lg">
+									立即注册
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item  banner_1">
+						<div class="container d-none d-sm-block ">
+							<div class="carousel-caption">
+								<h2 class="display-3" >
+									Banner_Two
+								</h2>
+								<p>
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia nostrum omnis ipsum quod rerum reprehenderit id reiciendis quo cupiditate debitis!
+								</p>
+								<a href="#" class="btn btn-success btn-lg">
+									查看更多
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item  banner_2 ">
+						<div class="container d-none d-sm-block ">
+							<div class="carousel-caption text-left ">
+								<h2 class="display-3" >
+									Banner_Three
+								</h2>
+								<p>
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia nostrum omnis ipsum quod rerum reprehenderit id reiciendis quo cupiditate debitis!
+								</p>
+								<a href="#" class="btn btn-primary btn-lg">
+									查看更多
+								</a>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+			</div>
+		
+		</section>
+		<!-- banner-END -->
+
+		<!-- present-BGN -->
+		<section id="present" class="py-5" >
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 text-center mb-3 mb-md-0 ">
+						<i class="fas fa-cog fa-3x mb-2"></i>
+						<h3> 设置菜单 </h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, provident.
+						</p>
+					</div>
+					<div class="col-md-4 text-center mb-3 mb-md-0">
+						<i class="fas fa-cloud fa-3x mb-2"></i>
+						<h3> 云端资源 </h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, provident.
+						</p>
+					</div>
+					<div class="col-md-4 text-center mb-5 mb-md-0">
+						<i class="fas fa-cart-plus fa-3x mb-2"></i>
+						<h3> 服务订单 </h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, provident.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- present-END -->
+
+		<!-- ready-BGN -->
+		<section id="ready" >
+			<div class="ready-overlay d-flex align-items-center py-5">
+				<div class="container text-center">
+					<div class="row  ">
+						<div class="col">
+							<h1>
+								准备好了吗? 那就开始吧?
+							</h1>
+							<p class="mb-0">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Non mollitia facere totam ullam dolore officia fugit enim, doloremque nesciunt consequatur.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ready-END -->
+		<!-- ipsum-BGN -->
+		<section id="ipsum">
+			<div class="container py-5">
+				<div class="row ">
+					<div class="col-md-6 align-self-center ">
+						<h3>2019 - iMac</h3>
+						<p>
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis quidem consectetur sapiente impedit vero reiciendis quam assumenda numquam? Culpa, assumenda.
+						</p>
+						<a href="#" class="btn btn-outline-danger btn-lg">
+							查看更多
+						</a>
+					</div>
+					<div class="col-md-6 align-content-center">
+						<img src="../static/images/laptop.png" alt="" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- ipsum-END -->
+		
+		<!-- btn-video-BGN -->
+		<section id="btn-video">
+			<div class="video-overlay">
+				<div class="container py-5 text-center ">
+					<div class="row">
+						<div class="col">
+							<!-- data-video="https://www.youtube.com/embed/视频编号，即可获取对应视频数据 -->
+							<a href="#" class="video" data-toggle="modal" data-target="#test1" data-video="https://www.youtube.com/embed/7QskmAsU9kc" >
+								<i class="fas fa-play fa-3x"></i>
+							</a>
+							<h1 class="mb-0" >See What We Do</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- btn-video-END -->
+
+		<!-- video-BGN -->
+		<div class="modal fade" id="test1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" >
+							&times;
+						</button>
+					</div>
+					<div class="modal-body">
+						<!-- 关于iframe -->
+						<!--
+							a) frameborder="0": 视频边框为0
+							b) allowfullscreen: 允许全屏
+						-->
+						<iframe src="" frameborder="0" width="100%" height="350px" allowfullscreen  ></iframe>
+					</div>
+					<div class="modal-footer">
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- video-END -->
+		
+		<!-- 随机图片-BGN -->
+		<section id="photo" class="py-5 text-center">
+			<h1>随机图片</h1>
+			<p> 点击图片查看效果不过也是随机图片哦! </p>
+
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 mb-3">
+						<!-- 灯箱弹窗效果,需要上方cdn.css与底部cdn.js+jquery配合，在配合bootstarp -->
+						<!--
+							data-toggle="lightbox" // 开启灯箱效果( 核心 )
+							data-gallery="img-gallery" // 不知
+							data-width/height="500" // 控制弹窗大小
+						-->
+						<a href="https://source.unsplash.com/random/1200x650" data-toggle="lightbox" data-gallery="img-gallery" data-width="1200" data-height="650" >
+							<img src="https://source.unsplash.com/random/562x562" alt="" class="img-fluid" >
+						</a>
+					</div>
+					<div class="col-md-4 mb-3">
+						<a href="https://source.unsplash.com/random/1200x650" data-toggle="lightbox" data-gallery="img-gallery" data-width="1200" data-height="650" >
+							<img src="https://source.unsplash.com/random/563x563" alt="" class="img-fluid" >
+						</a>
+					</div>
+					<div class="col-md-4 mb-3">
+						<a href="https://source.unsplash.com/random/1200x650" data-toggle="lightbox" data-gallery="img-gallery" data-width="1200" data-height="650" >
+							<img src="https://source.unsplash.com/random/564x564" alt="" class="img-fluid" >
+						</a>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-4 mb-3">
+						<a href="https://source.unsplash.com/random/1200x650" data-toggle="lightbox" data-gallery="img-gallery" data-width="1200" data-height="650" >
+							<img src="https://source.unsplash.com/random/565x565" alt="" class="img-fluid" >
+						</a>
+					</div>
+					<div class="col-md-4 mb-3">
+						<a href="https://source.unsplash.com/random/1200x650" data-toggle="lightbox" data-gallery="img-gallery" data-width="1200" data-height="650" >
+							<img src="https://source.unsplash.com/random/566x566" alt="" class="img-fluid" >
+						</a>
+					</div>
+					<div class="col-md-4 mb-3">
+						<a href="https://source.unsplash.com/random/1200x650" data-toggle="lightbox" data-gallery="img-gallery" data-width="1200" data-height="650" >
+							<img src="https://source.unsplash.com/random/567x567" alt="" class="img-fluid" >
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- 随机图片-END -->
+
+		<!-- tel-BGN -->
+		<section id="tel" class="py-5 bg-dark text-center text-light" >
+			
+			<div class="container">
+				<h1> 留下你的联络方式 </h1>
+				<p class="tel-p mx-auto">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae beatae ea atque, illum mollitia ducimus quasi magnam modi quis dignissimos.
+				</p>
+				<div class="row">
+					<div class="col">
+						<form action="" class="form-inline justify-content-center my-2">
+							<input type="text" class="form-control" placeholder="你的称呼" >
+							<input type="email" class="form-control" placeholder="你的邮箱" >
+							<input type="submit" value="提交信息" class="form-control btn btn-primary" >
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- tel-END -->
+
+		<!-- footer-BGN -->
+		<footer>
+			<div class="container py-5 text-light">
+				<div class="row">
+					<div class="col text-center">
+						<p class="mb-0" >
+							Copyright &copy; <span id="year"></span> Glozzom
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- footer-END -->
+
+        <!-- bootstrap必备 -->
+        <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		
+		<!-- 灯笼弹窗效果js需文件-与Bt4搭配-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js" integrity="sha256-jGAkJO3hvqIDc4nIY1sfh/FPbV+UK+1N+xJJg6zzr7A=" crossorigin="anonymous"></script>
+
+		<script>
+			// 获取时间,使用时" <span id="year"></span> "对应id是核心
+			$('#year').text(new Date().getFullYear());
+
+			// 控制banner特效( carousel动态效果 )
+			$('.carousel').carousel({
+				interval:3500, // 3.5/s一换图
+				pause:'hover' // 鼠标悬停时,停止动画
+			});
+
+			 // 灯箱效果
+			 $(document).on('click', '[data-toggle="lightbox"]', function (event) { // 抓取属性执行效果
+				event.preventDefault();
+				$(this).ekkoLightbox();
+			});
+
+			// 目的是自动加载视频( 只能使用在上方所演示的固定模式中 )
+			$(function () {
+			// 抓取目标
+			$(".video").click(function () {
+				var theModal = $(this).data("target"),
+				videoSRC = $(this).attr("data-video"),
+				videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1"; // 自动播放核心代码
+				$(theModal + ' iframe').attr('src', videoSRCauto);
+				$(theModal + ' button.close').click(function () {
+				$(theModal + ' iframe').attr('src', videoSRC);
+				});
+			});
+			});
+			
+		</script>
+	
+	</body>    
+
+</html>

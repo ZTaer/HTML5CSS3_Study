@@ -1,0 +1,105 @@
+
+body{
+    letter-spacing: 1px;
+    background: #f8f8f8;
+
+    overflow-x: hidden; /** 取消显示x滚动轴 **/
+}
+/********** nav *****/
+#mainNav{
+    .nav-item{
+        $plr:10px;
+        padding-left:$plr;
+        padding-right:$plr;
+        
+    }
+    .nav-item.active{
+        color:#f8f8f8;
+        border-left: 5px solid #444;
+    }
+}
+
+/********** banner *****/
+#banner{
+    .carousel-item{
+        height:450px;
+    }
+    .banner_0{
+        background:url(../images/image1.jpg) no-repeat top center ;
+        background-size: cover; /** 我日" background-size:cover; "二者竟然可以配合使用,从而达到完全覆盖显示效果 **/
+    }
+    .banner_1{
+        background:url(../images/image2.jpg) top center no-repeat ;
+        background-size: cover;
+    }
+    .banner_2{
+        background:url(../images/image3.jpg) top center no-repeat ;
+        background-size: cover;
+    }
+}
+
+/********** ready *****/
+#ready{
+    background: url(../images/lights.jpg) center center no-repeat ;
+    background-attachment: fixed; /** 锁定背景图片 **/
+
+    .ready-overlay{
+        min-height:200px; /** 为兼容响应式,没用特殊要求,不能固定高度 **/
+        color:#f8f8f8;
+        background: rgba(0,0,0,0.7);
+        width:100%;
+        height:100%;
+    }
+}
+
+/********** btn_video *****/
+#btn-video{
+    background: url(../images/media.jpg) center center no-repeat ;
+    background-attachment: fixed;
+    background-size:cover;
+    /* background-position: x y ; 精确改变背景图片的相对位置，background-position: x y ;  */
+
+    .video-overlay{
+        min-height:200px; /** 为兼容响应式,没用特殊要求,不能固定高度 **/
+        color:#f8f8f8;
+        background: rgba(0,0,0,0.7);
+        width:100%;
+        height:100%;
+    }
+}
+
+/********** btn-video ******/
+#btn-video{
+    a{
+        color:#f8f8f8;
+    }
+}
+
+
+/********** tel *****/
+#tel{
+    input{
+        margin:0 4px;
+    }
+}
+
+footer{
+    background: #000;
+}
+
+/********** md分辨率以下生效 *****/
+@media( max-width:765px ){
+    /** ipsum **/
+    #ipsum{
+        .row .col-md-6{
+            text-align: center;
+        }
+    }
+
+    #tel{
+        input{
+            margin:5px 5px;
+        }
+    }
+
+}
