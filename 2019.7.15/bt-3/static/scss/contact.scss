@@ -1,0 +1,55 @@
+
+body{
+    letter-spacing: 1px;
+    background: #f8f8f8;
+    overflow-x: hidden; /** 取消显示x滚动轴 **/
+}
+
+/********** nav *****/
+#mainNav{
+    .nav-item{
+        $plr:10px;
+        padding-left:$plr;
+        padding-right:$plr;
+        
+    }
+    .nav-item.active{
+        color:#f8f8f8;
+        border-left: 5px solid #444;
+    }
+}
+
+/********** banner ******/
+#banner{
+    background: url(../images/image1.jpg) no-repeat;
+    background-position: 0 -370px;
+    background-attachment:fixed;
+
+}
+
+/********** tel *****/
+#tel{
+    padding:75px 0;
+    .card{
+        background: #f8f8f8;
+    }
+    input,textarea{
+        background: #f8f8f8;
+    }
+    .btn{
+        &:hover{
+            background: #dc3545;
+        }
+    }
+}
+
+/********** footer *****/
+#footer{
+    background: #000;
+}
+
+/********** md分辨率以下生效 *****/
+@media( max-width:765px ){
+
+
+}

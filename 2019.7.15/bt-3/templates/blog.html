@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh" >
+
+    <head>
+        <meta charset="utf-8" >
+        <title>bt4实战3</title>
+
+        <!-- 为兼容响应式 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+
+        <!-- cdn_icon -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+        <!-- bootstrap必备 -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<!-- 滑动轮播模块-共二个css一个js -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+
+		<!-- 本地css,后面可以覆盖样式 -->
+		<link rel="stylesheet" href="../static/css/blog.css">
+		
+    </head>
+    <body data-spy="scroll" data-target="#mainNav" data-offset="50" >
+		<!-- nav-BGN -->
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark " id="mainNav" >
+			<div class="container">
+					<a href="#" class="navbar-brand">
+						Glozzom
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainItems" >
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="navbar-collapse collapse " id="mainItems" >
+						<ul class="navbar-nav ml-auto ">
+							<li class="nav-item">
+								<a href="index.html" class="nav-link "  > 主页 </a>
+							</li>
+							<li class="nav-item ">
+								<a href="about.html" class="nav-link"> 关于 </a>
+							</li>
+							<li class="nav-item">
+								<a href="ser.html" class="nav-link"> 服务 </a>
+							</li>
+							<li class="nav-item active">
+								<a href="blog.html" class="nav-link"> 博客 </a>
+							</li>
+							<li class="nav-item">
+								<a href="contact.html" class="nav-link"> 联系 </a>
+							</li>
+						</ul>
+					</div>
+			</div>
+			
+		</nav>
+		<!-- nav-END -->
+		
+		
+		<!-- banner-BGN -->
+		<section id="banner" class="py-5 text-light">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col">
+						<h1>关于我们</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, animi.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- banner-END -->
+
+		<!-- main-BGN -->
+		<main id="main">
+			<div class="container py-5">
+				<div class="row">
+					<!-- 
+						此次布局有点特殊,只用col
+						让card-columns( 父类 )他来处理card( 子类 )的关系 
+					-->
+					<div class="col"> 
+						<div class="card-columns">
+							
+							<!-- card-bgn -->
+							<div class="card">
+								<img src="https://source.unsplash.com/random/300x200" class="img-fluid card-img-top" alt="">
+								<div class="card-body">
+									<!-- h3属性,小提示需要 -->
+									<h3 class="card-title title-nowrap" data-toggle="tooltip" data-placement="bottom" title="天津大地列斯进出口有限公司" >
+										天津大地列斯进出口有限公司
+									</h3>
+									<!-- small标签，能把字体变小 -->
+									<small class="text-muted" >
+										源码作者 - OO7 - 2019/05/20
+									</small>
+									<hr>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam, maiores est accusamus consectetur iste dicta officia enim commodi ea porro dolores similique quibusdam quo quod. Tempore officiis nobis neque?
+									</p>
+								</div>
+							</div>
+
+							<div class="card p-3">
+								<blockquote class="blockquote">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eveniet nam et blanditiis inventore nihil?
+									</p>
+									<footer class="blockquote-footer">
+										<small class="text-muted">
+											部分内容参考文献于
+											<cite> <!-- cite标签用于，定义作品的标题 -->
+												菜鸟驿站
+											</cite>
+										</small>
+									</footer>
+								</blockquote>
+							</div>
+							<!-- card-end -->
+
+							<!-- card-bgn -->
+							<div class="card">
+								<img src="https://source.unsplash.com/random/300x201" class="img-fluid card-img-top" alt="">
+								<div class="card-body">
+									<!-- h3属性,小提示需要 -->
+									<h3 class="card-title title-nowrap" data-toggle="tooltip" data-placement="bottom" title="天津大地列斯进出口有限公司" >
+										天津大地列斯进出口有限公司
+									</h3>
+									<small class="text-muted" >
+										源码作者 - OO7 - 2019/05/20
+									</small>
+									<hr>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam, maiores est accusamus consectetur iste dicta officia enim commodi ea porro dolores similique quibusdam quo quod. Tempore officiis nobis neque?
+									</p>
+								</div>
+							</div>
+
+							<div class="card p-3 bg-danger text-light">
+								<blockquote class="blockquote">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eveniet nam et blanditiis inventore nihil?
+									</p>
+									<footer class="blockquote-footer">
+										<small class="text-light">
+											部分内容参考文献于
+											<cite> <!-- cite标签用于，定义作品的标题 -->
+												菜鸟驿站
+											</cite>
+										</small>
+									</footer>
+								</blockquote>
+							</div>
+							<!-- card-end -->
+
+							<!-- card-bgn -->
+							<div class="card">
+								<img src="https://source.unsplash.com/random/300x202" class="img-fluid card-img-top" alt="">
+								<div class="card-body">
+									<!-- h3属性,小提示需要 -->
+									<h3 class="card-title title-nowrap" data-toggle="tooltip" data-placement="bottom" title="天津大地列斯进出口有限公司" >
+										天津大地列斯进出口有限公司
+									</h3>
+									<small class="text-muted" >
+										源码作者 - OO7 - 2019/05/20
+									</small>
+									<hr>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam, maiores est accusamus consectetur iste dicta officia enim commodi ea porro dolores similique quibusdam quo quod. Tempore officiis nobis neque?
+									</p>
+								</div>
+							</div>
+
+							<div class="card p-3">
+								<blockquote class="blockquote">
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eveniet nam et blanditiis inventore nihil?
+									</p>
+									<footer class="blockquote-footer">
+										<small class="text-muted">
+											部分内容参考文献于
+											<cite> <!-- cite标签用于，定义作品的标题 -->
+												菜鸟驿站
+											</cite>
+										</small>
+									</footer>
+								</blockquote>
+							</div>
+							<!-- card-end -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- main-END -->
+
+
+		<!-- footer-BGN -->
+		<footer id="footer">
+			<div class="container py-5 text-light">
+				<div class="row">
+					<div class="col text-center">
+						<p class="mb-0" >
+							Copyright &copy; <span id="year"></span> Glozzom
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- footer-END -->
+
+        <!-- bootstrap必备 -->
+        <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<!-- 滑动轮播模块 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha256-zUQGihTEkA4nkrgfbbAM1f3pxvnWiznBND+TuJoUv3M=" crossorigin="anonymous"></script>
+		
+
+		<script>
+			// 获取时间,使用时" <span id="year"></span> "对应id是核心
+			$('#year').text(new Date().getFullYear());
+
+			// 小提示框所需
+			$( document ).ready( function(){ $('[data-toggle="tooltip"]').tooltip(); });
+
+		</script>
+	
+	</body>    
+
+</html>

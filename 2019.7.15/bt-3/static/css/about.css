@@ -1,0 +1,44 @@
+@charset "UTF-8";
+body {
+  letter-spacing: 1px;
+  background: #f8f8f8;
+  overflow-x: hidden;
+  /** 取消显示x滚动轴 **/
+}
+
+/********** nav *****/
+#mainNav .nav-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#mainNav .nav-item.active {
+  color: #f8f8f8;
+  border-left: 5px solid #444;
+}
+
+/********** banner ******/
+#banner {
+  background: url(../images/image1.jpg) no-repeat;
+  background-position: 0 -370px;
+  background-attachment: fixed;
+}
+
+/********** we-do *****/
+#we-do .about-img {
+  display: block;
+  margin-top: -50px;
+}
+
+/********** bequote *****/
+#bequote .blockquote-footer {
+  background: transparent;
+}
+
+/********** footer *****/
+footer {
+  background: #000;
+}
+
+/********** md分辨率以下生效 *****/
+
+/*# sourceMappingURL=about.css.map */

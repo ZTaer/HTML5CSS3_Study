@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh" >
+
+    <head>
+        <meta charset="utf-8" >
+        <title>bt4实战3</title>
+
+        <!-- 为兼容响应式 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+
+        <!-- cdn_icon -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+        <!-- bootstrap必备 -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<!-- 滑动轮播模块-共二个css一个js -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+
+		<!-- 本地css,后面可以覆盖样式 -->
+		<link rel="stylesheet" href="../static/css/about.css">
+		
+    </head>
+    <body data-spy="scroll" data-target="#mainNav" data-offset="50" >
+		<!-- nav-BGN -->
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark " id="mainNav" >
+			<div class="container">
+					<a href="#" class="navbar-brand">
+						Glozzom
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainItems" >
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="navbar-collapse collapse " id="mainItems" >
+						<ul class="navbar-nav ml-auto ">
+							<li class="nav-item">
+								<a href="index.html" class="nav-link "  > 主页 </a>
+							</li>
+							<li class="nav-item active">
+								<a href="about.html" class="nav-link"> 关于 </a>
+							</li>
+							<li class="nav-item">
+								<a href="ser.html" class="nav-link"> 服务 </a>
+							</li>
+							<li class="nav-item">
+								<a href="blog.html" class="nav-link"> 博客 </a>
+							</li>
+							<li class="nav-item">
+								<a href="contact.html" class="nav-link"> 联系 </a>
+							</li>
+						</ul>
+					</div>
+			</div>
+			
+		</nav>
+		<!-- nav-END -->
+		
+		<!-- banner-BGN -->
+		<section id="banner" class="py-5 text-light">
+			<div class="container text-center">
+				<div class="row">
+					<div class="col">
+						<h1>关于我们</h1>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, animi.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- banner-END -->
+
+		<!-- we-do-BGN -->
+		<section id="we-do" class="py-3" >
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6">
+						<h1>
+							我们所做的服务
+						</h1>
+						<p>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet consequuntur, tenetur fugiat minus ipsam soluta laudantium iusto sunt vero modi aliquam. Ab qui voluptate sapiente ducimus iste. Hic fugit nisi expedita laborum quam eos, culpa necessitatibus adipisci a ea eaque quaerat nostrum molestias distinctio, esse dolorum ratione cupiditate et qui?
+						</p>
+						<p class="">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, molestiae consequatur quae accusantium alias tempora sit quidem ipsum, ducimus, a dolor temporibus. Reiciendis, dolores molestiae excepturi iusto libero illum minima nobis blanditiis voluptate nesciunt incidunt eveniet dolorem ducimus velit dicta quod itaque in id sunt! Eligendi enim nulla beatae reprehenderit!
+						</p>
+					</div>
+					<div class="col-md-6">
+						<!-- 随机图片CDN解析:
+							https://source.unsplash.com/random/宽度x高度/?关键词(以控制图片类型)
+						-->
+						<img src="https://source.unsplash.com/random/700x700/?technology" alt="" class="img-fluid rounded-circle d-none d-md-block about-img ">
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- we-do-END -->
+		<!-- choose-BGN -->
+		<section id="choose" class="py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="card bg-danger text-light text-center">
+							<div class="card-body">
+								<i class="fas fa-building fa-3x"></i>
+								<h3 class="py-1" >公司大楼</h3>
+								<p class="mb-0">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dolor?
+								</p>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-4">
+						<div class="card bg-dark text-light text-center">
+							<div class="card-body">
+								<i class="fas fa-bullhorn fa-3x"></i>
+								<h3 class="py-1" >消息通知</h3>
+								<p class="mb-0">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dolor?
+								</p>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-4">
+						<div class="card bg-danger text-light text-center">
+							<div class="card-body">
+								<i class="fas fa-comments fa-3x"></i>
+								<h3 class="py-1" >交流讨论</h3>
+								<p class="mb-0">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dolor?
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row pt-4">
+					<div class="col-md-4">
+						<div class="card bg-dark text-light text-center">
+							<div class="card-body">
+								<i class="fas fa-box fa-3x"></i>
+								<h3 class="py-1" >快递服务</h3>
+								<p class="mb-0">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dolor?
+								</p>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-4">
+						<div class="card bg-danger text-light text-center">
+							<div class="card-body">
+								<i class="fas fa-credit-card fa-3x"></i>
+								<h3 class="py-1" >银行支付</h3>
+								<p class="mb-0">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dolor?
+								</p>
+							</div>
+						</div>
+
+					</div>
+					<div class="col-md-4">
+						<div class="card bg-dark text-light text-center">
+							<div class="card-body">
+								<i class="fas fa-coffee fa-3x"></i>
+								<h3 class="py-1" >咖啡休闲</h3>
+								<p class="mb-0">
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, dolor?
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+		<!-- choose-END -->
+
+		<!-- bequote-BGN -->
+		<section id="bequote" class="py-4 bg-dark text-light">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<!-- 滑动轮播图特效 -->
+						<!--
+							a) 添加class=".slider"后在js抓取.slider
+							b) 满足架构:
+								<div class="slider" >
+									<div>内容1<div>
+									<div>内容2<div>
+								</div>
+							c) 此效果简单明了，重点在于jquery
+
+						-->
+						<div class="slider">
+
+
+							<div>
+								<div class="bequote-pic text-center text-light">
+									<h2>
+										滑动模块测试1
+									</h2>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, cum?
+									</p>
+									<footer class="blockquote-footer">
+										Meghan Williams From
+										<cite title="Company 1">Company 1</cite>
+									</footer>
+								</div>	
+							</div>
+
+							<div>
+								<div class="bequote-pic text-center text-light">
+									<h2>
+										滑动模块测试2
+									</h2>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, cum?
+									</p>
+									<footer class="blockquote-footer">
+										Meghan Williams From
+										<cite title="Company 1">Company 2</cite>
+									</footer>
+								</div>	
+							</div>
+
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- bequote-END -->
+
+		<!-- footer-BGN -->
+		<footer>
+			<div class="container py-5 text-light">
+				<div class="row">
+					<div class="col text-center">
+						<p class="mb-0" >
+							Copyright &copy; <span id="year"></span> Glozzom
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- footer-END -->
+
+        <!-- bootstrap必备 -->
+        <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<!-- 滑动轮播模块 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js" integrity="sha256-zUQGihTEkA4nkrgfbbAM1f3pxvnWiznBND+TuJoUv3M=" crossorigin="anonymous"></script>
+		
+
+		<script>
+			// 获取时间,使用时" <span id="year"></span> "对应id是核心
+			$('#year').text(new Date().getFullYear());
+
+			// 控制banner特效( carousel动态效果 )
+			$('.carousel').carousel({
+				interval:3500, // 3.5/s一换图
+				pause:'hover' // 鼠标悬停时,停止动画
+			});
+
+			// 滑动轮播模块
+			$('.slider').slick({
+				infinite: true, // 开启滑动
+				slideToShow: 1, // 初试位置为1
+				sliderToScrool: 1 // 滑动数为1
+			});
+
+		</script>
+	
+	</body>    
+
+</html>
