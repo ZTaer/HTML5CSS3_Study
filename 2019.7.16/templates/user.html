@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh" >
+
+    <head>
+        <meta charset="utf-8" >
+        <title>bt4_test</title>
+
+        <!-- 为兼容响应式 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+
+		<!-- cdn_icon -->
+		<!--
+			icon查询: https://fontawesome.com/icons?d=gallery
+		-->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.6.3/css/all.min.css" >
+		
+		<!-- bootstrap必备 -->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+		<!-- 本地css,后面可以覆盖样式 -->
+        <link rel="stylesheet" href="../static/css/user.css" >
+
+	</head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50" >
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark py-0 my-0" id="nav">
+			<div class="container">
+				<a href="#" class="navbar-brand">
+					Blogen
+				</a>
+				<button type="button" data-toggle="collapse" data-target="#mainNav" class="navbar-toggler" >
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="navbar-collapse collapse" id="mainNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a href="index.html" class="nav-link">
+								主控台
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="posts.html" class="nav-link">
+								帖子
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="categories.html" class="nav-link ">
+								分类
+							</a>
+						</li>
+						<li class="nav-item active">
+							<a href="user.html" class="nav-link ">
+								用户
+							</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item dropdown">
+							<a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" >
+								<i class="fas fa-user"></i>
+								欢迎ZTaer
+							</a>
+							<div class="dropdown-menu">
+								<a href="#" class="dropdown-item">
+									<i class="fas fa-user-circle"></i>
+									个人资料
+								</a>
+								<a href="#" class="dropdown-item">
+									<i class="fas fa-cog"></i>
+									设置信息
+								</a>
+							</div>
+
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="fas fa-user-times"></i>
+								Logout
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- header-BGN -->
+		<div id="header" class="py-3 bg-warning">
+			<div class="container text-light">
+				<h1>
+					<i class="fas fa-users"></i>
+					用户
+				</h1>
+			</div>
+		</div>
+		<!-- header-END -->
+
+		<!-- action-BGN -->
+		<section id="action" class="py-4" >
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 ml-auto ">
+						<form >
+							<div class="input-group"> <!-- 记住他，常用 -->
+								<input type="text" placeholder="Search..." class="form-control">
+								<div class="input-group-append">
+									<button type="submit" class="btn btn-primary">
+										搜索
+									</button>
+								</div>
+							</div>
+						</form>
+						
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- action-END -->
+		<!-- table-main-BGN -->
+		<section id="table-main" class="py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="text-dark" >
+									帖子
+								</h4>
+							</div>
+
+							<div class="table-responsive">
+								<table class=" table table-striped table-hover">
+									<thead class="bg-dark text-light">
+										<tr>
+											<th> # </th>
+											<th> 名称 </th>
+											<th> 邮箱 </th>
+											<th>  </th>
+										</tr>
+									</thead>
+									<tbody>
+
+										<tr>
+											<td> 1 </td>
+											<td> ZTaerKiller </td>
+											<td> ztaerkiller@gmail.com </td>
+											<td>
+												<a href="#" class="btn btn-secondary">
+													<i class="fas fa-angle-double-right"></i>
+													详细信息
+												</a>
+											</tb>
+										</tr>
+										<tr>
+											<td> 1 </td>
+											<td> ZTaerKiller </td>
+											<td> ztaerkiller@gmail.com </td>
+											<td>
+												<a href="#" class="btn btn-secondary">
+													<i class="fas fa-angle-double-right"></i>
+													详细信息
+												</a>
+											</tb>
+										</tr>
+										<tr>
+											<td> 1 </td>
+											<td> ZTaerKiller </td>
+											<td> ztaerkiller@gmail.com </td>
+											<td>
+												<a href="#" class="btn btn-secondary">
+													<i class="fas fa-angle-double-right"></i>
+													详细信息
+												</a>
+											</tb>
+										</tr>
+										<tr>
+											<td> 1 </td>
+											<td> ZTaerKiller </td>
+											<td> ztaerkiller@gmail.com </td>
+											<td>
+												<a href="#" class="btn btn-secondary">
+													<i class="fas fa-angle-double-right"></i>
+													详细信息
+												</a>
+											</tb>
+										</tr>
+										<tr>
+											<td> 1 </td>
+											<td> ZTaerKiller </td>
+											<td> ztaerkiller@gmail.com </td>
+											<td>
+												<a href="#" class="btn btn-secondary">
+													<i class="fas fa-angle-double-right"></i>
+													详细信息
+												</a>
+											</tb>
+										</tr>
+										<tr>
+											<td> 1 </td>
+											<td> ZTaerKiller </td>
+											<td> ztaerkiller@gmail.com </td>
+											<td>
+												<a href="#" class="btn btn-secondary">
+													<i class="fas fa-angle-double-right"></i>
+													详细信息
+												</a>
+											</tb>
+										</tr>
+										
+
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- table-main-END -->
+
+		<!--footer-BGN-->
+		<footer id="footer" class="bg-dark text-center  py-5">
+			<div class="container">
+				<div class="col">
+					<p class="mb-0" >
+						Copyright &copy; <span id="year"></span> Blogen:OO7
+					</p>
+				</div>
+			</div>
+		</footer>
+		<!--footer-END-->
+
+
+		<!-- bootstrap必备 -->
+		<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<script>
+			// 获取时间,使用时" <span id="year"></span> "对应id是核心
+			$('#year').text(new Date().getFullYear());
+
+			// 创建滚动效果 
+			$(".navbar a").on(  // 抓取跳转的a标签,要与目标位置对应
+				'click',
+				function(event){
+					if(this.hash !== ""){
+						event.preventDefault();
+						const hash = this.hash;
+
+						$('html, body').animate({
+							scrollTop: $(hash).offset().top
+							},
+							800, // 动画执行时间
+							function(){
+								window.location.hash = hash;
+							}
+						);
+					}
+			});
+
+		</script>
+	
+	</body>    
+
+</html>

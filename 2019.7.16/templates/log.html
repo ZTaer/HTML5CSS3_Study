@@ -19,18 +19,94 @@
 		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		
 		<!-- 本地css,后面可以覆盖样式 -->
-        <link rel="stylesheet" href="../static/css/style.css" >
+        <link rel="stylesheet" href="../static/css/log.css" >
 
 	</head>
     <body data-spy="scroll" data-target=".navbar" data-offset="50" >
-		<!--Start Here-->
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark py-0 my-0" id="nav">
+			<div class="container">
+				<a href="#" class="navbar-brand">
+					Blogen
+				</a>
+				
+			</div>
+		</nav>
+
+		<!-- header-BGN -->
+		<div id="header" class="py-3 bg-primary">
+			<div class="container text-light">
+				<h1>
+					<i class="fas fa-user"></i>
+					登陆
+				</h1>
+			</div>
+		</div>
+		<!-- header-END -->
+
+		<!-- action-BGN -->
+		<section id="action" class="py-4">
+			<div class="container">
+				<div class="row">
+
+				</div>
+			</div>
+		</section>
+		<!-- action-END -->
 		
+		<!-- main-form-BGN -->
+		<section id="main-form" class="py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col d-flex justify-content-center">
+						<div class="col-md-5">
+							<div class="card">
+								<div class="card-header">
+									账户登陆
+								</div>
+								<div class="card-body">
+									<form action="index.html">
+										<div class="form-group">
+											<label for="email0">
+												邮箱:
+											</label>
+											<input type="text" class="form-control" id="email0" >
+										</div>
+										<div class="form-group">
+											<label for="password0">
+												密码:
+											</label>
+											<input type="password" class="form-control" id="password0" >
+										</div>
+										<!-- btn-block按钮变为块级元素 -->
+										<input type="submit" value="登陆" class="btn btn-primary btn-block">
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- main-form-END -->
+
+		<!--footer-BGN-->
+		<footer id="footer" class="bg-dark text-center  py-5">
+			<div class="container">
+				<div class="col">
+					<p class="mb-0" >
+						Copyright &copy; <span id="year"></span> Blogen:OO7
+					</p>
+				</div>
+			</div>
+		</footer>
+		<!--footer-END-->
+
 
 		<!-- bootstrap必备 -->
 		<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="https://cdn.staticfile.org/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
+
 		<script>
 			// 获取时间,使用时" <span id="year"></span> "对应id是核心
 			$('#year').text(new Date().getFullYear());
@@ -53,6 +129,7 @@
 						);
 					}
 			});
+
 		</script>
 	
 	</body>    

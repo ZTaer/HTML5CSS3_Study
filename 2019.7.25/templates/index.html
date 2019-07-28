@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh" >
+
+    <head>
+        <meta charset="utf-8" >
+        <title>bt4_test</title>
+
+        <!-- 为兼容响应式 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+
+		<!-- cdn_icon -->
+		<!--
+			icon查询: https://fontawesome.com/icons?d=gallery
+		-->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.6.3/css/all.min.css" >
+		
+		<!-- bootstrap必备 -->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<!-- 灯箱效果必备1css，1js，1jq -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css" />
+
+		
+		<!-- 本地css,后面可以覆盖样式 -->
+        <link rel="stylesheet" href="../static/css/index.css" >
+
+	</head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50" >
+		<main id="main">
+			<div class="container">
+				<header id="mainHeader">
+					<div class="row">
+						<div class="col-md-5 col-lg-4 p-0">
+							<img src="../static/images/ME.png" alt="">
+						</div>
+						<div class="col-md-7 col-lg-8 p-0">
+							<!-- 垂直排序 -->
+							<div class="d-flex flex-column"> 
+								<div class="d-flex  flex-row py-5 justify-content-around align-items-center bg-dark text-light">
+									<h1 class="display-4">
+										赵腾
+									</h1>
+									<a href="#" class="text-light" >
+										<i class="fab fa-twitter "></i>
+
+									</a>
+									<a href="#" class="text-light" >
+										<i class="fab fa-facebook"></i>
+
+									</a>
+									<a href="#" class="text-light" >
+										<i class="fab fa-instagram"></i>
+
+									</a>
+									<a href="#" class="text-light" >
+										<i class="fab fa-github"></i>
+
+									</a>
+								</div>
+							</div>
+
+							<div class="py-4 px-5 bg-black text-light">
+								前端工程师，WEB设计师，Python+GOlang狂热爱好者, GTA5大神, Alienware真爱粉<br/>
+								古风伴奏 - 代码长随 - 一切为了成为一名优秀的黑客
+							</div>
+
+							<!-- bootstrap- d-flex与flex-row配合使用,即可正常使用flex布局 -->
+							<div class="d-flex flex-row align-items-stretch text-center">
+
+								<div class="p-4 bg-primary collapsed choose-items" data-toggle="collapse" data-target="#home" >
+									<i class="fas fa-home fa-2x d-block"></i>
+									<span>
+										主页
+									</span>
+								</div>
+
+								<div class="p-4 bg-success collapsed choose-items" data-toggle="collapse" data-target="#resume" >
+									<i class="fas fa-graduation-cap fa-2x d-block"></i>
+									<span>
+										简历
+									</span>
+								</div>
+
+								<div class="p-4 bg-warning collapsed choose-items" data-toggle="collapse" data-target="#work" >
+									<i class="fas fa-folder-open fa-2x d-block"></i>
+									<span>
+										工作
+									</span>
+								</div>
+
+								<div class="p-4 bg-danger collapsed choose-items" data-toggle="collapse" data-target="#contact" >
+									<i class="fas fa-envelope fa-2x d-block"></i>
+									<span>
+										联系
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</header>
+			</div>
+
+			<!-- home-BGN -->
+			<div id="home" class="collapse show" data-parent="#main"   >
+				<div class="container px-0">
+
+					<div class="card py-5 bg-primary text-light w-100">
+						<div class="card-body">
+							<h3 class="card-title" >
+								欢迎访问 __OO7__ 网络空间
+							</h3>
+							<p class="mb-0" >
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ab?
+							</p>
+						</div>
+					</div>
+					<div class="card ">
+						<div class="card-body py-5 ">
+							<h3 class="card-title text-dark">
+								我的前端技能
+							</h3>
+							<p class="mb-0" >
+								自学参考<small class="text-danger" > : </small> 
+									Udemy - Brad老师( Bootstrap4 ) - Jonas老师( Javascript - ES5/6/7/8 )<small class="text-danger" > && </small>  
+									Javascript高级程序设计( 泽卡斯-第三版 )<small class="text-danger" > && </small>  
+									HTML5与CSS3权威指南( 陆凌牛-第3版 )<small class="text-danger" > && </small> 
+									Google/Baidu/CSDN/知乎/简书
+							</p>
+							<hr>
+
+							<h4 class="text-uppercase" >
+								HTML5
+							</h4>
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:85%;" >
+									85%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase" >
+								CSS3
+							</h4>
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:83%;" >
+									83%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase" >
+								SCSS
+							</h4>
+							<div class="progress mb-4" >
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:85%;" >
+									85%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase">
+								bootstrap4
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:89%;" >
+									89%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase">
+								javascript - ES5 - ES6 - ES7 - ES8
+							</h4 class="text-uppercase" >
+							
+							<div class="progress mb-4">
+								
+								<div class="progress-bar progress-bar-striped progress-bar-animated bg-success " style="width:35%;" >
+									自学中35%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase">
+								React
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:5%;" >
+									5%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase">
+								jquery
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:5%;" >
+									5%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase">
+								Ajax2
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:5%;" >
+									5%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase">
+								GIT/GITHUB
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%;" >
+									80%
+								</div>
+							</div>
+	
+							<a href="#" class=" btn btn-primary my-5 d-block ">
+								查看实战作品
+							</a>
+
+							<hr>
+
+							<h3 class="card-title pt-5 text-dark">
+								我的设计技能
+							</h3>
+							<p class="mb-0" >
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, adipisci.
+							</p>
+							<hr>
+
+							<h4 class="text-uppercase">
+								设计仿制
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:85%;" >
+									85%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase">
+								审美境界
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:90%;" >
+									90%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase">
+								灵感创造
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:50%;" >
+									50%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase">
+								Adobe PS
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:80%;" >
+									80%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase">
+								Adobe AI
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:60%;" >
+									60%
+								</div>
+							</div>
+							
+							<a href="#" class=" btn btn-primary my-5 d-block ">
+								查看实战作品
+							</a>
+
+							<hr>
+
+
+							<h3 class="card-title pt-5 text-dark">
+								我的后端技能
+							</h3>
+							<p class="mb-0" >
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, adipisci.
+							</p>
+							<hr>
+
+							<h4 class="text-uppercase">
+								python3
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:75%;" >
+									75%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase">
+								Django
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:20%;" >
+									20%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase">
+								nodo.js
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:5%;" >
+									5%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase">
+								Centos7
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:5%;" >
+									5%
+								</div>
+							</div>
+
+							<h4 class="text-uppercase">
+								GOlang
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated" style="width:5%;" >
+									5%
+								</div>
+							</div>
+
+							<a href="#" class=" btn btn-primary my-5 d-block ">
+								查看实战作品
+							</a>
+
+							<hr>
+
+							<h3 class="card-title pt-5 text-dark">
+								我的黑客技能
+							</h3>
+							<p class="mb-0" >
+								一切为了成为一名优秀的黑客而做准备
+							</p>
+							<hr>
+
+							<h4 class="text-uppercase">
+								保密
+							</h4 class="text-uppercase" >
+							<div class="progress mb-4">
+								<div class="progress-bar progress-bar-striped progress-bar-animated bg-dark " style="width:100%;" >
+									保密
+								</div>
+							</div>
+
+							<a href="#" class=" btn btn-dark mt-5 d-block disabled">
+								查看实战作品
+							</a>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- home-END -->
+
+			<!-- resume-BGN -->
+			<div id="resume" class="collapse" data-parent="#main"   >
+				<div class="container px-0">
+
+					<div class="card bg-success">
+						<div class="card-body  py-5 text-light">
+							<h3 class="card-title">
+								我的简历
+							</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, adipisci.
+							</p>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card-body">
+							<h4 class="card-title text-dark">
+								我在那工作过?
+							</h4>
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, quibusdam?
+							</p>
+
+							<div class="row">
+								<div class="col-md-4">
+									<div class="card">
+										<div class="card-body">
+											<h3>
+												前端工程师
+											</h3>
+											<p>
+												Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, alias.
+											</p>
+											<p class="p-2 bg-dark text-light addr-p">
+												地址: 山东菏泽牡丹区
+											</p>
+											<p class="p-2 bg-dark text-light addr-p">
+												电话: 0530 - 333-3333
+											</p>
+										</div>
+										<div class="card-footer">
+											<h6>
+												日期: 2019.4 - 2019.12
+											</h6>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4">
+									<div class="card">
+										<div class="card-body">
+											<h3>
+												前端工程师
+											</h3>
+											<p>
+												Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, alias.
+											</p>
+											<p class="p-2 bg-dark text-light addr-p">
+												地址: 山东菏泽牡丹区
+											</p>
+											<p class="p-2 bg-dark text-light addr-p">
+												电话: 0530 - 333-3333
+											</p>
+										</div>
+										<div class="card-footer">
+											<h6>
+												日期: 2019.4 - 2019.12
+											</h6>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-md-4">
+									<div class="card">
+										<div class="card-body">
+											<h3>
+												前端工程师
+											</h3>
+											<p>
+												Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, alias.
+											</p>
+											<p class="p-2 bg-dark text-light addr-p">
+												地址: 山东菏泽牡丹区
+											</p>
+											<p class="p-2 bg-dark text-light addr-p">
+												电话: 0530 - 333-3333
+											</p>
+										</div>
+										<div class="card-footer">
+											<h6>
+												日期: 2019.4 - 2019.12
+											</h6>
+										</div>
+									</div>
+								</div>
+
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- resume-END -->
+
+
+
+			<!-- work-BGN -->
+			<div id="work" class="collapse" data-parent="#main"   >
+				<div class="container px-0">
+
+					<div class="card bg-warning">
+						<div class="card-body  py-5 text-light">
+							<h3 class="card-title">
+								我的作品
+							</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, adipisci.
+							</p>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card-body">
+							<h4 class="card-title text-dark">
+								我在那工作过?
+							</h4>
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, quibusdam?
+							</p>
+
+							<!-- bootstrap- no-gutters让标签的子类,左右无外边距 -->
+							<div class="row no-gutters">
+								<div class="col-md-3">
+									<!-- 灯箱效果 -->
+									<a href="https://unsplash.it/1440/800.jpg?image=666" data-toggle="lightbox"  data-gallery="example-gallery"  >
+										<img src="https://unsplash.it/600.jpg?image=666" class="img-fluid" alt="">
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a href="https://unsplash.it/1440/800.jpg?image=500" data-toggle="lightbox"  data-gallery="example-gallery"  >
+										<img src="https://unsplash.it/600.jpg?image=500" class="img-fluid" alt="">
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a href="https://unsplash.it/1440/800.jpg?image=400" data-toggle="lightbox"  data-gallery="example-gallery" >
+										<img src="https://unsplash.it/600.jpg?image=400" class="img-fluid" alt="">
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a href="https://unsplash.it/1440/800.jpg?image=663" data-toggle="lightbox"  data-gallery="example-gallery" >
+										<img src="https://unsplash.it/600.jpg?image=663" class="img-fluid" alt="">
+									</a>
+								</div>
+							</div>
+
+							<div class="row no-gutters">
+								<div class="col-md-3">
+									<!-- 灯箱效果 -->
+									<a href="https://unsplash.it/1440/800.jpg?image=212" data-toggle="lightbox" >
+										<img src="https://unsplash.it/600.jpg?image=212" class="img-fluid" alt="">
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a href="https://unsplash.it/1440/800.jpg?image=352" data-toggle="lightbox" >
+										<img src="https://unsplash.it/600.jpg?image=352" class="img-fluid" alt="">
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a href="https://unsplash.it/1440/800.jpg?image=211" data-toggle="lightbox" >
+										<img src="https://unsplash.it/600.jpg?image=211" class="img-fluid" alt="">
+									</a>
+								</div>
+								<div class="col-md-3">
+									<a href="https://unsplash.it/1440/800.jpg?image=353" data-toggle="lightbox" >
+										<img src="https://unsplash.it/600.jpg?image=353" class="img-fluid" alt="">
+									</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- work-END -->
+
+
+			<!-- contact-BGN -->
+			<div id="contact" class="collapse" data-parent="#main"   >
+				<div class="container px-0">
+
+					<div class="card bg-danger">
+						<div class="card-body  py-5 text-light">
+							<h3 class="card-title">
+								联系本人
+							</h3>
+							<p>
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe, adipisci.
+							</p>
+						</div>
+					</div>
+
+					<div class="card">
+						<div class="card-body">
+							<h4 class="card-title text-dark">
+								填写信息
+							</h4>
+							<p>
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti, quibusdam?
+							</p>
+
+							<form action="">
+								<div class="form-group">
+									<div class="input-group input-group-lg mb-3">
+										<div class="input-group-prepend ">
+											<!-- 注意一定要span.input-group-text图标嵌套在内,否则容易出错 -->
+											<span class="input-group-text bg-danger text-light">
+												<i class="fas fa-user  "></i>
+											</span>
+										</div>
+										<input  type="text" class="form-control text-light bg-dark" placeholder="姓名" >
+									</div>
+
+									<div class="input-group input-group-lg mb-3">
+										<div class="input-group-prepend ">
+											<!-- 注意一定要span.input-group-text图标嵌套在内,否则容易出错 -->
+											<span class="input-group-text bg-danger text-light">
+												<i class="fas fa-envelope"></i>
+											</span>
+										</div>
+										<input  type="text" class="form-control text-light bg-dark" placeholder="邮箱" >
+									</div>
+
+									<div class="input-group input-group-lg mb-3">
+										<div class="input-group-prepend ">
+											<!-- 注意一定要span.input-group-text图标嵌套在内,否则容易出错 -->
+											<span class="input-group-text bg-danger text-light">
+												<i class="fas fa-pencil-alt"></i>
+											</span>
+										</div>
+										<textarea class="form-control bg-dark text-white" placeholder="留言"></textarea>
+									</div>
+
+									<button type="submit" class="btn btn-danger btn-lg d-block w-100">
+										Submit
+									</button>
+						
+								</div>
+
+							</form>
+
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- contact-END -->
+
+		</main>
+
+		<!-- footer-BGN -->
+		<footer id="footer">
+			<div class="container py-5 bg-dark text-light">
+				<div class="row">
+					<div class="col">
+						<a href="#" class="btn btn-outline-light d-block mx-auto " style="width:10rem;"  >
+							<i class="fas fa-cloud"></i>
+							下载此人简历
+						</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- footer-END -->
+		
+
+		<!-- bootstrap必备 -->
+		<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<!-- 灯箱效果必备 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+    
+		<script>
+			// 获取时间,使用时" <span id="year"></span> "对应id是核心
+			$('#year').text(new Date().getFullYear());
+
+			// 创建滚动效果 
+			$(".navbar a").on(  // 抓取跳转的a标签,要与目标位置对应
+				'click',
+				function(event){
+					if(this.hash !== ""){
+						event.preventDefault();
+						const hash = this.hash;
+
+						$('html, body').animate({
+							scrollTop: $(hash).offset().top
+							},
+							800, // 动画执行时间
+							function(){
+								window.location.hash = hash;
+							}
+						);
+					}
+			});
+
+			// 当点击.port-item时隐藏或者显示collapse
+			$('.port-item').click(function () {
+      			$('.collapse').collapse('hide');
+    		});
+
+			// 当单击标签有data-toggle='lightbox'属性时实现灯箱效果
+			$(document).on('click', '[data-toggle="lightbox"]', function (e) {
+				e.preventDefault();
+				$(this).ekkoLightbox();
+			});
+
+		</script>
+	
+	</body>    
+
+</html>

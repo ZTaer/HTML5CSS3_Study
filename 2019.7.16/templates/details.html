@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh" >
+
+    <head>
+        <meta charset="utf-8" >
+        <title>bt4_test</title>
+
+        <!-- 为兼容响应式 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+
+		<!-- cdn_icon -->
+		<!--
+			icon查询: https://fontawesome.com/icons?d=gallery
+		-->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/5.6.3/css/all.min.css" >
+		
+		<!-- bootstrap必备 -->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		
+		<!-- 本地css,后面可以覆盖样式 -->
+        <link rel="stylesheet" href="../static/css/details.css" >
+
+	</head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50" >
+		<nav class="navbar navbar-expand-md bg-dark navbar-dark py-0 my-0" id="nav">
+			<div class="container">
+				<a href="#" class="navbar-brand">
+					Blogen
+				</a>
+				<button type="button" data-toggle="collapse" data-target="#mainNav" class="navbar-toggler" >
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="navbar-collapse collapse" id="mainNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a href="index.html" class="nav-link active ">
+								主控台
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="posts.html" class="nav-link">
+								帖子
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="categories.html" class="nav-link">
+								分类
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="user.html" class="nav-link">
+								用户
+							</a>
+						</li>
+					</ul>
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item dropdown">
+							<a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown" >
+								<i class="fas fa-user"></i>
+								欢迎ZTaer
+							</a>
+							<div class="dropdown-menu">
+								<a href="#" class="dropdown-item">
+									<i class="fas fa-user-circle"></i>
+									个人资料
+								</a>
+								<a href="#" class="dropdown-item">
+									<i class="fas fa-cog"></i>
+									设置信息
+								</a>
+							</div>
+
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="fas fa-user-times"></i>
+								Logout
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- header-BGN -->
+		<div id="header" class="py-3 bg-primary">
+			<div class="container text-light">
+				<h1>
+					<i class="fas fa-cog"></i>
+					主控台
+				</h1>
+			</div>
+		</div>
+		<!-- header-END -->
+
+		<!-- action-BGN -->
+		<section id="action" class="py-4">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-3">
+						<a href="index.html" class="btn btn-muted d-block " >
+							<i class="fas fa-arrow-left"></i>
+							返回主控台
+						</a>
+					</div>
+
+					<div class="col-md-3">
+						<a href="#" class="btn btn-success d-block " >
+							<i class="fas fa-check"></i>
+							保存修改
+						</a>
+					</div>
+
+					<div class="col-md-3">
+						<a href="#" class="btn btn-danger d-block " >
+							<i class="fas fa-trash"></i>
+							删除帖子
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<!-- action-END -->
+		
+		<!-- main-form-BGN -->
+		<section id="main-form" class="py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="card">
+							<div class="card-header">
+								<h4 class="text-dark" >
+									编辑帖子
+								</h4>
+							</div>
+							<div class="card-body">
+									<form action="">
+										<div class="form-group">
+											<label for="title"> 标题: </label>
+											<input type="text" name="" id="title" class="form-control" placeholder="帖子标题" >
+										</div>
+										<div class="form-group">
+											<label for="category">分类: </label>
+											<select class="form-control" id="category" >
+												<option value=""> 前端工程师 </option>
+												<option value=""> 后端工程师 </option>
+												<option value=""> 安全工程师 </option>
+												<option value=""> 逆向工程师 </option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label for="upimg">上传图片:</label>
+											<!-- 此地使用的为,自定义上传控件 -->
+											<div class="custom-file">
+												<label for="imgfile" class="custom-file-label"> 选择文件 </label>
+												<input type="file" name="" id="imgfile" class="custom-file-input">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="bodytext"></label>
+											<!-- 超级文本编辑器,在textarea标签name="editor1"于jqurry对应即可开启 -->
+											<textarea name="editor1" id="bodytext" cols="30" rows="10">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur eius sed aliquam qui iusto cupiditate officia deleniti labore voluptatibus dignissimos quis, ducimus sequi animi, accusamus enim provident vitae, nesciunt facere iure quia eum? Deleniti, qui. Magni atque doloribus asperiores ut. Excepturi magni minima, nemo repellat at adipisci cum nostrum eius.
+
+											</textarea>
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- main-form-END -->
+
+		<!--footer-BGN-->
+		<footer id="footer" class="bg-dark text-center  py-5">
+			<div class="container">
+				<div class="col">
+					<p class="mb-0" >
+						Copyright &copy; <span id="year"></span> Blogen:OO7
+					</p>
+				</div>
+			</div>
+		</footer>
+		<!--footer-END-->
+
+
+		<!-- bootstrap必备 -->
+		<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+		<!-- ckeditor - 类似于word的文档编辑器 -->
+		<script src="https://cdn.staticfile.org/ckeditor/4.12.1/ckeditor.js"></script>
+    
+		<script>
+			// 获取时间,使用时" <span id="year"></span> "对应id是核心
+			$('#year').text(new Date().getFullYear());
+
+			// 创建滚动效果 
+			$(".navbar a").on(  // 抓取跳转的a标签,要与目标位置对应
+				'click',
+				function(event){
+					if(this.hash !== ""){
+						event.preventDefault();
+						const hash = this.hash;
+
+						$('html, body').animate({
+							scrollTop: $(hash).offset().top
+							},
+							800, // 动画执行时间
+							function(){
+								window.location.hash = hash;
+							}
+						);
+					}
+			});
+
+			// 文本编辑器需要
+			
+			CKEDITOR.replace( 'editor1' );
+		</script>
+	
+	</body>    
+
+</html>
