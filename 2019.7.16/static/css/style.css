@@ -1,0 +1,15 @@
+body{
+	font-family:'微软雅黑';
+	letter-spacing:3px;
+	background:#f8f8f8;
+	color:#696969;
+	
+}
+
+li{
+	list-style:none;
+}
+
+a{
+	text-decoration:none;
+}

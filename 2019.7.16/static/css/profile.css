@@ -1,0 +1,25 @@
+@charset "UTF-8";
+body {
+  background: #f8f8f8;
+  letter-spacing: 3px;
+  color: #696969;
+}
+
+/*********** nav *****/
+#nav #mainNav li {
+  margin: 0 5px;
+}
+
+/************* action *****/
+#action {
+  background: #eee;
+}
+
+/************* footer ******/
+#footer p {
+  color: #ccc;
+}
+
+/************* 移动端 *****/
+
+/*# sourceMappingURL=profile.css.map */

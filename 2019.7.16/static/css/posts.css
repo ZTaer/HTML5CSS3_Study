@@ -1,0 +1,32 @@
+@charset "UTF-8";
+body {
+  background: #f8f8f8;
+  letter-spacing: 3px;
+  color: #696969;
+}
+
+/*********** nav *****/
+#nav #mainNav li {
+  margin: 0 5px;
+}
+
+/************* action ******/
+#action {
+  background: #eee;
+}
+
+/************* footer ******/
+#footer p {
+  color: #ccc;
+}
+
+/************* 移动端 *****/
+@media (max-width: 756px) {
+  /** 响应式table必备 **/
+  #table-main table th, #table-main table td {
+    white-space: nowrap;
+    /**  文本不换行,目的是使表格响应式正常显示 **/
+  }
+}
+
+/*# sourceMappingURL=posts.css.map */
