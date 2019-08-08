@@ -17,7 +17,22 @@
 		
 		<!-- bootstrap必备 -->
 		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		
+
+
+		<!-- 滑动模块-可选 -->
+		<!--
+			效果查询: http://kenwheeler.github.io/slick/
+		-->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/slick-carousel/1.9.0/slick.css" />
+		<link rel="stylesheet" href="https://cdn.staticfile.org/slick-carousel/1.9.0/slick-theme.css" />
+
+		<!-- 灯箱效果-可选 -->
+		<!--
+			效果查询: http://ashleydw.github.io/lightbox/
+		-->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
+
+
 		<!-- 本地css,后面可以覆盖样式 -->
         <link rel="stylesheet" href="../static/css/style.css" >
 
@@ -30,7 +45,13 @@
 		<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="https://cdn.staticfile.org/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    
+
+		<!-- 滑动轮播-可选 -->
+		<script src="https://cdn.staticfile.org/slick-carousel/1.9.0/slick.js" integrity="sha256-zUQGihTEkA4nkrgfbbAM1f3pxvnWiznBND+TuJoUv3M=" crossorigin="anonymous"></script>
+		
+		<!-- 灯箱效果-可选 -->
+		<script src="https://cdn.staticfile.org/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=" crossorigin="anonymous"></script>
+		
 		<script>
 			// 获取时间,使用时" <span id="year"></span> "对应id是核心
 			$('#year').text(new Date().getFullYear());
@@ -53,6 +74,9 @@
 						);
 					}
 			});
+
+			// 滑动轮播-可选
+			// 灯箱-可选
 		</script>
 	
 	</body>    
