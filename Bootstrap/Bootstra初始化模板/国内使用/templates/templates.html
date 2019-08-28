@@ -47,6 +47,20 @@
 			效果查询: http://ashleydw.github.io/lightbox/
 		-->
 		<link rel="stylesheet" href="https://cdn.staticfile.org/ekko-lightbox/5.3.0/ekko-lightbox.css" integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
+		
+		
+		<!-- 动画效果框架-可选 -->
+		<!--
+			效果查询: https://daneden.github.io/animate.css/
+			常用类: 
+				延迟动画: .delay-1s ... .delay-5s
+				时间动画: 
+					加速: .fast( 800ms ) .faster( 500ms )
+					减速: .slow( 2s ) .slower( 3s )
+				无限循环: .infinite
+			准备CSS: .oo7-Animate{ opacity: 0; } 待动画标签加入类名.oo7-Animate 
+		-->
+		<link rel="stylesheet" href="https://cdn.staticfile.org/animate.css/3.7.2/animate.css">
 
 
 <!-- ------------- 本页主CSS --------------- -->
@@ -59,18 +73,40 @@
 
 <!-- ------------- 主内容区-END --------------- -->
 
-<!-- ------------- 扩展区-BGN --------------- -->
+<!-- ------------- 扩展区-必备-BGN --------------- -->
 		<!-- bootstrap必备 -->
 		<script src="https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 		<script src="https://cdn.staticfile.org/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- ------------- 扩展区-必备-END --------------- -->
+
+<!-- ------------- 扩展区-可选-BGN --------------- -->
 
 		<!-- 滑动轮播-可选 -->
 		<script src="https://cdn.staticfile.org/slick-carousel/1.9.0/slick.js" integrity="sha256-zUQGihTEkA4nkrgfbbAM1f3pxvnWiznBND+TuJoUv3M=" crossorigin="anonymous"></script>
 		
 		<!-- 灯箱效果-可选 -->
 		<script src="https://cdn.staticfile.org/ekko-lightbox/5.3.0/ekko-lightbox.min.js" integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=" crossorigin="anonymous"></script>
-		
+	  
+		<!-- OO7-JS-轻量级框架-可选 -->
+		<!--
+			源码参考: https://github.com/ZTaer/OO7_GoldModl/tree/master/WEB_GoldModl/JS_GoldModl
+		-->
+		<script src="../static/js/JS_GoldModl/javaScript_OO7GoldModl.js" ></script>
+
+		<!-- 滚动监听-与动画效果配合-可选 -->
+		<!--
+			效果查询: https://daneden.github.io/animate.css/
+		-->
+		<script src="https://cdn.jsdelivr.net/npm/scrollwatch@2.0.1/dist/ScrollWatch-2.0.1.min.js" integrity="sha256-jmgGQvZd2hgK8fxYGFYWPni/wP3c6/JkiMdUq5Ww3j8=" crossorigin="anonymous"></script>
+
+<!-- ------------- 扩展区-可选-END --------------- -->
+
+<!-- ------------- 本页主JS-BGN --------------- -->
+<!-- ------------- 本页主JS-END --------------- -->
+
+<!-- ------------- 初始化区-BGN --------------- -->
 		<script>
 			// 获取时间,使用时" <span id="year"></span> "对应id是核心
 			$('#year').text(new Date().getFullYear());
@@ -96,9 +132,23 @@
 
 			// 滑动轮播-可选
 			// 灯箱-可选
+
+			// 监听滚动动画初始化
+			let sw = new ScrollWatch({
+				watchOnce: true, // 是否开启不重复监听( 关闭则动画将来回执行 )
+				infiniteOffset: -10, // 偏移量
+				scrollThrottle: 200, // 延迟监听(ms)
+				// inViewClass: 'play', // 给当前视图增加类
+
+				onElementInView: function(data) { // 监听当前视图的标签
+					activeId = data.el.id;
+					// 动画示列
+					// oo7.moreAnimateCSS( activeId, '#wan_banner1',['h1','h2'],'fadeInUp' );
+				}
+			});
+
 		</script>
-	
-<!-- ------------- 扩展区-END --------------- -->
+<!-- ------------- 初始化区-END --------------- -->
 	</body>    
 
 </html>
