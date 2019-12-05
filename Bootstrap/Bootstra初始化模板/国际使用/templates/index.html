@@ -61,6 +61,12 @@
 		-->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
 
+		<!-- 剪切/粘贴-可选 -->
+		<!--
+			说明: https://clipboardjs.com
+		-->
+		<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+
 
 <!-- ------------- 本页主CSS --------------- -->
 		<!-- 本地css,后面可以覆盖样式 -->
@@ -149,6 +155,22 @@
 					// oo7.moreAnimateCSS( activeId, '#wan_banner1',['h1','h2'],'fadeInUp' );
 				}
 			});
+
+			// 复制初始化
+			var clipboard = new ClipboardJS('.btn', {
+				container: document.getElementById('modal') // bootstrap专用
+			});
+			clipboard.on('success', function(e) {
+				// 当前活动 console.info('Action:', e.action);
+				// 复制的文本 console.info('Text:', e.text);
+				// 目标标签 console.info('Trigger:', e.trigger);
+				e.clearSelection(); // 不显示选中效果
+			});
+			clipboard.on('error', function(e) {
+				console.error('Action:', e.action);
+				console.error('Trigger:', e.trigger);
+			});
+
 
 		</script>
 	
