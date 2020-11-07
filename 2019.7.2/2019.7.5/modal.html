@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bootstrap 实例</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<!-- 0. 模态框（ modal弹窗显示内容 ） -->
+	<!--
+		a) 按钮:
+			核心 data-toggle="modal" - data-target="指定modal,ID"
+		b) 模态框:
+			0. 先来个3连套: .modal - .modal-diglog - .modal-content
+			1. fade: 使有动画效果
+			2. .modal-diglog可以控制总体大小,使用 modal-bg/sm
+		c) 三连击完毕后,接着头,身,尾
+			0. .modal-footer - .modal-body - .modal-footer
+			1. data-toggle="modal" 为关闭按钮核心
+					X号关闭按钮: class="close"显示样式 , &times;为x号小图标
+					普通关闭按钮: 直接上btn
+	-->
+	<div class="container">
+		<!-- 单机按钮触发,模态框 -->
+		<button type="button" class="btn btn-success" data-toggle="modal" data-target="#test0"  > test0 </button>
+		<!-- 模态框 -->
+		<div class="modal fade" id="test0" >
+			<div class="modal-dialog modal-lg "> <!-- 这里可以控制总体大小 --> 
+				<div class="modal-content">
+					
+					<div class="modal-header">
+						<h3>test</h3>
+						<button type="button" class="close" data-dismiss="modal" > &times; </button> <!-- 头部关闭按钮 -->
+					</div>
+					<div class="modal-body">
+						我是中心内容
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger" data-dismiss="modal" > 关闭 </button> <!-- 关闭按钮,核心属性相同,只是样式不同 -->	
+					</div>
+
+				</div>
+			</div>	
+		</div>
+	</div>
+	
+
+</body>
+</html>
